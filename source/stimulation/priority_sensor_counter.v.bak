@@ -1,0 +1,37 @@
+module priority_sensor_counter(
+	clk,
+	enable,
+	priority_sensor);
+	
+input clk;
+input enable;
+output [15:0] priority_sensor;
+reg [15:0] priority_sensor;
+reg [19:0] counter;
+wire [15:0] random;
+
+random_16bit random_16bit(
+	.clk(clk),
+	.rand_num(random));
+
+initial
+begin
+counter=0;
+priority_sensor=0;
+end
+
+always@(posedge clk)
+begin
+if(enable) counter<=counter+1'b1;
+else counter<=0;
+end
+
+always@(posedge clk)
+begin
+if(counter==40960) 
+	priority_sensor<=random;
+//	priority_sensor<=16'd2;
+else priority_sensor<=0;
+end
+
+endmodule
