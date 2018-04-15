@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at router_UART_NI.v(115): always construct contains both blocking and non-blocking assignments File: D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_UART_NI/router_UART_NI.v Line: 115
+Warning (10268): Verilog HDL information at regularNI_FIFO_wrctrl.v(51): always construct contains both blocking and non-blocking assignments File: D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI/regularNI_FIFO_wrctrl.v Line: 51

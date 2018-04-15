@@ -1,0 +1,360 @@
+# Reading C:/intelFPGA_lite/17.1/modelsim_ase/tcl/vsim/pref.tcl
+# do MNOC_3rd_run_msim_rtl_verilog.do
+# if ![file isdirectory MNOC_3rd_iputf_libs] {
+# 	file mkdir MNOC_3rd_iputf_libs
+# }
+# 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/17.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+###### Libraries for IPUTF cores 
+###### End libraries for IPUTF cores 
+###### MIF file copy and HDL compilation commands for IPUTF cores 
+# 
+# 
+# vcom "D:/Study/Graduation_Project/verilog/MNOC_3rd/source/clock_management/super_pll_sim/super_pll.vho"
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:32:41 on Apr 16,2018
+# vcom -reportprogress 300 D:/Study/Graduation_Project/verilog/MNOC_3rd/source/clock_management/super_pll_sim/super_pll.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package altera_lnsim_components
+# -- Compiling entity super_pll
+# -- Compiling architecture RTL of super_pll
+# End time: 01:32:41 on Apr 16,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/stimulation {D:/Study/Graduation_Project/verilog/MNOC_3rd/source/stimulation/regular_sensor_counter.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:32:41 on Apr 16,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/stimulation" D:/Study/Graduation_Project/verilog/MNOC_3rd/source/stimulation/regular_sensor_counter.v 
+# -- Compiling module regular_sensor_counter
+# 
+# Top level modules:
+# 	regular_sensor_counter
+# End time: 01:32:41 on Apr 16,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/stimulation {D:/Study/Graduation_Project/verilog/MNOC_3rd/source/stimulation/random_16bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:32:41 on Apr 16,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/stimulation" D:/Study/Graduation_Project/verilog/MNOC_3rd/source/stimulation/random_16bit.v 
+# -- Compiling module random_16bit
+# 
+# Top level modules:
+# 	random_16bit
+# End time: 01:32:41 on Apr 16,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/stimulation {D:/Study/Graduation_Project/verilog/MNOC_3rd/source/stimulation/random_8bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:32:41 on Apr 16,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/stimulation" D:/Study/Graduation_Project/verilog/MNOC_3rd/source/stimulation/random_8bit.v 
+# -- Compiling module random_8bit
+# 
+# Top level modules:
+# 	random_8bit
+# End time: 01:32:41 on Apr 16,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/stimulation {D:/Study/Graduation_Project/verilog/MNOC_3rd/source/stimulation/priority_sensor_counter.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:32:41 on Apr 16,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/stimulation" D:/Study/Graduation_Project/verilog/MNOC_3rd/source/stimulation/priority_sensor_counter.v 
+# -- Compiling module priority_sensor_counter
+# 
+# Top level modules:
+# 	priority_sensor_counter
+# End time: 01:32:41 on Apr 16,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_UART_NI {D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_UART_NI/router_UART_NI.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:32:41 on Apr 16,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_UART_NI" D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_UART_NI/router_UART_NI.v 
+# -- Compiling module router_UART_NI
+# 
+# Top level modules:
+# 	router_UART_NI
+# End time: 01:32:41 on Apr 16,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI {D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI/router_sensor_NI.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:32:41 on Apr 16,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI" D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI/router_sensor_NI.v 
+# -- Compiling module router_sensor_NI
+# 
+# Top level modules:
+# 	router_sensor_NI
+# End time: 01:32:41 on Apr 16,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI {D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI/regularNI_FIFO_wrctrl.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:32:41 on Apr 16,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI" D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI/regularNI_FIFO_wrctrl.v 
+# -- Compiling module regularNI_FIFO_wrctrl
+# 
+# Top level modules:
+# 	regularNI_FIFO_wrctrl
+# End time: 01:32:41 on Apr 16,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI {D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI/regular_sensor_interface.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:32:41 on Apr 16,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI" D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI/regular_sensor_interface.v 
+# -- Compiling module regular_sensor_interface
+# 
+# Top level modules:
+# 	regular_sensor_interface
+# End time: 01:32:41 on Apr 16,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI {D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI/priorityNI_FIFO_wrctrl.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:32:41 on Apr 16,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI" D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI/priorityNI_FIFO_wrctrl.v 
+# -- Compiling module priorityNI_FIFO_wrctrl
+# 
+# Top level modules:
+# 	priorityNI_FIFO_wrctrl
+# End time: 01:32:42 on Apr 16,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI {D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI/priority_sensor_interface.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:32:42 on Apr 16,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI" D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI/priority_sensor_interface.v 
+# -- Compiling module priority_sensor_interface
+# 
+# Top level modules:
+# 	priority_sensor_interface
+# End time: 01:32:42 on Apr 16,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI {D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI/clock_division.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:32:42 on Apr 16,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI" D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI/clock_division.v 
+# -- Compiling module clock_division
+# 
+# Top level modules:
+# 	clock_division
+# End time: 01:32:42 on Apr 16,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module {D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module/two_1_mux.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:32:42 on Apr 16,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module" D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module/two_1_mux.v 
+# -- Compiling module two_1_mux
+# 
+# Top level modules:
+# 	two_1_mux
+# End time: 01:32:42 on Apr 16,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module {D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module/three_1_mux.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:32:42 on Apr 16,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module" D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module/three_1_mux.v 
+# -- Compiling module three_1_mux
+# 
+# Top level modules:
+# 	three_1_mux
+# End time: 01:32:42 on Apr 16,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module {D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module/FIFO_readctrl.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:32:42 on Apr 16,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module" D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module/FIFO_readctrl.v 
+# -- Compiling module FIFO_readctrl
+# 
+# Top level modules:
+# 	FIFO_readctrl
+# End time: 01:32:42 on Apr 16,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module {D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module/FIFO.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:32:42 on Apr 16,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module" D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module/FIFO.v 
+# -- Compiling module FIFO
+# 
+# Top level modules:
+# 	FIFO
+# End time: 01:32:42 on Apr 16,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module {D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module/FIFO _32depth.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:32:42 on Apr 16,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module" D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module/FIFO _32depth.v 
+# -- Compiling module FIFO_32depth
+# 
+# Top level modules:
+# 	FIFO_32depth
+# End time: 01:32:42 on Apr 16,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i3_router {D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i3_router/i3_router_FIFO_wrctrl.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:32:42 on Apr 16,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i3_router" D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i3_router/i3_router_FIFO_wrctrl.v 
+# -- Compiling module i3_router_FIFO_wrctrl
+# 
+# Top level modules:
+# 	i3_router_FIFO_wrctrl
+# End time: 01:32:42 on Apr 16,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i3_router {D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i3_router/i3_router.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:32:42 on Apr 16,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i3_router" D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i3_router/i3_router.v 
+# -- Compiling module i3_router
+# 
+# Top level modules:
+# 	i3_router
+# End time: 01:32:42 on Apr 16,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i2_router {D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i2_router/i2_router_FIFO_wrctrl.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:32:43 on Apr 16,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i2_router" D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i2_router/i2_router_FIFO_wrctrl.v 
+# -- Compiling module i2_router_FIFO_wrctrl
+# 
+# Top level modules:
+# 	i2_router_FIFO_wrctrl
+# End time: 01:32:43 on Apr 16,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i2_router {D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i2_router/i2_router.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:32:43 on Apr 16,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i2_router" D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i2_router/i2_router.v 
+# -- Compiling module i2_router
+# 
+# Top level modules:
+# 	i2_router
+# End time: 01:32:43 on Apr 16,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i1_router {D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i1_router/i1_router_FIFO_wrctrl.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:32:43 on Apr 16,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i1_router" D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i1_router/i1_router_FIFO_wrctrl.v 
+# -- Compiling module i1_router_FIFO_wrctrl
+# 
+# Top level modules:
+# 	i1_router_FIFO_wrctrl
+# End time: 01:32:43 on Apr 16,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i1_router {D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i1_router/i1_router.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:32:43 on Apr 16,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i1_router" D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i1_router/i1_router.v 
+# -- Compiling module i1_router
+# 
+# Top level modules:
+# 	i1_router
+# End time: 01:32:43 on Apr 16,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd {D:/Study/Graduation_Project/verilog/MNOC_3rd/MNOC_3rd.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:32:43 on Apr 16,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd" D:/Study/Graduation_Project/verilog/MNOC_3rd/MNOC_3rd.v 
+# -- Compiling module MNOC_3rd
+# 
+# Top level modules:
+# 	MNOC_3rd
+# End time: 01:32:43 on Apr 16,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd {D:/Study/Graduation_Project/verilog/MNOC_3rd/baseline_c5gx.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:32:43 on Apr 16,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd" D:/Study/Graduation_Project/verilog/MNOC_3rd/baseline_c5gx.v 
+# -- Compiling module baseline_c5gx
+# 
+# Top level modules:
+# 	baseline_c5gx
+# End time: 01:32:43 on Apr 16,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/simulation/modelsim {D:/Study/Graduation_Project/verilog/MNOC_3rd/simulation/modelsim/MNOC_3rd.vt}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:32:43 on Apr 16,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/simulation/modelsim" D:/Study/Graduation_Project/verilog/MNOC_3rd/simulation/modelsim/MNOC_3rd.vt 
+# -- Compiling module MNOC_3rd_vlg_tst
+# 
+# Top level modules:
+# 	MNOC_3rd_vlg_tst
+# End time: 01:32:43 on Apr 16,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  MNOC_3rd_vlg_tst
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" MNOC_3rd_vlg_tst 
+# Start time: 01:32:43 on Apr 16,2018
+# Loading work.MNOC_3rd_vlg_tst
+# Loading work.MNOC_3rd
+# Loading work.clock_division
+# Loading work.regular_sensor_counter
+# Loading work.random_8bit
+# Loading work.priority_sensor_counter
+# Loading work.random_16bit
+# Loading work.i2_router
+# Loading work.FIFO
+# Loading work.two_1_mux
+# Loading work.FIFO_readctrl
+# Loading work.i2_router_FIFO_wrctrl
+# Loading work.i3_router
+# Loading work.three_1_mux
+# Loading work.i3_router_FIFO_wrctrl
+# Loading work.i1_router
+# Loading work.i1_router_FIFO_wrctrl
+# Loading work.router_sensor_NI
+# Loading work.priorityNI_FIFO_wrctrl
+# Loading work.regular_sensor_interface
+# Loading work.regularNI_FIFO_wrctrl
+# Loading work.FIFO_32depth
+# Loading work.router_UART_NI
+# Loading work.priority_sensor_interface
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading altera_lnsim.altera_lnsim_components
+# Loading work.super_pll(rtl)
+# Loading sv_std.std
+# Loading altera_lnsim.altera_lnsim_functions
+# Loading altera_lnsim.altera_pll
+# Loading altera_lnsim_ver.dps_extra_kick
+# Loading altera_lnsim_ver.dprio_init
+# Loading altera_lnsim_ver.altera_generic_pll_functions
+# Loading altera_lnsim_ver.altera_lnsim_functions
+# Loading altera_lnsim_ver.generic_pll
+# ** Warning: (vsim-8822) D:/Study/Graduation_Project/verilog/MNOC_3rd/MNOC_3rd.v(182): [TFMPC] - Missing Verilog connection for formal VHDL port 'locked'.
+#    Time: 0 ps  Iteration: 0  Instance: /MNOC_3rd_vlg_tst/i1/super_pll File: D:/Study/Graduation_Project/verilog/MNOC_3rd/source/clock_management/super_pll_sim/super_pll.vho
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Info: hierarchical_name = MNOC_3rd_vlg_tst.i1.super_pll.super_pll_altera_pll_altera_pll_i_1098.new_model.gpll.no_need_to_gen
+# Adjusting output period from 891.441979 to 892.057702
+# Info: =================================================
+# Info:           Generic PLL Summary
+# Info: =================================================
+# Time scale of (MNOC_3rd_vlg_tst.i1.super_pll.super_pll_altera_pll_altera_pll_i_1098.new_model.gpll.no_need_to_gen) is  1ps /  1ps
+# Info: hierarchical_name = MNOC_3rd_vlg_tst.i1.super_pll.super_pll_altera_pll_altera_pll_i_1098.new_model.gpll.no_need_to_gen
+# Info: reference_clock_frequency = 50.0 MHz
+# Info: output_clock_frequency = 1121.778 MHZ
+# Info: phase_shift = 0 ps
+# Info: duty_cycle = 50
+# Info: sim_additional_refclk_cycles_to_lock = 0
+# Info: output_clock_high_period = 446.028851
+# Info: output_clock_low_period = 446.028851
+# Running testbench
+add wave -position insertpoint  \
+sim:/MNOC_3rd_vlg_tst/i1/root_router/output_data \
+sim:/MNOC_3rd_vlg_tst/i1/root_router/output_req \
+sim:/MNOC_3rd_vlg_tst/i1/root_router/output_bussy
+add wave -position insertpoint  \
+sim:/MNOC_3rd_vlg_tst/i1/router_UART_NI/intdata
+# Break key hit
+# Simulation stop requested.
+# End time: 01:41:16 on Apr 16,2018, Elapsed time: 0:08:33
+# Errors: 0, Warnings: 1

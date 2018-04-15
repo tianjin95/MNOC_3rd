@@ -1,5 +1,6 @@
 module i1_router_FIFO_wrctrl(
 	clk,
+	rst,
 	input_req,
 	head,
 	input_bussy,
@@ -7,6 +8,7 @@ module i1_router_FIFO_wrctrl(
 	FIFO_wr);
 	
 input clk;
+input rst;
 input input_req;
 input [2:0] head;
 input FIFO_full;
@@ -28,7 +30,8 @@ end
 
 always@(posedge clk) 
 begin
-state_c<=state_n;
+if(rst) state_c<=idle;
+else state_c<=state_n;
 end
 
 always@(*)
@@ -45,7 +48,14 @@ end
 
 always@(*)
 begin
-case(state_c)
+if(rst)
+	begin
+	FIFO_wr=0;
+	input_bussy=1;
+	end
+else
+	begin
+	case(state_c)
 	idle:
 		begin
 		if(input_req&&(head==head_flit)&&(~FIFO_full))
@@ -69,7 +79,8 @@ case(state_c)
 		FIFO_wr=(head==3'b110)?(!FIFO_full):0;
 		input_bussy=FIFO_full;
 		end
-endcase
+	endcase
+	end
 end
 
 endmodule

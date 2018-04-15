@@ -1,0 +1,1455 @@
+TimeQuest Timing Analyzer report for MNOC_3rd
+Mon Apr 16 02:20:06 2018
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1100mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1100mV 85C Model Setup Summary
+  8. Slow 1100mV 85C Model Hold Summary
+  9. Slow 1100mV 85C Model Recovery Summary
+ 10. Slow 1100mV 85C Model Removal Summary
+ 11. Slow 1100mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1100mV 85C Model Metastability Summary
+ 13. Slow 1100mV 0C Model Fmax Summary
+ 14. Slow 1100mV 0C Model Setup Summary
+ 15. Slow 1100mV 0C Model Hold Summary
+ 16. Slow 1100mV 0C Model Recovery Summary
+ 17. Slow 1100mV 0C Model Removal Summary
+ 18. Slow 1100mV 0C Model Minimum Pulse Width Summary
+ 19. Slow 1100mV 0C Model Metastability Summary
+ 20. Fast 1100mV 85C Model Setup Summary
+ 21. Fast 1100mV 85C Model Hold Summary
+ 22. Fast 1100mV 85C Model Recovery Summary
+ 23. Fast 1100mV 85C Model Removal Summary
+ 24. Fast 1100mV 85C Model Minimum Pulse Width Summary
+ 25. Fast 1100mV 85C Model Metastability Summary
+ 26. Fast 1100mV 0C Model Setup Summary
+ 27. Fast 1100mV 0C Model Hold Summary
+ 28. Fast 1100mV 0C Model Recovery Summary
+ 29. Fast 1100mV 0C Model Removal Summary
+ 30. Fast 1100mV 0C Model Minimum Pulse Width Summary
+ 31. Fast 1100mV 0C Model Metastability Summary
+ 32. Multicorner Timing Analysis Summary
+ 33. Board Trace Model Assignments
+ 34. Input Transition Times
+ 35. Signal Integrity Metrics (Slow 1100mv 0c Model)
+ 36. Signal Integrity Metrics (Slow 1100mv 85c Model)
+ 37. Signal Integrity Metrics (Fast 1100mv 0c Model)
+ 38. Signal Integrity Metrics (Fast 1100mv 85c Model)
+ 39. Setup Transfers
+ 40. Hold Transfers
+ 41. Recovery Transfers
+ 42. Removal Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths Summary
+ 46. Clock Status Summary
+ 47. Unconstrained Output Ports
+ 48. Unconstrained Output Ports
+ 49. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                           ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Timing Analyzer       ; TimeQuest                                           ;
+; Revision Name         ; MNOC_3rd                                            ;
+; Device Family         ; Cyclone V                                           ;
+; Device Name           ; 5CGXFC5C6F27C7                                      ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 2.62        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;  54.1%      ;
+;     Processor 3            ;  54.0%      ;
+;     Processor 4            ;  54.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ;
++---------------------------------------------------------------------------------+-----------+---------+------------+-------+---------+------------+-----------+-------------+-------+--------+-----------+------------+----------+-------------------------------------------------------------------------------+------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+
+; Clock Name                                                                      ; Type      ; Period  ; Frequency  ; Rise  ; Fall    ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master                                                                        ; Source                                                                             ; Targets                                                                             ;
++---------------------------------------------------------------------------------+-----------+---------+------------+-------+---------+------------+-----------+-------------+-------+--------+-----------+------------+----------+-------------------------------------------------------------------------------+------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+
+; clk_50MHz                                                                       ; Base      ; 20.000  ; 50.0 MHz   ; 0.000 ; 10.000  ;            ;           ;             ;       ;        ;           ;            ;          ;                                                                               ;                                                                                    ; { clk_50MHz }                                                                       ;
+; clock_division:clock_division1|clk_division                                     ; Base      ; 1.000   ; 1000.0 MHz ; 0.000 ; 0.500   ;            ;           ;             ;       ;        ;           ;            ;          ;                                                                               ;                                                                                    ; { clock_division:clock_division1|clk_division }                                     ;
+; router_sensor_NI:NI0|clock_division:clock_division|clk_division                 ; Base      ; 1.000   ; 1000.0 MHz ; 0.000 ; 0.500   ;            ;           ;             ;       ;        ;           ;            ;          ;                                                                               ;                                                                                    ; { router_sensor_NI:NI0|clock_division:clock_division|clk_division }                 ;
+; router_sensor_NI:NI1|clock_division:clock_division|clk_division                 ; Base      ; 1.000   ; 1000.0 MHz ; 0.000 ; 0.500   ;            ;           ;             ;       ;        ;           ;            ;          ;                                                                               ;                                                                                    ; { router_sensor_NI:NI1|clock_division:clock_division|clk_division }                 ;
+; router_sensor_NI:NI2|clock_division:clock_division|clk_division                 ; Base      ; 1.000   ; 1000.0 MHz ; 0.000 ; 0.500   ;            ;           ;             ;       ;        ;           ;            ;          ;                                                                               ;                                                                                    ; { router_sensor_NI:NI2|clock_division:clock_division|clk_division }                 ;
+; router_sensor_NI:NI3|clock_division:clock_division|clk_division                 ; Base      ; 1.000   ; 1000.0 MHz ; 0.000 ; 0.500   ;            ;           ;             ;       ;        ;           ;            ;          ;                                                                               ;                                                                                    ; { router_sensor_NI:NI3|clock_division:clock_division|clk_division }                 ;
+; router_sensor_NI:NI4|clock_division:clock_division|clk_division                 ; Base      ; 1.000   ; 1000.0 MHz ; 0.000 ; 0.500   ;            ;           ;             ;       ;        ;           ;            ;          ;                                                                               ;                                                                                    ; { router_sensor_NI:NI4|clock_division:clock_division|clk_division }                 ;
+; router_sensor_NI:NI5|clock_division:clock_division|clk_division                 ; Base      ; 1.000   ; 1000.0 MHz ; 0.000 ; 0.500   ;            ;           ;             ;       ;        ;           ;            ;          ;                                                                               ;                                                                                    ; { router_sensor_NI:NI5|clock_division:clock_division|clk_division }                 ;
+; router_sensor_NI:NI6|clock_division:clock_division|clk_division                 ; Base      ; 1.000   ; 1000.0 MHz ; 0.000 ; 0.500   ;            ;           ;             ;       ;        ;           ;            ;          ;                                                                               ;                                                                                    ; { router_sensor_NI:NI6|clock_division:clock_division|clk_division }                 ;
+; router_sensor_NI:NI7|clock_division:clock_division|clk_division                 ; Base      ; 1.000   ; 1000.0 MHz ; 0.000 ; 0.500   ;            ;           ;             ;       ;        ;           ;            ;          ;                                                                               ;                                                                                    ; { router_sensor_NI:NI7|clock_division:clock_division|clk_division }                 ;
+; router_sensor_NI:NI8|clock_division:clock_division|clk_division                 ; Base      ; 1.000   ; 1000.0 MHz ; 0.000 ; 0.500   ;            ;           ;             ;       ;        ;           ;            ;          ;                                                                               ;                                                                                    ; { router_sensor_NI:NI8|clock_division:clock_division|clk_division }                 ;
+; router_sensor_NI:NI9|clock_division:clock_division|clk_division                 ; Base      ; 1.000   ; 1000.0 MHz ; 0.000 ; 0.500   ;            ;           ;             ;       ;        ;           ;            ;          ;                                                                               ;                                                                                    ; { router_sensor_NI:NI9|clock_division:clock_division|clk_division }                 ;
+; router_sensor_NI:NI10|clock_division:clock_division|clk_division                ; Base      ; 1.000   ; 1000.0 MHz ; 0.000 ; 0.500   ;            ;           ;             ;       ;        ;           ;            ;          ;                                                                               ;                                                                                    ; { router_sensor_NI:NI10|clock_division:clock_division|clk_division }                ;
+; router_sensor_NI:NI11|clock_division:clock_division|clk_division                ; Base      ; 1.000   ; 1000.0 MHz ; 0.000 ; 0.500   ;            ;           ;             ;       ;        ;           ;            ;          ;                                                                               ;                                                                                    ; { router_sensor_NI:NI11|clock_division:clock_division|clk_division }                ;
+; router_sensor_NI:NI12|clock_division:clock_division|clk_division                ; Base      ; 1.000   ; 1000.0 MHz ; 0.000 ; 0.500   ;            ;           ;             ;       ;        ;           ;            ;          ;                                                                               ;                                                                                    ; { router_sensor_NI:NI12|clock_division:clock_division|clk_division }                ;
+; router_sensor_NI:NI13|clock_division:clock_division|clk_division                ; Base      ; 1.000   ; 1000.0 MHz ; 0.000 ; 0.500   ;            ;           ;             ;       ;        ;           ;            ;          ;                                                                               ;                                                                                    ; { router_sensor_NI:NI13|clock_division:clock_division|clk_division }                ;
+; router_sensor_NI:NI14|clock_division:clock_division|clk_division                ; Base      ; 1.000   ; 1000.0 MHz ; 0.000 ; 0.500   ;            ;           ;             ;       ;        ;           ;            ;          ;                                                                               ;                                                                                    ; { router_sensor_NI:NI14|clock_division:clock_division|clk_division }                ;
+; router_sensor_NI:NI15|clock_division:clock_division|clk_division                ; Base      ; 1.000   ; 1000.0 MHz ; 0.000 ; 0.500   ;            ;           ;             ;       ;        ;           ;            ;          ;                                                                               ;                                                                                    ; { router_sensor_NI:NI15|clock_division:clock_division|clk_division }                ;
+; rst                                                                             ; Base      ; 1.000   ; 1000.0 MHz ; 0.000 ; 0.500   ;            ;           ;             ;       ;        ;           ;            ;          ;                                                                               ;                                                                                    ; { rst }                                                                             ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; Generated ; 1.333   ; 750.0 MHz  ; 0.000 ; 0.666   ; 50.00      ; 2         ; 30          ;       ;        ;           ;            ; false    ; clk_50MHz                                                                     ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|refclkin      ; { super_pll|super_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] }   ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; Generated ; 6.666   ; 150.0 MHz  ; 0.000 ; 3.333   ; 50.00      ; 5         ; 1           ;       ;        ;           ;            ; false    ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|vco0ph[0] ; { super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk } ;
+; super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk ; Generated ; 542.666 ; 1.84 MHz   ; 0.000 ; 271.333 ; 50.00      ; 407       ; 1           ;       ;        ;           ;            ; false    ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] ; super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|vco0ph[0] ; { super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk } ;
++---------------------------------------------------------------------------------+-----------+---------+------------+-------+---------+------------+-----------+-------------+-------+--------+-----------+------------+----------+-------------------------------------------------------------------------------+------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Slow 1100mV 85C Model Fmax Summary                                                                                    ;
++------------+-----------------+---------------------------------------------------------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                                                                      ; Note ;
++------------+-----------------+---------------------------------------------------------------------------------+------+
+; 58.95 MHz  ; 58.95 MHz       ; rst                                                                             ;      ;
+; 73.37 MHz  ; 73.37 MHz       ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ;      ;
+; 118.43 MHz ; 118.43 MHz      ; super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk ;      ;
+; 153.21 MHz ; 153.21 MHz      ; router_sensor_NI:NI13|clock_division:clock_division|clk_division                ;      ;
+; 154.73 MHz ; 154.73 MHz      ; router_sensor_NI:NI6|clock_division:clock_division|clk_division                 ;      ;
+; 159.95 MHz ; 159.95 MHz      ; router_sensor_NI:NI4|clock_division:clock_division|clk_division                 ;      ;
+; 162.84 MHz ; 162.84 MHz      ; router_sensor_NI:NI9|clock_division:clock_division|clk_division                 ;      ;
+; 172.44 MHz ; 172.44 MHz      ; router_sensor_NI:NI3|clock_division:clock_division|clk_division                 ;      ;
+; 175.53 MHz ; 175.53 MHz      ; router_sensor_NI:NI1|clock_division:clock_division|clk_division                 ;      ;
+; 183.76 MHz ; 183.76 MHz      ; router_sensor_NI:NI12|clock_division:clock_division|clk_division                ;      ;
+; 184.95 MHz ; 184.95 MHz      ; router_sensor_NI:NI0|clock_division:clock_division|clk_division                 ;      ;
+; 187.06 MHz ; 187.06 MHz      ; router_sensor_NI:NI2|clock_division:clock_division|clk_division                 ;      ;
+; 188.75 MHz ; 188.75 MHz      ; router_sensor_NI:NI11|clock_division:clock_division|clk_division                ;      ;
+; 192.86 MHz ; 192.86 MHz      ; router_sensor_NI:NI5|clock_division:clock_division|clk_division                 ;      ;
+; 197.2 MHz  ; 197.2 MHz       ; router_sensor_NI:NI10|clock_division:clock_division|clk_division                ;      ;
+; 197.75 MHz ; 197.75 MHz      ; router_sensor_NI:NI15|clock_division:clock_division|clk_division                ;      ;
+; 199.44 MHz ; 199.44 MHz      ; router_sensor_NI:NI8|clock_division:clock_division|clk_division                 ;      ;
+; 201.49 MHz ; 201.49 MHz      ; router_sensor_NI:NI7|clock_division:clock_division|clk_division                 ;      ;
+; 225.63 MHz ; 225.63 MHz      ; router_sensor_NI:NI14|clock_division:clock_division|clk_division                ;      ;
+; 271.37 MHz ; 271.37 MHz      ; clock_division:clock_division1|clk_division                                     ;      ;
++------------+-----------------+---------------------------------------------------------------------------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1100mV 85C Model Setup Summary                                                                       ;
++---------------------------------------------------------------------------------+---------+---------------+
+; Clock                                                                           ; Slack   ; End Point TNS ;
++---------------------------------------------------------------------------------+---------+---------------+
+; rst                                                                             ; -11.700 ; -1387.616     ;
+; router_sensor_NI:NI7|clock_division:clock_division|clk_division                 ; -10.428 ; -224.614      ;
+; router_sensor_NI:NI4|clock_division:clock_division|clk_division                 ; -10.238 ; -227.020      ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -10.043 ; -13181.133    ;
+; router_sensor_NI:NI13|clock_division:clock_division|clk_division                ; -9.912  ; -214.680      ;
+; router_sensor_NI:NI6|clock_division:clock_division|clk_division                 ; -9.765  ; -197.092      ;
+; router_sensor_NI:NI3|clock_division:clock_division|clk_division                 ; -9.711  ; -227.684      ;
+; router_sensor_NI:NI11|clock_division:clock_division|clk_division                ; -9.652  ; -251.512      ;
+; router_sensor_NI:NI9|clock_division:clock_division|clk_division                 ; -9.630  ; -169.900      ;
+; router_sensor_NI:NI8|clock_division:clock_division|clk_division                 ; -9.522  ; -200.173      ;
+; router_sensor_NI:NI14|clock_division:clock_division|clk_division                ; -9.453  ; -206.000      ;
+; router_sensor_NI:NI12|clock_division:clock_division|clk_division                ; -9.210  ; -188.008      ;
+; router_sensor_NI:NI15|clock_division:clock_division|clk_division                ; -9.096  ; -192.048      ;
+; router_sensor_NI:NI10|clock_division:clock_division|clk_division                ; -9.075  ; -182.706      ;
+; router_sensor_NI:NI5|clock_division:clock_division|clk_division                 ; -9.055  ; -181.814      ;
+; router_sensor_NI:NI0|clock_division:clock_division|clk_division                 ; -9.045  ; -193.973      ;
+; router_sensor_NI:NI2|clock_division:clock_division|clk_division                 ; -8.709  ; -223.418      ;
+; router_sensor_NI:NI1|clock_division:clock_division|clk_division                 ; -8.404  ; -193.351      ;
+; super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk ; -3.203  ; -20.530       ;
+; clock_division:clock_division1|clk_division                                     ; -2.685  ; -22.811       ;
++---------------------------------------------------------------------------------+---------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Slow 1100mV 85C Model Hold Summary                                                                       ;
++---------------------------------------------------------------------------------+--------+---------------+
+; Clock                                                                           ; Slack  ; End Point TNS ;
++---------------------------------------------------------------------------------+--------+---------------+
+; rst                                                                             ; -6.638 ; -857.948      ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -4.523 ; -5046.296     ;
+; router_sensor_NI:NI12|clock_division:clock_division|clk_division                ; -0.768 ; -1.088        ;
+; router_sensor_NI:NI4|clock_division:clock_division|clk_division                 ; -0.756 ; -2.016        ;
+; router_sensor_NI:NI5|clock_division:clock_division|clk_division                 ; -0.424 ; -1.415        ;
+; router_sensor_NI:NI2|clock_division:clock_division|clk_division                 ; -0.189 ; -1.323        ;
+; router_sensor_NI:NI3|clock_division:clock_division|clk_division                 ; -0.131 ; -0.537        ;
+; router_sensor_NI:NI9|clock_division:clock_division|clk_division                 ; -0.057 ; -0.456        ;
+; router_sensor_NI:NI0|clock_division:clock_division|clk_division                 ; -0.054 ; -0.054        ;
+; router_sensor_NI:NI1|clock_division:clock_division|clk_division                 ; 0.107  ; 0.000         ;
+; router_sensor_NI:NI10|clock_division:clock_division|clk_division                ; 0.171  ; 0.000         ;
+; router_sensor_NI:NI14|clock_division:clock_division|clk_division                ; 0.284  ; 0.000         ;
+; router_sensor_NI:NI8|clock_division:clock_division|clk_division                 ; 0.285  ; 0.000         ;
+; router_sensor_NI:NI13|clock_division:clock_division|clk_division                ; 0.298  ; 0.000         ;
+; router_sensor_NI:NI15|clock_division:clock_division|clk_division                ; 0.341  ; 0.000         ;
+; router_sensor_NI:NI7|clock_division:clock_division|clk_division                 ; 0.349  ; 0.000         ;
+; router_sensor_NI:NI11|clock_division:clock_division|clk_division                ; 0.352  ; 0.000         ;
+; router_sensor_NI:NI6|clock_division:clock_division|clk_division                 ; 0.356  ; 0.000         ;
+; clock_division:clock_division1|clk_division                                     ; 0.580  ; 0.000         ;
+; super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.717  ; 0.000         ;
++---------------------------------------------------------------------------------+--------+---------------+
+
+
++----------------------------------------+
+; Slow 1100mV 85C Model Recovery Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; rst   ; -9.258 ; -1734.709             ;
++-------+--------+-----------------------+
+
+
++---------------------------------------+
+; Slow 1100mV 85C Model Removal Summary ;
++-------+--------+----------------------+
+; Clock ; Slack  ; End Point TNS        ;
++-------+--------+----------------------+
+; rst   ; -5.672 ; -761.333             ;
++-------+--------+----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1100mV 85C Model Minimum Pulse Width Summary                                                         ;
++---------------------------------------------------------------------------------+---------+---------------+
+; Clock                                                                           ; Slack   ; End Point TNS ;
++---------------------------------------------------------------------------------+---------+---------------+
+; rst                                                                             ; -6.324  ; -6949.228     ;
+; router_sensor_NI:NI12|clock_division:clock_division|clk_division                ; -0.649  ; -46.675       ;
+; router_sensor_NI:NI4|clock_division:clock_division|clk_division                 ; -0.562  ; -41.469       ;
+; router_sensor_NI:NI1|clock_division:clock_division|clk_division                 ; -0.538  ; -45.314       ;
+; router_sensor_NI:NI0|clock_division:clock_division|clk_division                 ; -0.538  ; -43.938       ;
+; router_sensor_NI:NI5|clock_division:clock_division|clk_division                 ; -0.538  ; -43.304       ;
+; router_sensor_NI:NI2|clock_division:clock_division|clk_division                 ; -0.538  ; -43.063       ;
+; router_sensor_NI:NI9|clock_division:clock_division|clk_division                 ; -0.538  ; -42.251       ;
+; router_sensor_NI:NI6|clock_division:clock_division|clk_division                 ; -0.538  ; -41.991       ;
+; router_sensor_NI:NI15|clock_division:clock_division|clk_division                ; -0.538  ; -41.919       ;
+; router_sensor_NI:NI10|clock_division:clock_division|clk_division                ; -0.538  ; -41.915       ;
+; router_sensor_NI:NI3|clock_division:clock_division|clk_division                 ; -0.538  ; -41.702       ;
+; router_sensor_NI:NI14|clock_division:clock_division|clk_division                ; -0.538  ; -41.312       ;
+; router_sensor_NI:NI8|clock_division:clock_division|clk_division                 ; -0.538  ; -41.289       ;
+; router_sensor_NI:NI7|clock_division:clock_division|clk_division                 ; -0.538  ; -40.692       ;
+; router_sensor_NI:NI13|clock_division:clock_division|clk_division                ; -0.538  ; -40.652       ;
+; router_sensor_NI:NI11|clock_division:clock_division|clk_division                ; -0.538  ; -40.311       ;
+; clock_division:clock_division1|clk_division                                     ; -0.538  ; -8.856        ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; 0.666   ; 0.000         ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 1.899   ; 0.000         ;
+; clk_50MHz                                                                       ; 9.949   ; 0.000         ;
+; super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk ; 270.584 ; 0.000         ;
++---------------------------------------------------------------------------------+---------+---------------+
+
+
+-----------------------------------------------
+; Slow 1100mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Slow 1100mV 0C Model Fmax Summary                                                                                     ;
++------------+-----------------+---------------------------------------------------------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                                                                      ; Note ;
++------------+-----------------+---------------------------------------------------------------------------------+------+
+; 59.99 MHz  ; 59.99 MHz       ; rst                                                                             ;      ;
+; 75.79 MHz  ; 75.79 MHz       ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ;      ;
+; 122.29 MHz ; 122.29 MHz      ; super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk ;      ;
+; 155.93 MHz ; 155.93 MHz      ; router_sensor_NI:NI13|clock_division:clock_division|clk_division                ;      ;
+; 161.5 MHz  ; 161.5 MHz       ; router_sensor_NI:NI6|clock_division:clock_division|clk_division                 ;      ;
+; 166.97 MHz ; 166.97 MHz      ; router_sensor_NI:NI9|clock_division:clock_division|clk_division                 ;      ;
+; 169.69 MHz ; 169.69 MHz      ; router_sensor_NI:NI4|clock_division:clock_division|clk_division                 ;      ;
+; 177.12 MHz ; 177.12 MHz      ; router_sensor_NI:NI3|clock_division:clock_division|clk_division                 ;      ;
+; 178.09 MHz ; 178.09 MHz      ; router_sensor_NI:NI1|clock_division:clock_division|clk_division                 ;      ;
+; 186.78 MHz ; 186.78 MHz      ; router_sensor_NI:NI2|clock_division:clock_division|clk_division                 ;      ;
+; 188.18 MHz ; 188.18 MHz      ; router_sensor_NI:NI11|clock_division:clock_division|clk_division                ;      ;
+; 189.32 MHz ; 189.32 MHz      ; router_sensor_NI:NI12|clock_division:clock_division|clk_division                ;      ;
+; 190.26 MHz ; 190.26 MHz      ; router_sensor_NI:NI0|clock_division:clock_division|clk_division                 ;      ;
+; 196.23 MHz ; 196.23 MHz      ; router_sensor_NI:NI5|clock_division:clock_division|clk_division                 ;      ;
+; 198.77 MHz ; 198.77 MHz      ; router_sensor_NI:NI15|clock_division:clock_division|clk_division                ;      ;
+; 202.35 MHz ; 202.35 MHz      ; router_sensor_NI:NI10|clock_division:clock_division|clk_division                ;      ;
+; 202.68 MHz ; 202.68 MHz      ; router_sensor_NI:NI8|clock_division:clock_division|clk_division                 ;      ;
+; 209.34 MHz ; 209.34 MHz      ; router_sensor_NI:NI7|clock_division:clock_division|clk_division                 ;      ;
+; 232.77 MHz ; 232.77 MHz      ; router_sensor_NI:NI14|clock_division:clock_division|clk_division                ;      ;
+; 277.01 MHz ; 277.01 MHz      ; clock_division:clock_division1|clk_division                                     ;      ;
++------------+-----------------+---------------------------------------------------------------------------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1100mV 0C Model Setup Summary                                                                        ;
++---------------------------------------------------------------------------------+---------+---------------+
+; Clock                                                                           ; Slack   ; End Point TNS ;
++---------------------------------------------------------------------------------+---------+---------------+
+; rst                                                                             ; -11.591 ; -1403.239     ;
+; router_sensor_NI:NI7|clock_division:clock_division|clk_division                 ; -10.405 ; -221.676      ;
+; router_sensor_NI:NI4|clock_division:clock_division|clk_division                 ; -10.241 ; -219.663      ;
+; router_sensor_NI:NI6|clock_division:clock_division|clk_division                 ; -9.778  ; -193.036      ;
+; router_sensor_NI:NI3|clock_division:clock_division|clk_division                 ; -9.772  ; -222.032      ;
+; router_sensor_NI:NI13|clock_division:clock_division|clk_division                ; -9.764  ; -210.688      ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -9.732  ; -12252.346    ;
+; router_sensor_NI:NI11|clock_division:clock_division|clk_division                ; -9.664  ; -245.744      ;
+; router_sensor_NI:NI9|clock_division:clock_division|clk_division                 ; -9.615  ; -166.309      ;
+; router_sensor_NI:NI14|clock_division:clock_division|clk_division                ; -9.612  ; -202.695      ;
+; router_sensor_NI:NI8|clock_division:clock_division|clk_division                 ; -9.515  ; -195.639      ;
+; router_sensor_NI:NI12|clock_division:clock_division|clk_division                ; -9.257  ; -182.929      ;
+; router_sensor_NI:NI15|clock_division:clock_division|clk_division                ; -9.224  ; -189.083      ;
+; router_sensor_NI:NI5|clock_division:clock_division|clk_division                 ; -9.184  ; -176.492      ;
+; router_sensor_NI:NI10|clock_division:clock_division|clk_division                ; -9.093  ; -177.700      ;
+; router_sensor_NI:NI0|clock_division:clock_division|clk_division                 ; -9.052  ; -189.053      ;
+; router_sensor_NI:NI2|clock_division:clock_division|clk_division                 ; -8.768  ; -219.270      ;
+; router_sensor_NI:NI1|clock_division:clock_division|clk_division                 ; -8.512  ; -189.553      ;
+; super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk ; -3.188  ; -18.936       ;
+; clock_division:clock_division1|clk_division                                     ; -2.610  ; -21.717       ;
++---------------------------------------------------------------------------------+---------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Slow 1100mV 0C Model Hold Summary                                                                        ;
++---------------------------------------------------------------------------------+--------+---------------+
+; Clock                                                                           ; Slack  ; End Point TNS ;
++---------------------------------------------------------------------------------+--------+---------------+
+; rst                                                                             ; -6.586 ; -863.303      ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -4.574 ; -5610.165     ;
+; router_sensor_NI:NI12|clock_division:clock_division|clk_division                ; -0.645 ; -0.671        ;
+; router_sensor_NI:NI4|clock_division:clock_division|clk_division                 ; -0.562 ; -1.247        ;
+; router_sensor_NI:NI5|clock_division:clock_division|clk_division                 ; -0.292 ; -0.536        ;
+; router_sensor_NI:NI2|clock_division:clock_division|clk_division                 ; -0.146 ; -1.022        ;
+; router_sensor_NI:NI0|clock_division:clock_division|clk_division                 ; -0.053 ; -0.053        ;
+; router_sensor_NI:NI3|clock_division:clock_division|clk_division                 ; -0.032 ; -0.032        ;
+; router_sensor_NI:NI9|clock_division:clock_division|clk_division                 ; -0.010 ; -0.044        ;
+; router_sensor_NI:NI10|clock_division:clock_division|clk_division                ; 0.142  ; 0.000         ;
+; router_sensor_NI:NI1|clock_division:clock_division|clk_division                 ; 0.182  ; 0.000         ;
+; router_sensor_NI:NI14|clock_division:clock_division|clk_division                ; 0.329  ; 0.000         ;
+; router_sensor_NI:NI8|clock_division:clock_division|clk_division                 ; 0.377  ; 0.000         ;
+; router_sensor_NI:NI15|clock_division:clock_division|clk_division                ; 0.379  ; 0.000         ;
+; router_sensor_NI:NI13|clock_division:clock_division|clk_division                ; 0.391  ; 0.000         ;
+; router_sensor_NI:NI11|clock_division:clock_division|clk_division                ; 0.400  ; 0.000         ;
+; router_sensor_NI:NI7|clock_division:clock_division|clk_division                 ; 0.404  ; 0.000         ;
+; router_sensor_NI:NI6|clock_division:clock_division|clk_division                 ; 0.411  ; 0.000         ;
+; clock_division:clock_division1|clk_division                                     ; 0.616  ; 0.000         ;
+; super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.650  ; 0.000         ;
++---------------------------------------------------------------------------------+--------+---------------+
+
+
++---------------------------------------+
+; Slow 1100mV 0C Model Recovery Summary ;
++-------+--------+----------------------+
+; Clock ; Slack  ; End Point TNS        ;
++-------+--------+----------------------+
+; rst   ; -9.220 ; -1748.410            ;
++-------+--------+----------------------+
+
+
++--------------------------------------+
+; Slow 1100mV 0C Model Removal Summary ;
++-------+--------+---------------------+
+; Clock ; Slack  ; End Point TNS       ;
++-------+--------+---------------------+
+; rst   ; -5.702 ; -762.025            ;
++-------+--------+---------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1100mV 0C Model Minimum Pulse Width Summary                                                          ;
++---------------------------------------------------------------------------------+---------+---------------+
+; Clock                                                                           ; Slack   ; End Point TNS ;
++---------------------------------------------------------------------------------+---------+---------------+
+; rst                                                                             ; -6.272  ; -6955.993     ;
+; router_sensor_NI:NI12|clock_division:clock_division|clk_division                ; -0.646  ; -46.559       ;
+; router_sensor_NI:NI4|clock_division:clock_division|clk_division                 ; -0.543  ; -41.155       ;
+; router_sensor_NI:NI1|clock_division:clock_division|clk_division                 ; -0.538  ; -44.559       ;
+; router_sensor_NI:NI0|clock_division:clock_division|clk_division                 ; -0.538  ; -43.702       ;
+; router_sensor_NI:NI2|clock_division:clock_division|clk_division                 ; -0.538  ; -42.934       ;
+; router_sensor_NI:NI5|clock_division:clock_division|clk_division                 ; -0.538  ; -42.705       ;
+; router_sensor_NI:NI6|clock_division:clock_division|clk_division                 ; -0.538  ; -41.784       ;
+; router_sensor_NI:NI10|clock_division:clock_division|clk_division                ; -0.538  ; -41.775       ;
+; router_sensor_NI:NI3|clock_division:clock_division|clk_division                 ; -0.538  ; -41.619       ;
+; router_sensor_NI:NI15|clock_division:clock_division|clk_division                ; -0.538  ; -41.490       ;
+; router_sensor_NI:NI8|clock_division:clock_division|clk_division                 ; -0.538  ; -41.274       ;
+; router_sensor_NI:NI14|clock_division:clock_division|clk_division                ; -0.538  ; -41.196       ;
+; router_sensor_NI:NI9|clock_division:clock_division|clk_division                 ; -0.538  ; -41.146       ;
+; router_sensor_NI:NI13|clock_division:clock_division|clk_division                ; -0.538  ; -40.567       ;
+; router_sensor_NI:NI11|clock_division:clock_division|clk_division                ; -0.538  ; -40.215       ;
+; router_sensor_NI:NI7|clock_division:clock_division|clk_division                 ; -0.538  ; -40.069       ;
+; clock_division:clock_division1|clk_division                                     ; -0.538  ; -8.932        ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; 0.666   ; 0.000         ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 1.857   ; 0.000         ;
+; clk_50MHz                                                                       ; 9.980   ; 0.000         ;
+; super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk ; 270.502 ; 0.000         ;
++---------------------------------------------------------------------------------+---------+---------------+
+
+
+----------------------------------------------
+; Slow 1100mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++----------------------------------------------------------------------------------------------------------+
+; Fast 1100mV 85C Model Setup Summary                                                                      ;
++---------------------------------------------------------------------------------+--------+---------------+
+; Clock                                                                           ; Slack  ; End Point TNS ;
++---------------------------------------------------------------------------------+--------+---------------+
+; rst                                                                             ; -6.566 ; -667.789      ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -5.906 ; -8572.326     ;
+; router_sensor_NI:NI7|clock_division:clock_division|clk_division                 ; -5.158 ; -111.110      ;
+; router_sensor_NI:NI4|clock_division:clock_division|clk_division                 ; -5.137 ; -111.828      ;
+; router_sensor_NI:NI13|clock_division:clock_division|clk_division                ; -5.086 ; -101.533      ;
+; router_sensor_NI:NI11|clock_division:clock_division|clk_division                ; -4.795 ; -129.431      ;
+; router_sensor_NI:NI6|clock_division:clock_division|clk_division                 ; -4.780 ; -90.732       ;
+; router_sensor_NI:NI3|clock_division:clock_division|clk_division                 ; -4.752 ; -110.433      ;
+; router_sensor_NI:NI9|clock_division:clock_division|clk_division                 ; -4.698 ; -69.270       ;
+; router_sensor_NI:NI8|clock_division:clock_division|clk_division                 ; -4.577 ; -93.101       ;
+; router_sensor_NI:NI14|clock_division:clock_division|clk_division                ; -4.572 ; -99.368       ;
+; router_sensor_NI:NI12|clock_division:clock_division|clk_division                ; -4.451 ; -85.817       ;
+; router_sensor_NI:NI10|clock_division:clock_division|clk_division                ; -4.381 ; -83.330       ;
+; router_sensor_NI:NI0|clock_division:clock_division|clk_division                 ; -4.379 ; -85.680       ;
+; router_sensor_NI:NI5|clock_division:clock_division|clk_division                 ; -4.329 ; -77.032       ;
+; router_sensor_NI:NI15|clock_division:clock_division|clk_division                ; -4.237 ; -88.225       ;
+; router_sensor_NI:NI2|clock_division:clock_division|clk_division                 ; -4.120 ; -110.863      ;
+; router_sensor_NI:NI1|clock_division:clock_division|clk_division                 ; -3.831 ; -86.961       ;
+; clock_division:clock_division1|clk_division                                     ; -1.035 ; -8.564        ;
+; super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk ; -0.914 ; -2.718        ;
++---------------------------------------------------------------------------------+--------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Fast 1100mV 85C Model Hold Summary                                                                       ;
++---------------------------------------------------------------------------------+--------+---------------+
+; Clock                                                                           ; Slack  ; End Point TNS ;
++---------------------------------------------------------------------------------+--------+---------------+
+; rst                                                                             ; -3.314 ; -406.400      ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -2.182 ; -1955.972     ;
+; router_sensor_NI:NI4|clock_division:clock_division|clk_division                 ; -0.628 ; -1.941        ;
+; router_sensor_NI:NI5|clock_division:clock_division|clk_division                 ; -0.482 ; -3.919        ;
+; router_sensor_NI:NI12|clock_division:clock_division|clk_division                ; -0.478 ; -1.297        ;
+; router_sensor_NI:NI0|clock_division:clock_division|clk_division                 ; -0.302 ; -0.545        ;
+; router_sensor_NI:NI3|clock_division:clock_division|clk_division                 ; -0.299 ; -2.122        ;
+; router_sensor_NI:NI2|clock_division:clock_division|clk_division                 ; -0.271 ; -2.001        ;
+; router_sensor_NI:NI10|clock_division:clock_division|clk_division                ; -0.113 ; -0.895        ;
+; router_sensor_NI:NI9|clock_division:clock_division|clk_division                 ; -0.091 ; -0.941        ;
+; router_sensor_NI:NI1|clock_division:clock_division|clk_division                 ; -0.051 ; -0.081        ;
+; router_sensor_NI:NI6|clock_division:clock_division|clk_division                 ; 0.001  ; 0.000         ;
+; router_sensor_NI:NI8|clock_division:clock_division|clk_division                 ; 0.119  ; 0.000         ;
+; router_sensor_NI:NI13|clock_division:clock_division|clk_division                ; 0.121  ; 0.000         ;
+; router_sensor_NI:NI14|clock_division:clock_division|clk_division                ; 0.122  ; 0.000         ;
+; router_sensor_NI:NI7|clock_division:clock_division|clk_division                 ; 0.157  ; 0.000         ;
+; router_sensor_NI:NI15|clock_division:clock_division|clk_division                ; 0.165  ; 0.000         ;
+; super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.195  ; 0.000         ;
+; router_sensor_NI:NI11|clock_division:clock_division|clk_division                ; 0.221  ; 0.000         ;
+; clock_division:clock_division1|clk_division                                     ; 0.300  ; 0.000         ;
++---------------------------------------------------------------------------------+--------+---------------+
+
+
++----------------------------------------+
+; Fast 1100mV 85C Model Recovery Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; rst   ; -4.935 ; -824.675              ;
++-------+--------+-----------------------+
+
+
++---------------------------------------+
+; Fast 1100mV 85C Model Removal Summary ;
++-------+--------+----------------------+
+; Clock ; Slack  ; End Point TNS        ;
++-------+--------+----------------------+
+; rst   ; -2.952 ; -399.926             ;
++-------+--------+----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Fast 1100mV 85C Model Minimum Pulse Width Summary                                                         ;
++---------------------------------------------------------------------------------+---------+---------------+
+; Clock                                                                           ; Slack   ; End Point TNS ;
++---------------------------------------------------------------------------------+---------+---------------+
+; rst                                                                             ; -3.298  ; -3082.461     ;
+; router_sensor_NI:NI12|clock_division:clock_division|clk_division                ; -0.261  ; -3.119        ;
+; router_sensor_NI:NI4|clock_division:clock_division|clk_division                 ; -0.191  ; -0.761        ;
+; router_sensor_NI:NI5|clock_division:clock_division|clk_division                 ; -0.189  ; -2.410        ;
+; router_sensor_NI:NI0|clock_division:clock_division|clk_division                 ; -0.181  ; -2.281        ;
+; router_sensor_NI:NI3|clock_division:clock_division|clk_division                 ; -0.107  ; -0.851        ;
+; router_sensor_NI:NI1|clock_division:clock_division|clk_division                 ; -0.099  ; -1.454        ;
+; router_sensor_NI:NI2|clock_division:clock_division|clk_division                 ; -0.094  ; -0.983        ;
+; router_sensor_NI:NI9|clock_division:clock_division|clk_division                 ; -0.069  ; -0.959        ;
+; router_sensor_NI:NI6|clock_division:clock_division|clk_division                 ; -0.066  ; -0.917        ;
+; router_sensor_NI:NI10|clock_division:clock_division|clk_division                ; -0.044  ; -0.343        ;
+; router_sensor_NI:NI15|clock_division:clock_division|clk_division                ; -0.029  ; -0.211        ;
+; router_sensor_NI:NI8|clock_division:clock_division|clk_division                 ; -0.005  ; -0.037        ;
+; router_sensor_NI:NI14|clock_division:clock_division|clk_division                ; 0.016   ; 0.000         ;
+; router_sensor_NI:NI13|clock_division:clock_division|clk_division                ; 0.018   ; 0.000         ;
+; router_sensor_NI:NI7|clock_division:clock_division|clk_division                 ; 0.056   ; 0.000         ;
+; clock_division:clock_division1|clk_division                                     ; 0.062   ; 0.000         ;
+; router_sensor_NI:NI11|clock_division:clock_division|clk_division                ; 0.081   ; 0.000         ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; 0.666   ; 0.000         ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 2.219   ; 0.000         ;
+; clk_50MHz                                                                       ; 9.643   ; 0.000         ;
+; super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk ; 270.887 ; 0.000         ;
++---------------------------------------------------------------------------------+---------+---------------+
+
+
+-----------------------------------------------
+; Fast 1100mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++----------------------------------------------------------------------------------------------------------+
+; Fast 1100mV 0C Model Setup Summary                                                                       ;
++---------------------------------------------------------------------------------+--------+---------------+
+; Clock                                                                           ; Slack  ; End Point TNS ;
++---------------------------------------------------------------------------------+--------+---------------+
+; rst                                                                             ; -5.900 ; -629.441      ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -5.240 ; -7290.968     ;
+; router_sensor_NI:NI7|clock_division:clock_division|clk_division                 ; -4.912 ; -104.449      ;
+; router_sensor_NI:NI4|clock_division:clock_division|clk_division                 ; -4.887 ; -102.518      ;
+; router_sensor_NI:NI13|clock_division:clock_division|clk_division                ; -4.801 ; -95.513       ;
+; router_sensor_NI:NI6|clock_division:clock_division|clk_division                 ; -4.574 ; -84.320       ;
+; router_sensor_NI:NI11|clock_division:clock_division|clk_division                ; -4.573 ; -119.574      ;
+; router_sensor_NI:NI3|clock_division:clock_division|clk_division                 ; -4.506 ; -103.449      ;
+; router_sensor_NI:NI9|clock_division:clock_division|clk_division                 ; -4.464 ; -65.224       ;
+; router_sensor_NI:NI14|clock_division:clock_division|clk_division                ; -4.393 ; -93.273       ;
+; router_sensor_NI:NI8|clock_division:clock_division|clk_division                 ; -4.384 ; -88.088       ;
+; router_sensor_NI:NI12|clock_division:clock_division|clk_division                ; -4.284 ; -79.989       ;
+; router_sensor_NI:NI10|clock_division:clock_division|clk_division                ; -4.205 ; -77.372       ;
+; router_sensor_NI:NI0|clock_division:clock_division|clk_division                 ; -4.196 ; -78.548       ;
+; router_sensor_NI:NI5|clock_division:clock_division|clk_division                 ; -4.180 ; -67.965       ;
+; router_sensor_NI:NI15|clock_division:clock_division|clk_division                ; -4.132 ; -84.113       ;
+; router_sensor_NI:NI2|clock_division:clock_division|clk_division                 ; -3.988 ; -103.701      ;
+; router_sensor_NI:NI1|clock_division:clock_division|clk_division                 ; -3.727 ; -79.604       ;
+; clock_division:clock_division1|clk_division                                     ; -0.851 ; -6.784        ;
+; super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk ; -0.710 ; -0.710        ;
++---------------------------------------------------------------------------------+--------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Fast 1100mV 0C Model Hold Summary                                                                        ;
++---------------------------------------------------------------------------------+--------+---------------+
+; Clock                                                                           ; Slack  ; End Point TNS ;
++---------------------------------------------------------------------------------+--------+---------------+
+; rst                                                                             ; -2.992 ; -373.589      ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -2.203 ; -2209.456     ;
+; router_sensor_NI:NI4|clock_division:clock_division|clk_division                 ; -0.502 ; -1.464        ;
+; router_sensor_NI:NI5|clock_division:clock_division|clk_division                 ; -0.375 ; -3.208        ;
+; router_sensor_NI:NI12|clock_division:clock_division|clk_division                ; -0.370 ; -0.718        ;
+; router_sensor_NI:NI3|clock_division:clock_division|clk_division                 ; -0.270 ; -1.778        ;
+; router_sensor_NI:NI0|clock_division:clock_division|clk_division                 ; -0.242 ; -0.401        ;
+; router_sensor_NI:NI2|clock_division:clock_division|clk_division                 ; -0.204 ; -1.472        ;
+; router_sensor_NI:NI10|clock_division:clock_division|clk_division                ; -0.076 ; -0.608        ;
+; router_sensor_NI:NI1|clock_division:clock_division|clk_division                 ; -0.057 ; -0.077        ;
+; router_sensor_NI:NI9|clock_division:clock_division|clk_division                 ; -0.048 ; -0.380        ;
+; router_sensor_NI:NI6|clock_division:clock_division|clk_division                 ; 0.013  ; 0.000         ;
+; router_sensor_NI:NI8|clock_division:clock_division|clk_division                 ; 0.119  ; 0.000         ;
+; router_sensor_NI:NI13|clock_division:clock_division|clk_division                ; 0.124  ; 0.000         ;
+; router_sensor_NI:NI14|clock_division:clock_division|clk_division                ; 0.125  ; 0.000         ;
+; super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.136  ; 0.000         ;
+; router_sensor_NI:NI15|clock_division:clock_division|clk_division                ; 0.155  ; 0.000         ;
+; router_sensor_NI:NI7|clock_division:clock_division|clk_division                 ; 0.155  ; 0.000         ;
+; router_sensor_NI:NI11|clock_division:clock_division|clk_division                ; 0.207  ; 0.000         ;
+; clock_division:clock_division1|clk_division                                     ; 0.275  ; 0.000         ;
++---------------------------------------------------------------------------------+--------+---------------+
+
+
++---------------------------------------+
+; Fast 1100mV 0C Model Recovery Summary ;
++-------+--------+----------------------+
+; Clock ; Slack  ; End Point TNS        ;
++-------+--------+----------------------+
+; rst   ; -4.560 ; -772.956             ;
++-------+--------+----------------------+
+
+
++--------------------------------------+
+; Fast 1100mV 0C Model Removal Summary ;
++-------+--------+---------------------+
+; Clock ; Slack  ; End Point TNS       ;
++-------+--------+---------------------+
+; rst   ; -2.676 ; -361.281            ;
++-------+--------+---------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Fast 1100mV 0C Model Minimum Pulse Width Summary                                                          ;
++---------------------------------------------------------------------------------+---------+---------------+
+; Clock                                                                           ; Slack   ; End Point TNS ;
++---------------------------------------------------------------------------------+---------+---------------+
+; rst                                                                             ; -2.964  ; -2687.735     ;
+; router_sensor_NI:NI12|clock_division:clock_division|clk_division                ; -0.183  ; -2.183        ;
+; router_sensor_NI:NI4|clock_division:clock_division|clk_division                 ; -0.127  ; -0.505        ;
+; router_sensor_NI:NI0|clock_division:clock_division|clk_division                 ; -0.126  ; -1.292        ;
+; router_sensor_NI:NI5|clock_division:clock_division|clk_division                 ; -0.124  ; -1.308        ;
+; router_sensor_NI:NI3|clock_division:clock_division|clk_division                 ; -0.094  ; -0.752        ;
+; router_sensor_NI:NI2|clock_division:clock_division|clk_division                 ; -0.061  ; -0.583        ;
+; router_sensor_NI:NI1|clock_division:clock_division|clk_division                 ; -0.047  ; -0.568        ;
+; router_sensor_NI:NI6|clock_division:clock_division|clk_division                 ; -0.042  ; -0.567        ;
+; router_sensor_NI:NI9|clock_division:clock_division|clk_division                 ; -0.028  ; -0.371        ;
+; router_sensor_NI:NI10|clock_division:clock_division|clk_division                ; -0.019  ; -0.140        ;
+; router_sensor_NI:NI15|clock_division:clock_division|clk_division                ; -0.007  ; -0.037        ;
+; router_sensor_NI:NI8|clock_division:clock_division|clk_division                 ; 0.016   ; 0.000         ;
+; router_sensor_NI:NI14|clock_division:clock_division|clk_division                ; 0.027   ; 0.000         ;
+; router_sensor_NI:NI13|clock_division:clock_division|clk_division                ; 0.033   ; 0.000         ;
+; clock_division:clock_division1|clk_division                                     ; 0.057   ; 0.000         ;
+; router_sensor_NI:NI7|clock_division:clock_division|clk_division                 ; 0.076   ; 0.000         ;
+; router_sensor_NI:NI11|clock_division:clock_division|clk_division                ; 0.084   ; 0.000         ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; 0.666   ; 0.000         ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 2.221   ; 0.000         ;
+; clk_50MHz                                                                       ; 9.632   ; 0.000         ;
+; super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk ; 270.880 ; 0.000         ;
++---------------------------------------------------------------------------------+---------+---------------+
+
+
+----------------------------------------------
+; Fast 1100mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                                                                    ;
++----------------------------------------------------------------------------------+------------+-----------+-----------+----------+---------------------+
+; Clock                                                                            ; Setup      ; Hold      ; Recovery  ; Removal  ; Minimum Pulse Width ;
++----------------------------------------------------------------------------------+------------+-----------+-----------+----------+---------------------+
+; Worst-case Slack                                                                 ; -11.700    ; -6.638    ; -9.258    ; -5.702   ; -6.324              ;
+;  clk_50MHz                                                                       ; N/A        ; N/A       ; N/A       ; N/A      ; 9.632               ;
+;  clock_division:clock_division1|clk_division                                     ; -2.685     ; 0.275     ; N/A       ; N/A      ; -0.538              ;
+;  router_sensor_NI:NI0|clock_division:clock_division|clk_division                 ; -9.052     ; -0.302    ; N/A       ; N/A      ; -0.538              ;
+;  router_sensor_NI:NI10|clock_division:clock_division|clk_division                ; -9.093     ; -0.113    ; N/A       ; N/A      ; -0.538              ;
+;  router_sensor_NI:NI11|clock_division:clock_division|clk_division                ; -9.664     ; 0.207     ; N/A       ; N/A      ; -0.538              ;
+;  router_sensor_NI:NI12|clock_division:clock_division|clk_division                ; -9.257     ; -0.768    ; N/A       ; N/A      ; -0.649              ;
+;  router_sensor_NI:NI13|clock_division:clock_division|clk_division                ; -9.912     ; 0.121     ; N/A       ; N/A      ; -0.538              ;
+;  router_sensor_NI:NI14|clock_division:clock_division|clk_division                ; -9.612     ; 0.122     ; N/A       ; N/A      ; -0.538              ;
+;  router_sensor_NI:NI15|clock_division:clock_division|clk_division                ; -9.224     ; 0.155     ; N/A       ; N/A      ; -0.538              ;
+;  router_sensor_NI:NI1|clock_division:clock_division|clk_division                 ; -8.512     ; -0.057    ; N/A       ; N/A      ; -0.538              ;
+;  router_sensor_NI:NI2|clock_division:clock_division|clk_division                 ; -8.768     ; -0.271    ; N/A       ; N/A      ; -0.538              ;
+;  router_sensor_NI:NI3|clock_division:clock_division|clk_division                 ; -9.772     ; -0.299    ; N/A       ; N/A      ; -0.538              ;
+;  router_sensor_NI:NI4|clock_division:clock_division|clk_division                 ; -10.241    ; -0.756    ; N/A       ; N/A      ; -0.562              ;
+;  router_sensor_NI:NI5|clock_division:clock_division|clk_division                 ; -9.184     ; -0.482    ; N/A       ; N/A      ; -0.538              ;
+;  router_sensor_NI:NI6|clock_division:clock_division|clk_division                 ; -9.778     ; 0.001     ; N/A       ; N/A      ; -0.538              ;
+;  router_sensor_NI:NI7|clock_division:clock_division|clk_division                 ; -10.428    ; 0.155     ; N/A       ; N/A      ; -0.538              ;
+;  router_sensor_NI:NI8|clock_division:clock_division|clk_division                 ; -9.522     ; 0.119     ; N/A       ; N/A      ; -0.538              ;
+;  router_sensor_NI:NI9|clock_division:clock_division|clk_division                 ; -9.630     ; -0.091    ; N/A       ; N/A      ; -0.538              ;
+;  rst                                                                             ; -11.700    ; -6.638    ; -9.258    ; -5.702   ; -6.324              ;
+;  super_pll|super_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; N/A        ; N/A       ; N/A       ; N/A      ; 0.666               ;
+;  super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -10.043    ; -4.574    ; N/A       ; N/A      ; 1.857               ;
+;  super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk ; -3.203     ; 0.136     ; N/A       ; N/A      ; 270.502             ;
+; Design-wide TNS                                                                  ; -17886.083 ; -6477.073 ; -1748.41  ; -762.025 ; -7637.674           ;
+;  clk_50MHz                                                                       ; N/A        ; N/A       ; N/A       ; N/A      ; 0.000               ;
+;  clock_division:clock_division1|clk_division                                     ; -22.811    ; 0.000     ; N/A       ; N/A      ; -8.932              ;
+;  router_sensor_NI:NI0|clock_division:clock_division|clk_division                 ; -193.973   ; -0.545    ; N/A       ; N/A      ; -43.938             ;
+;  router_sensor_NI:NI10|clock_division:clock_division|clk_division                ; -182.706   ; -0.895    ; N/A       ; N/A      ; -41.915             ;
+;  router_sensor_NI:NI11|clock_division:clock_division|clk_division                ; -251.512   ; 0.000     ; N/A       ; N/A      ; -40.311             ;
+;  router_sensor_NI:NI12|clock_division:clock_division|clk_division                ; -188.008   ; -1.297    ; N/A       ; N/A      ; -46.675             ;
+;  router_sensor_NI:NI13|clock_division:clock_division|clk_division                ; -214.680   ; 0.000     ; N/A       ; N/A      ; -40.652             ;
+;  router_sensor_NI:NI14|clock_division:clock_division|clk_division                ; -206.000   ; 0.000     ; N/A       ; N/A      ; -41.312             ;
+;  router_sensor_NI:NI15|clock_division:clock_division|clk_division                ; -192.048   ; 0.000     ; N/A       ; N/A      ; -41.919             ;
+;  router_sensor_NI:NI1|clock_division:clock_division|clk_division                 ; -193.351   ; -0.081    ; N/A       ; N/A      ; -45.314             ;
+;  router_sensor_NI:NI2|clock_division:clock_division|clk_division                 ; -223.418   ; -2.001    ; N/A       ; N/A      ; -43.063             ;
+;  router_sensor_NI:NI3|clock_division:clock_division|clk_division                 ; -227.684   ; -2.122    ; N/A       ; N/A      ; -41.702             ;
+;  router_sensor_NI:NI4|clock_division:clock_division|clk_division                 ; -227.020   ; -2.016    ; N/A       ; N/A      ; -41.469             ;
+;  router_sensor_NI:NI5|clock_division:clock_division|clk_division                 ; -181.814   ; -3.919    ; N/A       ; N/A      ; -43.304             ;
+;  router_sensor_NI:NI6|clock_division:clock_division|clk_division                 ; -197.092   ; 0.000     ; N/A       ; N/A      ; -41.991             ;
+;  router_sensor_NI:NI7|clock_division:clock_division|clk_division                 ; -224.614   ; 0.000     ; N/A       ; N/A      ; -40.692             ;
+;  router_sensor_NI:NI8|clock_division:clock_division|clk_division                 ; -200.173   ; 0.000     ; N/A       ; N/A      ; -41.289             ;
+;  router_sensor_NI:NI9|clock_division:clock_division|clk_division                 ; -169.900   ; -0.941    ; N/A       ; N/A      ; -42.251             ;
+;  rst                                                                             ; -1403.239  ; -863.303  ; -1748.410 ; -762.025 ; -6955.993           ;
+;  super_pll|super_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; N/A        ; N/A       ; N/A       ; N/A      ; 0.000               ;
+;  super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -13181.133 ; -5610.165 ; N/A       ; N/A      ; 0.000               ;
+;  super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk ; -20.530    ; 0.000     ; N/A       ; N/A      ; 0.000               ;
++----------------------------------------------------------------------------------+------------+-----------+-----------+----------+---------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                          ;
++-----+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++-----+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; RXD ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++-----+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++--------------------------------------------------------------+
+; Input Transition Times                                       ;
++-----------+--------------+-----------------+-----------------+
+; Pin       ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-----------+--------------+-----------------+-----------------+
+; clk_50MHz ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; rst       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-----------+--------------+-----------------+-----------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1100mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ;
++-----+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++-----+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; RXD ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.88e-07 V                   ; 2.35 V              ; -0.0185 V           ; 0.153 V                              ; 0.099 V                              ; 4.6e-10 s                   ; 4.48e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.88e-07 V                  ; 2.35 V             ; -0.0185 V          ; 0.153 V                             ; 0.099 V                             ; 4.6e-10 s                  ; 4.48e-10 s                 ; No                        ; Yes                       ;
++-----+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1100mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ;
++-----+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++-----+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; RXD ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.27e-05 V                   ; 2.34 V              ; -0.0089 V           ; 0.206 V                              ; 0.058 V                              ; 4.97e-10 s                  ; 5.13e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.27e-05 V                  ; 2.34 V             ; -0.0089 V          ; 0.206 V                             ; 0.058 V                             ; 4.97e-10 s                 ; 5.13e-10 s                 ; Yes                       ; Yes                       ;
++-----+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1100mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ;
++-----+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++-----+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; RXD ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
++-----+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1100mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ;
++-----+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++-----+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; RXD ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
++-----+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                                                                                                               ;
++---------------------------------------------------------------------------------+---------------------------------------------------------------------------------+----------+----------+----------+----------+
+; From Clock                                                                      ; To Clock                                                                        ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++---------------------------------------------------------------------------------+---------------------------------------------------------------------------------+----------+----------+----------+----------+
+; clock_division:clock_division1|clk_division                                     ; clock_division:clock_division1|clk_division                                     ; 0        ; 0        ; 0        ; 16       ;
+; clock_division:clock_division1|clk_division                                     ; router_sensor_NI:NI0|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 0        ; 8        ;
+; router_sensor_NI:NI0|clock_division:clock_division|clk_division                 ; router_sensor_NI:NI0|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 0        ; 397      ;
+; rst                                                                             ; router_sensor_NI:NI0|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 76       ; 76       ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; router_sensor_NI:NI0|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 24       ; 0        ;
+; clock_division:clock_division1|clk_division                                     ; router_sensor_NI:NI1|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 0        ; 8        ;
+; router_sensor_NI:NI1|clock_division:clock_division|clk_division                 ; router_sensor_NI:NI1|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 0        ; 397      ;
+; rst                                                                             ; router_sensor_NI:NI1|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 76       ; 76       ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; router_sensor_NI:NI1|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 24       ; 0        ;
+; clock_division:clock_division1|clk_division                                     ; router_sensor_NI:NI2|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 0        ; 8        ;
+; router_sensor_NI:NI2|clock_division:clock_division|clk_division                 ; router_sensor_NI:NI2|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 0        ; 397      ;
+; rst                                                                             ; router_sensor_NI:NI2|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 76       ; 76       ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; router_sensor_NI:NI2|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 24       ; 0        ;
+; clock_division:clock_division1|clk_division                                     ; router_sensor_NI:NI3|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 0        ; 8        ;
+; router_sensor_NI:NI3|clock_division:clock_division|clk_division                 ; router_sensor_NI:NI3|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 0        ; 397      ;
+; rst                                                                             ; router_sensor_NI:NI3|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 76       ; 76       ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; router_sensor_NI:NI3|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 24       ; 0        ;
+; clock_division:clock_division1|clk_division                                     ; router_sensor_NI:NI4|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 0        ; 8        ;
+; router_sensor_NI:NI4|clock_division:clock_division|clk_division                 ; router_sensor_NI:NI4|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 0        ; 397      ;
+; rst                                                                             ; router_sensor_NI:NI4|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 76       ; 76       ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; router_sensor_NI:NI4|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 24       ; 0        ;
+; clock_division:clock_division1|clk_division                                     ; router_sensor_NI:NI5|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 0        ; 8        ;
+; router_sensor_NI:NI5|clock_division:clock_division|clk_division                 ; router_sensor_NI:NI5|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 0        ; 397      ;
+; rst                                                                             ; router_sensor_NI:NI5|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 76       ; 76       ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; router_sensor_NI:NI5|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 24       ; 0        ;
+; clock_division:clock_division1|clk_division                                     ; router_sensor_NI:NI6|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 0        ; 8        ;
+; router_sensor_NI:NI6|clock_division:clock_division|clk_division                 ; router_sensor_NI:NI6|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 0        ; 397      ;
+; rst                                                                             ; router_sensor_NI:NI6|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 76       ; 76       ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; router_sensor_NI:NI6|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 24       ; 0        ;
+; clock_division:clock_division1|clk_division                                     ; router_sensor_NI:NI7|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 0        ; 8        ;
+; router_sensor_NI:NI7|clock_division:clock_division|clk_division                 ; router_sensor_NI:NI7|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 0        ; 397      ;
+; rst                                                                             ; router_sensor_NI:NI7|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 76       ; 76       ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; router_sensor_NI:NI7|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 24       ; 0        ;
+; clock_division:clock_division1|clk_division                                     ; router_sensor_NI:NI8|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 0        ; 8        ;
+; router_sensor_NI:NI8|clock_division:clock_division|clk_division                 ; router_sensor_NI:NI8|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 0        ; 397      ;
+; rst                                                                             ; router_sensor_NI:NI8|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 76       ; 76       ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; router_sensor_NI:NI8|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 24       ; 0        ;
+; clock_division:clock_division1|clk_division                                     ; router_sensor_NI:NI9|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 0        ; 8        ;
+; router_sensor_NI:NI9|clock_division:clock_division|clk_division                 ; router_sensor_NI:NI9|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 0        ; 397      ;
+; rst                                                                             ; router_sensor_NI:NI9|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 76       ; 76       ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; router_sensor_NI:NI9|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 24       ; 0        ;
+; clock_division:clock_division1|clk_division                                     ; router_sensor_NI:NI10|clock_division:clock_division|clk_division                ; 0        ; 0        ; 0        ; 8        ;
+; router_sensor_NI:NI10|clock_division:clock_division|clk_division                ; router_sensor_NI:NI10|clock_division:clock_division|clk_division                ; 0        ; 0        ; 0        ; 397      ;
+; rst                                                                             ; router_sensor_NI:NI10|clock_division:clock_division|clk_division                ; 0        ; 0        ; 76       ; 76       ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; router_sensor_NI:NI10|clock_division:clock_division|clk_division                ; 0        ; 0        ; 24       ; 0        ;
+; clock_division:clock_division1|clk_division                                     ; router_sensor_NI:NI11|clock_division:clock_division|clk_division                ; 0        ; 0        ; 0        ; 8        ;
+; router_sensor_NI:NI11|clock_division:clock_division|clk_division                ; router_sensor_NI:NI11|clock_division:clock_division|clk_division                ; 0        ; 0        ; 0        ; 397      ;
+; rst                                                                             ; router_sensor_NI:NI11|clock_division:clock_division|clk_division                ; 0        ; 0        ; 76       ; 76       ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; router_sensor_NI:NI11|clock_division:clock_division|clk_division                ; 0        ; 0        ; 24       ; 0        ;
+; clock_division:clock_division1|clk_division                                     ; router_sensor_NI:NI12|clock_division:clock_division|clk_division                ; 0        ; 0        ; 0        ; 8        ;
+; router_sensor_NI:NI12|clock_division:clock_division|clk_division                ; router_sensor_NI:NI12|clock_division:clock_division|clk_division                ; 0        ; 0        ; 0        ; 397      ;
+; rst                                                                             ; router_sensor_NI:NI12|clock_division:clock_division|clk_division                ; 0        ; 0        ; 76       ; 76       ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; router_sensor_NI:NI12|clock_division:clock_division|clk_division                ; 0        ; 0        ; 24       ; 0        ;
+; clock_division:clock_division1|clk_division                                     ; router_sensor_NI:NI13|clock_division:clock_division|clk_division                ; 0        ; 0        ; 0        ; 8        ;
+; router_sensor_NI:NI13|clock_division:clock_division|clk_division                ; router_sensor_NI:NI13|clock_division:clock_division|clk_division                ; 0        ; 0        ; 0        ; 397      ;
+; rst                                                                             ; router_sensor_NI:NI13|clock_division:clock_division|clk_division                ; 0        ; 0        ; 76       ; 76       ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; router_sensor_NI:NI13|clock_division:clock_division|clk_division                ; 0        ; 0        ; 24       ; 0        ;
+; clock_division:clock_division1|clk_division                                     ; router_sensor_NI:NI14|clock_division:clock_division|clk_division                ; 0        ; 0        ; 0        ; 8        ;
+; router_sensor_NI:NI14|clock_division:clock_division|clk_division                ; router_sensor_NI:NI14|clock_division:clock_division|clk_division                ; 0        ; 0        ; 0        ; 397      ;
+; rst                                                                             ; router_sensor_NI:NI14|clock_division:clock_division|clk_division                ; 0        ; 0        ; 76       ; 76       ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; router_sensor_NI:NI14|clock_division:clock_division|clk_division                ; 0        ; 0        ; 24       ; 0        ;
+; clock_division:clock_division1|clk_division                                     ; router_sensor_NI:NI15|clock_division:clock_division|clk_division                ; 0        ; 0        ; 0        ; 8        ;
+; router_sensor_NI:NI15|clock_division:clock_division|clk_division                ; router_sensor_NI:NI15|clock_division:clock_division|clk_division                ; 0        ; 0        ; 0        ; 397      ;
+; rst                                                                             ; router_sensor_NI:NI15|clock_division:clock_division|clk_division                ; 0        ; 0        ; 76       ; 76       ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; router_sensor_NI:NI15|clock_division:clock_division|clk_division                ; 0        ; 0        ; 24       ; 0        ;
+; rst                                                                             ; rst                                                                             ; 448      ; 448      ; 464      ; 464      ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; rst                                                                             ; 448      ; 0        ; 464      ; 0        ;
+; clock_division:clock_division1|clk_division                                     ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 1        ; 1        ; 0        ; 0        ;
+; router_sensor_NI:NI0|clock_division:clock_division|clk_division                 ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 21       ; 567      ; 0        ; 0        ;
+; router_sensor_NI:NI1|clock_division:clock_division|clk_division                 ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 21       ; 567      ; 0        ; 0        ;
+; router_sensor_NI:NI2|clock_division:clock_division|clk_division                 ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 21       ; 567      ; 0        ; 0        ;
+; router_sensor_NI:NI3|clock_division:clock_division|clk_division                 ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 21       ; 567      ; 0        ; 0        ;
+; router_sensor_NI:NI4|clock_division:clock_division|clk_division                 ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 21       ; 567      ; 0        ; 0        ;
+; router_sensor_NI:NI5|clock_division:clock_division|clk_division                 ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 21       ; 567      ; 0        ; 0        ;
+; router_sensor_NI:NI6|clock_division:clock_division|clk_division                 ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 21       ; 567      ; 0        ; 0        ;
+; router_sensor_NI:NI7|clock_division:clock_division|clk_division                 ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 21       ; 567      ; 0        ; 0        ;
+; router_sensor_NI:NI8|clock_division:clock_division|clk_division                 ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 21       ; 567      ; 0        ; 0        ;
+; router_sensor_NI:NI9|clock_division:clock_division|clk_division                 ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 21       ; 567      ; 0        ; 0        ;
+; router_sensor_NI:NI10|clock_division:clock_division|clk_division                ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 21       ; 567      ; 0        ; 0        ;
+; router_sensor_NI:NI11|clock_division:clock_division|clk_division                ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 21       ; 567      ; 0        ; 0        ;
+; router_sensor_NI:NI12|clock_division:clock_division|clk_division                ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 21       ; 567      ; 0        ; 0        ;
+; router_sensor_NI:NI13|clock_division:clock_division|clk_division                ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 21       ; 567      ; 0        ; 0        ;
+; router_sensor_NI:NI14|clock_division:clock_division|clk_division                ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 21       ; 567      ; 0        ; 0        ;
+; router_sensor_NI:NI15|clock_division:clock_division|clk_division                ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 21       ; 567      ; 0        ; 0        ;
+; rst                                                                             ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 7580     ; 7612     ; 0        ; 0        ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 1701597  ; 0        ; 0        ; 0        ;
+; super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 429      ; 0        ; 0        ; 0        ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk ; 35       ; 0        ; 0        ; 0        ;
+; super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk ; super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk ; 277      ; 0        ; 0        ; 0        ;
++---------------------------------------------------------------------------------+---------------------------------------------------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                                                                                                                ;
++---------------------------------------------------------------------------------+---------------------------------------------------------------------------------+----------+----------+----------+----------+
+; From Clock                                                                      ; To Clock                                                                        ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++---------------------------------------------------------------------------------+---------------------------------------------------------------------------------+----------+----------+----------+----------+
+; clock_division:clock_division1|clk_division                                     ; clock_division:clock_division1|clk_division                                     ; 0        ; 0        ; 0        ; 16       ;
+; clock_division:clock_division1|clk_division                                     ; router_sensor_NI:NI0|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 0        ; 8        ;
+; router_sensor_NI:NI0|clock_division:clock_division|clk_division                 ; router_sensor_NI:NI0|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 0        ; 397      ;
+; rst                                                                             ; router_sensor_NI:NI0|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 76       ; 76       ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; router_sensor_NI:NI0|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 24       ; 0        ;
+; clock_division:clock_division1|clk_division                                     ; router_sensor_NI:NI1|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 0        ; 8        ;
+; router_sensor_NI:NI1|clock_division:clock_division|clk_division                 ; router_sensor_NI:NI1|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 0        ; 397      ;
+; rst                                                                             ; router_sensor_NI:NI1|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 76       ; 76       ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; router_sensor_NI:NI1|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 24       ; 0        ;
+; clock_division:clock_division1|clk_division                                     ; router_sensor_NI:NI2|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 0        ; 8        ;
+; router_sensor_NI:NI2|clock_division:clock_division|clk_division                 ; router_sensor_NI:NI2|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 0        ; 397      ;
+; rst                                                                             ; router_sensor_NI:NI2|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 76       ; 76       ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; router_sensor_NI:NI2|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 24       ; 0        ;
+; clock_division:clock_division1|clk_division                                     ; router_sensor_NI:NI3|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 0        ; 8        ;
+; router_sensor_NI:NI3|clock_division:clock_division|clk_division                 ; router_sensor_NI:NI3|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 0        ; 397      ;
+; rst                                                                             ; router_sensor_NI:NI3|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 76       ; 76       ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; router_sensor_NI:NI3|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 24       ; 0        ;
+; clock_division:clock_division1|clk_division                                     ; router_sensor_NI:NI4|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 0        ; 8        ;
+; router_sensor_NI:NI4|clock_division:clock_division|clk_division                 ; router_sensor_NI:NI4|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 0        ; 397      ;
+; rst                                                                             ; router_sensor_NI:NI4|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 76       ; 76       ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; router_sensor_NI:NI4|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 24       ; 0        ;
+; clock_division:clock_division1|clk_division                                     ; router_sensor_NI:NI5|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 0        ; 8        ;
+; router_sensor_NI:NI5|clock_division:clock_division|clk_division                 ; router_sensor_NI:NI5|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 0        ; 397      ;
+; rst                                                                             ; router_sensor_NI:NI5|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 76       ; 76       ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; router_sensor_NI:NI5|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 24       ; 0        ;
+; clock_division:clock_division1|clk_division                                     ; router_sensor_NI:NI6|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 0        ; 8        ;
+; router_sensor_NI:NI6|clock_division:clock_division|clk_division                 ; router_sensor_NI:NI6|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 0        ; 397      ;
+; rst                                                                             ; router_sensor_NI:NI6|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 76       ; 76       ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; router_sensor_NI:NI6|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 24       ; 0        ;
+; clock_division:clock_division1|clk_division                                     ; router_sensor_NI:NI7|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 0        ; 8        ;
+; router_sensor_NI:NI7|clock_division:clock_division|clk_division                 ; router_sensor_NI:NI7|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 0        ; 397      ;
+; rst                                                                             ; router_sensor_NI:NI7|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 76       ; 76       ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; router_sensor_NI:NI7|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 24       ; 0        ;
+; clock_division:clock_division1|clk_division                                     ; router_sensor_NI:NI8|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 0        ; 8        ;
+; router_sensor_NI:NI8|clock_division:clock_division|clk_division                 ; router_sensor_NI:NI8|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 0        ; 397      ;
+; rst                                                                             ; router_sensor_NI:NI8|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 76       ; 76       ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; router_sensor_NI:NI8|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 24       ; 0        ;
+; clock_division:clock_division1|clk_division                                     ; router_sensor_NI:NI9|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 0        ; 8        ;
+; router_sensor_NI:NI9|clock_division:clock_division|clk_division                 ; router_sensor_NI:NI9|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 0        ; 397      ;
+; rst                                                                             ; router_sensor_NI:NI9|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 76       ; 76       ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; router_sensor_NI:NI9|clock_division:clock_division|clk_division                 ; 0        ; 0        ; 24       ; 0        ;
+; clock_division:clock_division1|clk_division                                     ; router_sensor_NI:NI10|clock_division:clock_division|clk_division                ; 0        ; 0        ; 0        ; 8        ;
+; router_sensor_NI:NI10|clock_division:clock_division|clk_division                ; router_sensor_NI:NI10|clock_division:clock_division|clk_division                ; 0        ; 0        ; 0        ; 397      ;
+; rst                                                                             ; router_sensor_NI:NI10|clock_division:clock_division|clk_division                ; 0        ; 0        ; 76       ; 76       ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; router_sensor_NI:NI10|clock_division:clock_division|clk_division                ; 0        ; 0        ; 24       ; 0        ;
+; clock_division:clock_division1|clk_division                                     ; router_sensor_NI:NI11|clock_division:clock_division|clk_division                ; 0        ; 0        ; 0        ; 8        ;
+; router_sensor_NI:NI11|clock_division:clock_division|clk_division                ; router_sensor_NI:NI11|clock_division:clock_division|clk_division                ; 0        ; 0        ; 0        ; 397      ;
+; rst                                                                             ; router_sensor_NI:NI11|clock_division:clock_division|clk_division                ; 0        ; 0        ; 76       ; 76       ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; router_sensor_NI:NI11|clock_division:clock_division|clk_division                ; 0        ; 0        ; 24       ; 0        ;
+; clock_division:clock_division1|clk_division                                     ; router_sensor_NI:NI12|clock_division:clock_division|clk_division                ; 0        ; 0        ; 0        ; 8        ;
+; router_sensor_NI:NI12|clock_division:clock_division|clk_division                ; router_sensor_NI:NI12|clock_division:clock_division|clk_division                ; 0        ; 0        ; 0        ; 397      ;
+; rst                                                                             ; router_sensor_NI:NI12|clock_division:clock_division|clk_division                ; 0        ; 0        ; 76       ; 76       ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; router_sensor_NI:NI12|clock_division:clock_division|clk_division                ; 0        ; 0        ; 24       ; 0        ;
+; clock_division:clock_division1|clk_division                                     ; router_sensor_NI:NI13|clock_division:clock_division|clk_division                ; 0        ; 0        ; 0        ; 8        ;
+; router_sensor_NI:NI13|clock_division:clock_division|clk_division                ; router_sensor_NI:NI13|clock_division:clock_division|clk_division                ; 0        ; 0        ; 0        ; 397      ;
+; rst                                                                             ; router_sensor_NI:NI13|clock_division:clock_division|clk_division                ; 0        ; 0        ; 76       ; 76       ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; router_sensor_NI:NI13|clock_division:clock_division|clk_division                ; 0        ; 0        ; 24       ; 0        ;
+; clock_division:clock_division1|clk_division                                     ; router_sensor_NI:NI14|clock_division:clock_division|clk_division                ; 0        ; 0        ; 0        ; 8        ;
+; router_sensor_NI:NI14|clock_division:clock_division|clk_division                ; router_sensor_NI:NI14|clock_division:clock_division|clk_division                ; 0        ; 0        ; 0        ; 397      ;
+; rst                                                                             ; router_sensor_NI:NI14|clock_division:clock_division|clk_division                ; 0        ; 0        ; 76       ; 76       ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; router_sensor_NI:NI14|clock_division:clock_division|clk_division                ; 0        ; 0        ; 24       ; 0        ;
+; clock_division:clock_division1|clk_division                                     ; router_sensor_NI:NI15|clock_division:clock_division|clk_division                ; 0        ; 0        ; 0        ; 8        ;
+; router_sensor_NI:NI15|clock_division:clock_division|clk_division                ; router_sensor_NI:NI15|clock_division:clock_division|clk_division                ; 0        ; 0        ; 0        ; 397      ;
+; rst                                                                             ; router_sensor_NI:NI15|clock_division:clock_division|clk_division                ; 0        ; 0        ; 76       ; 76       ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; router_sensor_NI:NI15|clock_division:clock_division|clk_division                ; 0        ; 0        ; 24       ; 0        ;
+; rst                                                                             ; rst                                                                             ; 448      ; 448      ; 464      ; 464      ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; rst                                                                             ; 448      ; 0        ; 464      ; 0        ;
+; clock_division:clock_division1|clk_division                                     ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 1        ; 1        ; 0        ; 0        ;
+; router_sensor_NI:NI0|clock_division:clock_division|clk_division                 ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 21       ; 567      ; 0        ; 0        ;
+; router_sensor_NI:NI1|clock_division:clock_division|clk_division                 ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 21       ; 567      ; 0        ; 0        ;
+; router_sensor_NI:NI2|clock_division:clock_division|clk_division                 ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 21       ; 567      ; 0        ; 0        ;
+; router_sensor_NI:NI3|clock_division:clock_division|clk_division                 ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 21       ; 567      ; 0        ; 0        ;
+; router_sensor_NI:NI4|clock_division:clock_division|clk_division                 ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 21       ; 567      ; 0        ; 0        ;
+; router_sensor_NI:NI5|clock_division:clock_division|clk_division                 ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 21       ; 567      ; 0        ; 0        ;
+; router_sensor_NI:NI6|clock_division:clock_division|clk_division                 ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 21       ; 567      ; 0        ; 0        ;
+; router_sensor_NI:NI7|clock_division:clock_division|clk_division                 ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 21       ; 567      ; 0        ; 0        ;
+; router_sensor_NI:NI8|clock_division:clock_division|clk_division                 ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 21       ; 567      ; 0        ; 0        ;
+; router_sensor_NI:NI9|clock_division:clock_division|clk_division                 ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 21       ; 567      ; 0        ; 0        ;
+; router_sensor_NI:NI10|clock_division:clock_division|clk_division                ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 21       ; 567      ; 0        ; 0        ;
+; router_sensor_NI:NI11|clock_division:clock_division|clk_division                ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 21       ; 567      ; 0        ; 0        ;
+; router_sensor_NI:NI12|clock_division:clock_division|clk_division                ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 21       ; 567      ; 0        ; 0        ;
+; router_sensor_NI:NI13|clock_division:clock_division|clk_division                ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 21       ; 567      ; 0        ; 0        ;
+; router_sensor_NI:NI14|clock_division:clock_division|clk_division                ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 21       ; 567      ; 0        ; 0        ;
+; router_sensor_NI:NI15|clock_division:clock_division|clk_division                ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 21       ; 567      ; 0        ; 0        ;
+; rst                                                                             ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 7580     ; 7612     ; 0        ; 0        ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 1701597  ; 0        ; 0        ; 0        ;
+; super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 429      ; 0        ; 0        ; 0        ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk ; 35       ; 0        ; 0        ; 0        ;
+; super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk ; super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk ; 277      ; 0        ; 0        ; 0        ;
++---------------------------------------------------------------------------------+---------------------------------------------------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Recovery Transfers                                                                                                                     ;
++---------------------------------------------------------------------------------+----------+----------+----------+----------+----------+
+; From Clock                                                                      ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++---------------------------------------------------------------------------------+----------+----------+----------+----------+----------+
+; rst                                                                             ; rst      ; 448      ; 448      ; 496      ; 496      ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; rst      ; 448      ; 0        ; 496      ; 0        ;
++---------------------------------------------------------------------------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Removal Transfers                                                                                                                      ;
++---------------------------------------------------------------------------------+----------+----------+----------+----------+----------+
+; From Clock                                                                      ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++---------------------------------------------------------------------------------+----------+----------+----------+----------+----------+
+; rst                                                                             ; rst      ; 448      ; 448      ; 496      ; 496      ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; rst      ; 448      ; 0        ; 496      ; 0        ;
++---------------------------------------------------------------------------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 1     ; 1    ;
++---------------------------------+-------+------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Status Summary                                                                                                                                                                        ;
++---------------------------------------------------------------------------------+---------------------------------------------------------------------------------+-----------+-------------+
+; Target                                                                          ; Clock                                                                           ; Type      ; Status      ;
++---------------------------------------------------------------------------------+---------------------------------------------------------------------------------+-----------+-------------+
+; clk_50MHz                                                                       ; clk_50MHz                                                                       ; Base      ; Constrained ;
+; clock_division:clock_division1|clk_division                                     ; clock_division:clock_division1|clk_division                                     ; Base      ; Constrained ;
+; router_sensor_NI:NI0|clock_division:clock_division|clk_division                 ; router_sensor_NI:NI0|clock_division:clock_division|clk_division                 ; Base      ; Constrained ;
+; router_sensor_NI:NI1|clock_division:clock_division|clk_division                 ; router_sensor_NI:NI1|clock_division:clock_division|clk_division                 ; Base      ; Constrained ;
+; router_sensor_NI:NI2|clock_division:clock_division|clk_division                 ; router_sensor_NI:NI2|clock_division:clock_division|clk_division                 ; Base      ; Constrained ;
+; router_sensor_NI:NI3|clock_division:clock_division|clk_division                 ; router_sensor_NI:NI3|clock_division:clock_division|clk_division                 ; Base      ; Constrained ;
+; router_sensor_NI:NI4|clock_division:clock_division|clk_division                 ; router_sensor_NI:NI4|clock_division:clock_division|clk_division                 ; Base      ; Constrained ;
+; router_sensor_NI:NI5|clock_division:clock_division|clk_division                 ; router_sensor_NI:NI5|clock_division:clock_division|clk_division                 ; Base      ; Constrained ;
+; router_sensor_NI:NI6|clock_division:clock_division|clk_division                 ; router_sensor_NI:NI6|clock_division:clock_division|clk_division                 ; Base      ; Constrained ;
+; router_sensor_NI:NI7|clock_division:clock_division|clk_division                 ; router_sensor_NI:NI7|clock_division:clock_division|clk_division                 ; Base      ; Constrained ;
+; router_sensor_NI:NI8|clock_division:clock_division|clk_division                 ; router_sensor_NI:NI8|clock_division:clock_division|clk_division                 ; Base      ; Constrained ;
+; router_sensor_NI:NI9|clock_division:clock_division|clk_division                 ; router_sensor_NI:NI9|clock_division:clock_division|clk_division                 ; Base      ; Constrained ;
+; router_sensor_NI:NI10|clock_division:clock_division|clk_division                ; router_sensor_NI:NI10|clock_division:clock_division|clk_division                ; Base      ; Constrained ;
+; router_sensor_NI:NI11|clock_division:clock_division|clk_division                ; router_sensor_NI:NI11|clock_division:clock_division|clk_division                ; Base      ; Constrained ;
+; router_sensor_NI:NI12|clock_division:clock_division|clk_division                ; router_sensor_NI:NI12|clock_division:clock_division|clk_division                ; Base      ; Constrained ;
+; router_sensor_NI:NI13|clock_division:clock_division|clk_division                ; router_sensor_NI:NI13|clock_division:clock_division|clk_division                ; Base      ; Constrained ;
+; router_sensor_NI:NI14|clock_division:clock_division|clk_division                ; router_sensor_NI:NI14|clock_division:clock_division|clk_division                ; Base      ; Constrained ;
+; router_sensor_NI:NI15|clock_division:clock_division|clk_division                ; router_sensor_NI:NI15|clock_division:clock_division|clk_division                ; Base      ; Constrained ;
+; rst                                                                             ; rst                                                                             ; Base      ; Constrained ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; Generated ; Constrained ;
+; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; Generated ; Constrained ;
+; super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk ; super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk ; Generated ; Constrained ;
++---------------------------------------------------------------------------------+---------------------------------------------------------------------------------+-----------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; RXD         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; RXD         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime TimeQuest Timing Analyzer
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Mon Apr 16 02:19:37 2018
+Info: Command: quartus_sta MNOC_3rd -c MNOC_3rd
+Info: qsta_default_script.tcl version: #3
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 256 combinational loops as latches. For more details, run the Check Timing command in the TimeQuest Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'MNOC_3rd.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained generated clocks found in the design. Calling "derive_pll_clocks -create_base_clocks"
+Info (332110): Deriving PLL clocks
+    Info (332110): create_clock -period 20.000 -waveform {0.000 10.000} -name clk_50MHz clk_50MHz
+    Info (332110): create_generated_clock -source {super_pll|super_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|refclkin} -divide_by 2 -multiply_by 30 -duty_cycle 50.00 -name {super_pll|super_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]} {super_pll|super_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]}
+    Info (332110): create_generated_clock -source {super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|vco0ph[0]} -divide_by 5 -duty_cycle 50.00 -name {super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk} {super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}
+    Info (332110): create_generated_clock -source {super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|vco0ph[0]} -divide_by 407 -duty_cycle 50.00 -name {super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk} {super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name rst rst
+    Info (332105): create_clock -period 1.000 -name router_sensor_NI:NI0|clock_division:clock_division|clk_division router_sensor_NI:NI0|clock_division:clock_division|clk_division
+    Info (332105): create_clock -period 1.000 -name clock_division:clock_division1|clk_division clock_division:clock_division1|clk_division
+    Info (332105): create_clock -period 1.000 -name router_sensor_NI:NI1|clock_division:clock_division|clk_division router_sensor_NI:NI1|clock_division:clock_division|clk_division
+    Info (332105): create_clock -period 1.000 -name router_sensor_NI:NI9|clock_division:clock_division|clk_division router_sensor_NI:NI9|clock_division:clock_division|clk_division
+    Info (332105): create_clock -period 1.000 -name router_sensor_NI:NI8|clock_division:clock_division|clk_division router_sensor_NI:NI8|clock_division:clock_division|clk_division
+    Info (332105): create_clock -period 1.000 -name router_sensor_NI:NI10|clock_division:clock_division|clk_division router_sensor_NI:NI10|clock_division:clock_division|clk_division
+    Info (332105): create_clock -period 1.000 -name router_sensor_NI:NI11|clock_division:clock_division|clk_division router_sensor_NI:NI11|clock_division:clock_division|clk_division
+    Info (332105): create_clock -period 1.000 -name router_sensor_NI:NI2|clock_division:clock_division|clk_division router_sensor_NI:NI2|clock_division:clock_division|clk_division
+    Info (332105): create_clock -period 1.000 -name router_sensor_NI:NI3|clock_division:clock_division|clk_division router_sensor_NI:NI3|clock_division:clock_division|clk_division
+    Info (332105): create_clock -period 1.000 -name router_sensor_NI:NI6|clock_division:clock_division|clk_division router_sensor_NI:NI6|clock_division:clock_division|clk_division
+    Info (332105): create_clock -period 1.000 -name router_sensor_NI:NI14|clock_division:clock_division|clk_division router_sensor_NI:NI14|clock_division:clock_division|clk_division
+    Info (332105): create_clock -period 1.000 -name router_sensor_NI:NI15|clock_division:clock_division|clk_division router_sensor_NI:NI15|clock_division:clock_division|clk_division
+    Info (332105): create_clock -period 1.000 -name router_sensor_NI:NI7|clock_division:clock_division|clk_division router_sensor_NI:NI7|clock_division:clock_division|clk_division
+    Info (332105): create_clock -period 1.000 -name router_sensor_NI:NI4|clock_division:clock_division|clk_division router_sensor_NI:NI4|clock_division:clock_division|clk_division
+    Info (332105): create_clock -period 1.000 -name router_sensor_NI:NI5|clock_division:clock_division|clk_division router_sensor_NI:NI5|clock_division:clock_division|clk_division
+    Info (332105): create_clock -period 1.000 -name router_sensor_NI:NI13|clock_division:clock_division|clk_division router_sensor_NI:NI13|clock_division:clock_division|clk_division
+    Info (332105): create_clock -period 1.000 -name router_sensor_NI:NI12|clock_division:clock_division|clk_division router_sensor_NI:NI12|clock_division:clock_division|clk_division
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): Cell: super_pll|super_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL  from: refclkin  to: fbclk
+    Info (332098): Cell: super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
+    Info (332098): Cell: super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_REFCLK_SELECT  from: clkin[2]  to: clkout
+    Info (332098): Cell: super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1100mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -11.700
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):   -11.700           -1387.616 rst 
+    Info (332119):   -10.428            -224.614 router_sensor_NI:NI7|clock_division:clock_division|clk_division 
+    Info (332119):   -10.238            -227.020 router_sensor_NI:NI4|clock_division:clock_division|clk_division 
+    Info (332119):   -10.043          -13181.133 super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    -9.912            -214.680 router_sensor_NI:NI13|clock_division:clock_division|clk_division 
+    Info (332119):    -9.765            -197.092 router_sensor_NI:NI6|clock_division:clock_division|clk_division 
+    Info (332119):    -9.711            -227.684 router_sensor_NI:NI3|clock_division:clock_division|clk_division 
+    Info (332119):    -9.652            -251.512 router_sensor_NI:NI11|clock_division:clock_division|clk_division 
+    Info (332119):    -9.630            -169.900 router_sensor_NI:NI9|clock_division:clock_division|clk_division 
+    Info (332119):    -9.522            -200.173 router_sensor_NI:NI8|clock_division:clock_division|clk_division 
+    Info (332119):    -9.453            -206.000 router_sensor_NI:NI14|clock_division:clock_division|clk_division 
+    Info (332119):    -9.210            -188.008 router_sensor_NI:NI12|clock_division:clock_division|clk_division 
+    Info (332119):    -9.096            -192.048 router_sensor_NI:NI15|clock_division:clock_division|clk_division 
+    Info (332119):    -9.075            -182.706 router_sensor_NI:NI10|clock_division:clock_division|clk_division 
+    Info (332119):    -9.055            -181.814 router_sensor_NI:NI5|clock_division:clock_division|clk_division 
+    Info (332119):    -9.045            -193.973 router_sensor_NI:NI0|clock_division:clock_division|clk_division 
+    Info (332119):    -8.709            -223.418 router_sensor_NI:NI2|clock_division:clock_division|clk_division 
+    Info (332119):    -8.404            -193.351 router_sensor_NI:NI1|clock_division:clock_division|clk_division 
+    Info (332119):    -3.203             -20.530 super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    -2.685             -22.811 clock_division:clock_division1|clk_division 
+Info (332146): Worst-case hold slack is -6.638
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -6.638            -857.948 rst 
+    Info (332119):    -4.523           -5046.296 super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    -0.768              -1.088 router_sensor_NI:NI12|clock_division:clock_division|clk_division 
+    Info (332119):    -0.756              -2.016 router_sensor_NI:NI4|clock_division:clock_division|clk_division 
+    Info (332119):    -0.424              -1.415 router_sensor_NI:NI5|clock_division:clock_division|clk_division 
+    Info (332119):    -0.189              -1.323 router_sensor_NI:NI2|clock_division:clock_division|clk_division 
+    Info (332119):    -0.131              -0.537 router_sensor_NI:NI3|clock_division:clock_division|clk_division 
+    Info (332119):    -0.057              -0.456 router_sensor_NI:NI9|clock_division:clock_division|clk_division 
+    Info (332119):    -0.054              -0.054 router_sensor_NI:NI0|clock_division:clock_division|clk_division 
+    Info (332119):     0.107               0.000 router_sensor_NI:NI1|clock_division:clock_division|clk_division 
+    Info (332119):     0.171               0.000 router_sensor_NI:NI10|clock_division:clock_division|clk_division 
+    Info (332119):     0.284               0.000 router_sensor_NI:NI14|clock_division:clock_division|clk_division 
+    Info (332119):     0.285               0.000 router_sensor_NI:NI8|clock_division:clock_division|clk_division 
+    Info (332119):     0.298               0.000 router_sensor_NI:NI13|clock_division:clock_division|clk_division 
+    Info (332119):     0.341               0.000 router_sensor_NI:NI15|clock_division:clock_division|clk_division 
+    Info (332119):     0.349               0.000 router_sensor_NI:NI7|clock_division:clock_division|clk_division 
+    Info (332119):     0.352               0.000 router_sensor_NI:NI11|clock_division:clock_division|clk_division 
+    Info (332119):     0.356               0.000 router_sensor_NI:NI6|clock_division:clock_division|clk_division 
+    Info (332119):     0.580               0.000 clock_division:clock_division1|clk_division 
+    Info (332119):     0.717               0.000 super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case recovery slack is -9.258
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -9.258           -1734.709 rst 
+Info (332146): Worst-case removal slack is -5.672
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -5.672            -761.333 rst 
+Info (332146): Worst-case minimum pulse width slack is -6.324
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -6.324           -6949.228 rst 
+    Info (332119):    -0.649             -46.675 router_sensor_NI:NI12|clock_division:clock_division|clk_division 
+    Info (332119):    -0.562             -41.469 router_sensor_NI:NI4|clock_division:clock_division|clk_division 
+    Info (332119):    -0.538             -45.314 router_sensor_NI:NI1|clock_division:clock_division|clk_division 
+    Info (332119):    -0.538             -43.938 router_sensor_NI:NI0|clock_division:clock_division|clk_division 
+    Info (332119):    -0.538             -43.304 router_sensor_NI:NI5|clock_division:clock_division|clk_division 
+    Info (332119):    -0.538             -43.063 router_sensor_NI:NI2|clock_division:clock_division|clk_division 
+    Info (332119):    -0.538             -42.251 router_sensor_NI:NI9|clock_division:clock_division|clk_division 
+    Info (332119):    -0.538             -41.991 router_sensor_NI:NI6|clock_division:clock_division|clk_division 
+    Info (332119):    -0.538             -41.919 router_sensor_NI:NI15|clock_division:clock_division|clk_division 
+    Info (332119):    -0.538             -41.915 router_sensor_NI:NI10|clock_division:clock_division|clk_division 
+    Info (332119):    -0.538             -41.702 router_sensor_NI:NI3|clock_division:clock_division|clk_division 
+    Info (332119):    -0.538             -41.312 router_sensor_NI:NI14|clock_division:clock_division|clk_division 
+    Info (332119):    -0.538             -41.289 router_sensor_NI:NI8|clock_division:clock_division|clk_division 
+    Info (332119):    -0.538             -40.692 router_sensor_NI:NI7|clock_division:clock_division|clk_division 
+    Info (332119):    -0.538             -40.652 router_sensor_NI:NI13|clock_division:clock_division|clk_division 
+    Info (332119):    -0.538             -40.311 router_sensor_NI:NI11|clock_division:clock_division|clk_division 
+    Info (332119):    -0.538              -8.856 clock_division:clock_division1|clk_division 
+    Info (332119):     0.666               0.000 super_pll|super_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
+    Info (332119):     1.899               0.000 super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     9.949               0.000 clk_50MHz 
+    Info (332119):   270.584               0.000 super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info: Analyzing Slow 1100mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): Cell: super_pll|super_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL  from: refclkin  to: fbclk
+    Info (332098): Cell: super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
+    Info (332098): Cell: super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_REFCLK_SELECT  from: clkin[2]  to: clkout
+    Info (332098): Cell: super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -11.591
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):   -11.591           -1403.239 rst 
+    Info (332119):   -10.405            -221.676 router_sensor_NI:NI7|clock_division:clock_division|clk_division 
+    Info (332119):   -10.241            -219.663 router_sensor_NI:NI4|clock_division:clock_division|clk_division 
+    Info (332119):    -9.778            -193.036 router_sensor_NI:NI6|clock_division:clock_division|clk_division 
+    Info (332119):    -9.772            -222.032 router_sensor_NI:NI3|clock_division:clock_division|clk_division 
+    Info (332119):    -9.764            -210.688 router_sensor_NI:NI13|clock_division:clock_division|clk_division 
+    Info (332119):    -9.732          -12252.346 super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    -9.664            -245.744 router_sensor_NI:NI11|clock_division:clock_division|clk_division 
+    Info (332119):    -9.615            -166.309 router_sensor_NI:NI9|clock_division:clock_division|clk_division 
+    Info (332119):    -9.612            -202.695 router_sensor_NI:NI14|clock_division:clock_division|clk_division 
+    Info (332119):    -9.515            -195.639 router_sensor_NI:NI8|clock_division:clock_division|clk_division 
+    Info (332119):    -9.257            -182.929 router_sensor_NI:NI12|clock_division:clock_division|clk_division 
+    Info (332119):    -9.224            -189.083 router_sensor_NI:NI15|clock_division:clock_division|clk_division 
+    Info (332119):    -9.184            -176.492 router_sensor_NI:NI5|clock_division:clock_division|clk_division 
+    Info (332119):    -9.093            -177.700 router_sensor_NI:NI10|clock_division:clock_division|clk_division 
+    Info (332119):    -9.052            -189.053 router_sensor_NI:NI0|clock_division:clock_division|clk_division 
+    Info (332119):    -8.768            -219.270 router_sensor_NI:NI2|clock_division:clock_division|clk_division 
+    Info (332119):    -8.512            -189.553 router_sensor_NI:NI1|clock_division:clock_division|clk_division 
+    Info (332119):    -3.188             -18.936 super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    -2.610             -21.717 clock_division:clock_division1|clk_division 
+Info (332146): Worst-case hold slack is -6.586
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -6.586            -863.303 rst 
+    Info (332119):    -4.574           -5610.165 super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    -0.645              -0.671 router_sensor_NI:NI12|clock_division:clock_division|clk_division 
+    Info (332119):    -0.562              -1.247 router_sensor_NI:NI4|clock_division:clock_division|clk_division 
+    Info (332119):    -0.292              -0.536 router_sensor_NI:NI5|clock_division:clock_division|clk_division 
+    Info (332119):    -0.146              -1.022 router_sensor_NI:NI2|clock_division:clock_division|clk_division 
+    Info (332119):    -0.053              -0.053 router_sensor_NI:NI0|clock_division:clock_division|clk_division 
+    Info (332119):    -0.032              -0.032 router_sensor_NI:NI3|clock_division:clock_division|clk_division 
+    Info (332119):    -0.010              -0.044 router_sensor_NI:NI9|clock_division:clock_division|clk_division 
+    Info (332119):     0.142               0.000 router_sensor_NI:NI10|clock_division:clock_division|clk_division 
+    Info (332119):     0.182               0.000 router_sensor_NI:NI1|clock_division:clock_division|clk_division 
+    Info (332119):     0.329               0.000 router_sensor_NI:NI14|clock_division:clock_division|clk_division 
+    Info (332119):     0.377               0.000 router_sensor_NI:NI8|clock_division:clock_division|clk_division 
+    Info (332119):     0.379               0.000 router_sensor_NI:NI15|clock_division:clock_division|clk_division 
+    Info (332119):     0.391               0.000 router_sensor_NI:NI13|clock_division:clock_division|clk_division 
+    Info (332119):     0.400               0.000 router_sensor_NI:NI11|clock_division:clock_division|clk_division 
+    Info (332119):     0.404               0.000 router_sensor_NI:NI7|clock_division:clock_division|clk_division 
+    Info (332119):     0.411               0.000 router_sensor_NI:NI6|clock_division:clock_division|clk_division 
+    Info (332119):     0.616               0.000 clock_division:clock_division1|clk_division 
+    Info (332119):     0.650               0.000 super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case recovery slack is -9.220
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -9.220           -1748.410 rst 
+Info (332146): Worst-case removal slack is -5.702
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -5.702            -762.025 rst 
+Info (332146): Worst-case minimum pulse width slack is -6.272
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -6.272           -6955.993 rst 
+    Info (332119):    -0.646             -46.559 router_sensor_NI:NI12|clock_division:clock_division|clk_division 
+    Info (332119):    -0.543             -41.155 router_sensor_NI:NI4|clock_division:clock_division|clk_division 
+    Info (332119):    -0.538             -44.559 router_sensor_NI:NI1|clock_division:clock_division|clk_division 
+    Info (332119):    -0.538             -43.702 router_sensor_NI:NI0|clock_division:clock_division|clk_division 
+    Info (332119):    -0.538             -42.934 router_sensor_NI:NI2|clock_division:clock_division|clk_division 
+    Info (332119):    -0.538             -42.705 router_sensor_NI:NI5|clock_division:clock_division|clk_division 
+    Info (332119):    -0.538             -41.784 router_sensor_NI:NI6|clock_division:clock_division|clk_division 
+    Info (332119):    -0.538             -41.775 router_sensor_NI:NI10|clock_division:clock_division|clk_division 
+    Info (332119):    -0.538             -41.619 router_sensor_NI:NI3|clock_division:clock_division|clk_division 
+    Info (332119):    -0.538             -41.490 router_sensor_NI:NI15|clock_division:clock_division|clk_division 
+    Info (332119):    -0.538             -41.274 router_sensor_NI:NI8|clock_division:clock_division|clk_division 
+    Info (332119):    -0.538             -41.196 router_sensor_NI:NI14|clock_division:clock_division|clk_division 
+    Info (332119):    -0.538             -41.146 router_sensor_NI:NI9|clock_division:clock_division|clk_division 
+    Info (332119):    -0.538             -40.567 router_sensor_NI:NI13|clock_division:clock_division|clk_division 
+    Info (332119):    -0.538             -40.215 router_sensor_NI:NI11|clock_division:clock_division|clk_division 
+    Info (332119):    -0.538             -40.069 router_sensor_NI:NI7|clock_division:clock_division|clk_division 
+    Info (332119):    -0.538              -8.932 clock_division:clock_division1|clk_division 
+    Info (332119):     0.666               0.000 super_pll|super_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
+    Info (332119):     1.857               0.000 super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     9.980               0.000 clk_50MHz 
+    Info (332119):   270.502               0.000 super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info: Analyzing Fast 1100mV 85C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): Cell: super_pll|super_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL  from: refclkin  to: fbclk
+    Info (332098): Cell: super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
+    Info (332098): Cell: super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_REFCLK_SELECT  from: clkin[2]  to: clkout
+    Info (332098): Cell: super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -6.566
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -6.566            -667.789 rst 
+    Info (332119):    -5.906           -8572.326 super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    -5.158            -111.110 router_sensor_NI:NI7|clock_division:clock_division|clk_division 
+    Info (332119):    -5.137            -111.828 router_sensor_NI:NI4|clock_division:clock_division|clk_division 
+    Info (332119):    -5.086            -101.533 router_sensor_NI:NI13|clock_division:clock_division|clk_division 
+    Info (332119):    -4.795            -129.431 router_sensor_NI:NI11|clock_division:clock_division|clk_division 
+    Info (332119):    -4.780             -90.732 router_sensor_NI:NI6|clock_division:clock_division|clk_division 
+    Info (332119):    -4.752            -110.433 router_sensor_NI:NI3|clock_division:clock_division|clk_division 
+    Info (332119):    -4.698             -69.270 router_sensor_NI:NI9|clock_division:clock_division|clk_division 
+    Info (332119):    -4.577             -93.101 router_sensor_NI:NI8|clock_division:clock_division|clk_division 
+    Info (332119):    -4.572             -99.368 router_sensor_NI:NI14|clock_division:clock_division|clk_division 
+    Info (332119):    -4.451             -85.817 router_sensor_NI:NI12|clock_division:clock_division|clk_division 
+    Info (332119):    -4.381             -83.330 router_sensor_NI:NI10|clock_division:clock_division|clk_division 
+    Info (332119):    -4.379             -85.680 router_sensor_NI:NI0|clock_division:clock_division|clk_division 
+    Info (332119):    -4.329             -77.032 router_sensor_NI:NI5|clock_division:clock_division|clk_division 
+    Info (332119):    -4.237             -88.225 router_sensor_NI:NI15|clock_division:clock_division|clk_division 
+    Info (332119):    -4.120            -110.863 router_sensor_NI:NI2|clock_division:clock_division|clk_division 
+    Info (332119):    -3.831             -86.961 router_sensor_NI:NI1|clock_division:clock_division|clk_division 
+    Info (332119):    -1.035              -8.564 clock_division:clock_division1|clk_division 
+    Info (332119):    -0.914              -2.718 super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is -3.314
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.314            -406.400 rst 
+    Info (332119):    -2.182           -1955.972 super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    -0.628              -1.941 router_sensor_NI:NI4|clock_division:clock_division|clk_division 
+    Info (332119):    -0.482              -3.919 router_sensor_NI:NI5|clock_division:clock_division|clk_division 
+    Info (332119):    -0.478              -1.297 router_sensor_NI:NI12|clock_division:clock_division|clk_division 
+    Info (332119):    -0.302              -0.545 router_sensor_NI:NI0|clock_division:clock_division|clk_division 
+    Info (332119):    -0.299              -2.122 router_sensor_NI:NI3|clock_division:clock_division|clk_division 
+    Info (332119):    -0.271              -2.001 router_sensor_NI:NI2|clock_division:clock_division|clk_division 
+    Info (332119):    -0.113              -0.895 router_sensor_NI:NI10|clock_division:clock_division|clk_division 
+    Info (332119):    -0.091              -0.941 router_sensor_NI:NI9|clock_division:clock_division|clk_division 
+    Info (332119):    -0.051              -0.081 router_sensor_NI:NI1|clock_division:clock_division|clk_division 
+    Info (332119):     0.001               0.000 router_sensor_NI:NI6|clock_division:clock_division|clk_division 
+    Info (332119):     0.119               0.000 router_sensor_NI:NI8|clock_division:clock_division|clk_division 
+    Info (332119):     0.121               0.000 router_sensor_NI:NI13|clock_division:clock_division|clk_division 
+    Info (332119):     0.122               0.000 router_sensor_NI:NI14|clock_division:clock_division|clk_division 
+    Info (332119):     0.157               0.000 router_sensor_NI:NI7|clock_division:clock_division|clk_division 
+    Info (332119):     0.165               0.000 router_sensor_NI:NI15|clock_division:clock_division|clk_division 
+    Info (332119):     0.195               0.000 super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.221               0.000 router_sensor_NI:NI11|clock_division:clock_division|clk_division 
+    Info (332119):     0.300               0.000 clock_division:clock_division1|clk_division 
+Info (332146): Worst-case recovery slack is -4.935
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -4.935            -824.675 rst 
+Info (332146): Worst-case removal slack is -2.952
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.952            -399.926 rst 
+Info (332146): Worst-case minimum pulse width slack is -3.298
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.298           -3082.461 rst 
+    Info (332119):    -0.261              -3.119 router_sensor_NI:NI12|clock_division:clock_division|clk_division 
+    Info (332119):    -0.191              -0.761 router_sensor_NI:NI4|clock_division:clock_division|clk_division 
+    Info (332119):    -0.189              -2.410 router_sensor_NI:NI5|clock_division:clock_division|clk_division 
+    Info (332119):    -0.181              -2.281 router_sensor_NI:NI0|clock_division:clock_division|clk_division 
+    Info (332119):    -0.107              -0.851 router_sensor_NI:NI3|clock_division:clock_division|clk_division 
+    Info (332119):    -0.099              -1.454 router_sensor_NI:NI1|clock_division:clock_division|clk_division 
+    Info (332119):    -0.094              -0.983 router_sensor_NI:NI2|clock_division:clock_division|clk_division 
+    Info (332119):    -0.069              -0.959 router_sensor_NI:NI9|clock_division:clock_division|clk_division 
+    Info (332119):    -0.066              -0.917 router_sensor_NI:NI6|clock_division:clock_division|clk_division 
+    Info (332119):    -0.044              -0.343 router_sensor_NI:NI10|clock_division:clock_division|clk_division 
+    Info (332119):    -0.029              -0.211 router_sensor_NI:NI15|clock_division:clock_division|clk_division 
+    Info (332119):    -0.005              -0.037 router_sensor_NI:NI8|clock_division:clock_division|clk_division 
+    Info (332119):     0.016               0.000 router_sensor_NI:NI14|clock_division:clock_division|clk_division 
+    Info (332119):     0.018               0.000 router_sensor_NI:NI13|clock_division:clock_division|clk_division 
+    Info (332119):     0.056               0.000 router_sensor_NI:NI7|clock_division:clock_division|clk_division 
+    Info (332119):     0.062               0.000 clock_division:clock_division1|clk_division 
+    Info (332119):     0.081               0.000 router_sensor_NI:NI11|clock_division:clock_division|clk_division 
+    Info (332119):     0.666               0.000 super_pll|super_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
+    Info (332119):     2.219               0.000 super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     9.643               0.000 clk_50MHz 
+    Info (332119):   270.887               0.000 super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info: Analyzing Fast 1100mV 0C Model
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): Cell: super_pll|super_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL  from: refclkin  to: fbclk
+    Info (332098): Cell: super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
+    Info (332098): Cell: super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_REFCLK_SELECT  from: clkin[2]  to: clkout
+    Info (332098): Cell: super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -5.900
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -5.900            -629.441 rst 
+    Info (332119):    -5.240           -7290.968 super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    -4.912            -104.449 router_sensor_NI:NI7|clock_division:clock_division|clk_division 
+    Info (332119):    -4.887            -102.518 router_sensor_NI:NI4|clock_division:clock_division|clk_division 
+    Info (332119):    -4.801             -95.513 router_sensor_NI:NI13|clock_division:clock_division|clk_division 
+    Info (332119):    -4.574             -84.320 router_sensor_NI:NI6|clock_division:clock_division|clk_division 
+    Info (332119):    -4.573            -119.574 router_sensor_NI:NI11|clock_division:clock_division|clk_division 
+    Info (332119):    -4.506            -103.449 router_sensor_NI:NI3|clock_division:clock_division|clk_division 
+    Info (332119):    -4.464             -65.224 router_sensor_NI:NI9|clock_division:clock_division|clk_division 
+    Info (332119):    -4.393             -93.273 router_sensor_NI:NI14|clock_division:clock_division|clk_division 
+    Info (332119):    -4.384             -88.088 router_sensor_NI:NI8|clock_division:clock_division|clk_division 
+    Info (332119):    -4.284             -79.989 router_sensor_NI:NI12|clock_division:clock_division|clk_division 
+    Info (332119):    -4.205             -77.372 router_sensor_NI:NI10|clock_division:clock_division|clk_division 
+    Info (332119):    -4.196             -78.548 router_sensor_NI:NI0|clock_division:clock_division|clk_division 
+    Info (332119):    -4.180             -67.965 router_sensor_NI:NI5|clock_division:clock_division|clk_division 
+    Info (332119):    -4.132             -84.113 router_sensor_NI:NI15|clock_division:clock_division|clk_division 
+    Info (332119):    -3.988            -103.701 router_sensor_NI:NI2|clock_division:clock_division|clk_division 
+    Info (332119):    -3.727             -79.604 router_sensor_NI:NI1|clock_division:clock_division|clk_division 
+    Info (332119):    -0.851              -6.784 clock_division:clock_division1|clk_division 
+    Info (332119):    -0.710              -0.710 super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is -2.992
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.992            -373.589 rst 
+    Info (332119):    -2.203           -2209.456 super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    -0.502              -1.464 router_sensor_NI:NI4|clock_division:clock_division|clk_division 
+    Info (332119):    -0.375              -3.208 router_sensor_NI:NI5|clock_division:clock_division|clk_division 
+    Info (332119):    -0.370              -0.718 router_sensor_NI:NI12|clock_division:clock_division|clk_division 
+    Info (332119):    -0.270              -1.778 router_sensor_NI:NI3|clock_division:clock_division|clk_division 
+    Info (332119):    -0.242              -0.401 router_sensor_NI:NI0|clock_division:clock_division|clk_division 
+    Info (332119):    -0.204              -1.472 router_sensor_NI:NI2|clock_division:clock_division|clk_division 
+    Info (332119):    -0.076              -0.608 router_sensor_NI:NI10|clock_division:clock_division|clk_division 
+    Info (332119):    -0.057              -0.077 router_sensor_NI:NI1|clock_division:clock_division|clk_division 
+    Info (332119):    -0.048              -0.380 router_sensor_NI:NI9|clock_division:clock_division|clk_division 
+    Info (332119):     0.013               0.000 router_sensor_NI:NI6|clock_division:clock_division|clk_division 
+    Info (332119):     0.119               0.000 router_sensor_NI:NI8|clock_division:clock_division|clk_division 
+    Info (332119):     0.124               0.000 router_sensor_NI:NI13|clock_division:clock_division|clk_division 
+    Info (332119):     0.125               0.000 router_sensor_NI:NI14|clock_division:clock_division|clk_division 
+    Info (332119):     0.136               0.000 super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.155               0.000 router_sensor_NI:NI15|clock_division:clock_division|clk_division 
+    Info (332119):     0.155               0.000 router_sensor_NI:NI7|clock_division:clock_division|clk_division 
+    Info (332119):     0.207               0.000 router_sensor_NI:NI11|clock_division:clock_division|clk_division 
+    Info (332119):     0.275               0.000 clock_division:clock_division1|clk_division 
+Info (332146): Worst-case recovery slack is -4.560
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -4.560            -772.956 rst 
+Info (332146): Worst-case removal slack is -2.676
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.676            -361.281 rst 
+Info (332146): Worst-case minimum pulse width slack is -2.964
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.964           -2687.735 rst 
+    Info (332119):    -0.183              -2.183 router_sensor_NI:NI12|clock_division:clock_division|clk_division 
+    Info (332119):    -0.127              -0.505 router_sensor_NI:NI4|clock_division:clock_division|clk_division 
+    Info (332119):    -0.126              -1.292 router_sensor_NI:NI0|clock_division:clock_division|clk_division 
+    Info (332119):    -0.124              -1.308 router_sensor_NI:NI5|clock_division:clock_division|clk_division 
+    Info (332119):    -0.094              -0.752 router_sensor_NI:NI3|clock_division:clock_division|clk_division 
+    Info (332119):    -0.061              -0.583 router_sensor_NI:NI2|clock_division:clock_division|clk_division 
+    Info (332119):    -0.047              -0.568 router_sensor_NI:NI1|clock_division:clock_division|clk_division 
+    Info (332119):    -0.042              -0.567 router_sensor_NI:NI6|clock_division:clock_division|clk_division 
+    Info (332119):    -0.028              -0.371 router_sensor_NI:NI9|clock_division:clock_division|clk_division 
+    Info (332119):    -0.019              -0.140 router_sensor_NI:NI10|clock_division:clock_division|clk_division 
+    Info (332119):    -0.007              -0.037 router_sensor_NI:NI15|clock_division:clock_division|clk_division 
+    Info (332119):     0.016               0.000 router_sensor_NI:NI8|clock_division:clock_division|clk_division 
+    Info (332119):     0.027               0.000 router_sensor_NI:NI14|clock_division:clock_division|clk_division 
+    Info (332119):     0.033               0.000 router_sensor_NI:NI13|clock_division:clock_division|clk_division 
+    Info (332119):     0.057               0.000 clock_division:clock_division1|clk_division 
+    Info (332119):     0.076               0.000 router_sensor_NI:NI7|clock_division:clock_division|clk_division 
+    Info (332119):     0.084               0.000 router_sensor_NI:NI11|clock_division:clock_division|clk_division 
+    Info (332119):     0.666               0.000 super_pll|super_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
+    Info (332119):     2.221               0.000 super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     9.632               0.000 clk_50MHz 
+    Info (332119):   270.880               0.000 super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 1311 megabytes
+    Info: Processing ended: Mon Apr 16 02:20:06 2018
+    Info: Elapsed time: 00:00:29
+    Info: Total CPU time (on all processors): 00:01:05
+
+

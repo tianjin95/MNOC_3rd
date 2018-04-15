@@ -1,0 +1,23 @@
+Info: Start Nativelink Simulation process
+executing command line: ip-make-simscript --nativelink-mode --output-directory=MNOC_3rd_iputf_input --spd=D:/Study/Graduation_Project/verilog/MNOC_3rd/source/clock_management/super_pll.spd 
+
+========= EDA Simulation Settings =====================
+
+Sim Mode              :  RTL
+Family                :  cyclonev
+Quartus root          :  c:/intelfpga_lite/17.1/quartus/bin64/
+Quartus sim root      :  c:/intelfpga_lite/17.1/quartus/eda/sim_lib
+Simulation Tool       :  modelsim-altera
+Simulation Language   :  verilog
+Simulation Mode       :  GUI
+Sim Output File       :  
+Sim SDF file          :  
+Sim dir               :  simulation\modelsim
+
+=======================================================
+
+Info: Starting NativeLink simulation with ModelSim-Altera software
+Sourced NativeLink script c:/intelfpga_lite/17.1/quartus/common/tcl/internal/nativelink/modelsim.tcl
+Warning: File MNOC_3rd_run_msim_rtl_verilog.do already exists - backing up current file as MNOC_3rd_run_msim_rtl_verilog.do.bak4
+Info: Spawning ModelSim-Altera Simulation software 
+Info: NativeLink simulation flow was successful

@@ -1,7 +1,6 @@
 module router_sensor_NI(
 	clk,
-	enable,
-	core_address,
+	rst,
 	priority_sensor,
 	regular_sensor0,
 	regular_sensor1,
@@ -24,8 +23,7 @@ module router_sensor_NI(
 	output_bussy);
 	
 input clk;
-input enable;
-input [3:0] core_address;
+input rst;
 wire clk_division;
 input output_bussy;
 input [15:0] priority_sensor;
@@ -67,6 +65,8 @@ wire regularNI_FIFO_read;
 wire [15:0] feedback_rst;
 wire [15:0] interrupt;
 
+parameter core_address = 4'd0;
+
 genvar i;
 
 generate 
@@ -75,6 +75,7 @@ begin:priority_sensor_interface
 priority_sensor_interface priority_sensor_interface(
 	.sensor(priority_sensor[i]),
 	.clk(clk),
+	.grst(rst),
 	.interrupt(interrupt[i]),
 	.rst(feedback_rst[i]));
 end
@@ -82,6 +83,7 @@ endgenerate
 
 priorityNI_FIFO_wrctrl priorityNI_FIFO_wrctrl(
 	 .clk(clk),
+	 .rst(rst),
 	 .core_address(core_address),
 	 .interrupt(interrupt),
 	 .feedback_rst(feedback_rst),
@@ -92,135 +94,167 @@ priorityNI_FIFO_wrctrl priorityNI_FIFO_wrctrl(
 wire [15:0] slot;
 wire sample_en;
 
-regular_sensor_interface regular_sensor_interface0(
+regular_sensor_interface
+	#(.sensor_address(4'd0)) 
+	regular_sensor_interface0(
 	.clk_division(clk_division),
 	.sample_en(sample_en),
+	.rst(rst),
 	.sensor(regular_sensor0),
-	.sensor_address(4'd0),
 	.slot(slot[0]));
 
-regular_sensor_interface regular_sensor_interface1(
+regular_sensor_interface
+	#(.sensor_address(4'd1)) 
+	regular_sensor_interface1(
 	.clk_division(clk_division),
 	.sample_en(sample_en),
+	.rst(rst),
 	.sensor(regular_sensor1),
-	.sensor_address(4'd1),
 	.slot(slot[1]));
 
 
-regular_sensor_interface regular_sensor_interface2(
+regular_sensor_interface
+	#(.sensor_address(4'd2)) 
+	regular_sensor_interface2(
 	.clk_division(clk_division),
 	.sample_en(sample_en),
+	.rst(rst),
 	.sensor(regular_sensor2),
-	.sensor_address(4'd2),
 	.slot(slot[2]));
 
 
-regular_sensor_interface regular_sensor_interface3(
+regular_sensor_interface
+	#(.sensor_address(4'd3)) 
+	regular_sensor_interface3(
 	.clk_division(clk_division),
 	.sample_en(sample_en),
+	.rst(rst),
 	.sensor(regular_sensor3),
-	.sensor_address(4'd3),
 	.slot(slot[3]));
 
 
-regular_sensor_interface regular_sensor_interface4(
+regular_sensor_interface
+	#(.sensor_address(4'd4)) 
+	regular_sensor_interface4(
 	.clk_division(clk_division),
 	.sample_en(sample_en),
+	.rst(rst),
 	.sensor(regular_sensor4),
-	.sensor_address(4'd4),
 	.slot(slot[4]));
 
 
-regular_sensor_interface regular_sensor_interface5(
+regular_sensor_interface
+	#(.sensor_address(4'd5)) 
+	regular_sensor_interface5(
 	.clk_division(clk_division),
 	.sample_en(sample_en),
+	.rst(rst),
 	.sensor(regular_sensor5),
-	.sensor_address(4'd5),
 	.slot(slot[5]));
 
 
-regular_sensor_interface regular_sensor_interface6(
+regular_sensor_interface
+	#(.sensor_address(4'd6)) 
+	regular_sensor_interface6(
 	.clk_division(clk_division),
 	.sample_en(sample_en),
+	.rst(rst),
 	.sensor(regular_sensor6),
-	.sensor_address(4'd6),
 	.slot(slot[6]));
 
 
-regular_sensor_interface regular_sensor_interface7(
+regular_sensor_interface
+	#(.sensor_address(4'd7)) 
+	regular_sensor_interface7(
 	.clk_division(clk_division),
 	.sample_en(sample_en),
+	.rst(rst),
 	.sensor(regular_sensor7),
-	.sensor_address(4'd7),
 	.slot(slot[7]));
 
-regular_sensor_interface regular_sensor_interface8(
+regular_sensor_interface
+	#(.sensor_address(4'd8)) 
+	regular_sensor_interface8(
 	.clk_division(clk_division),
 	.sample_en(sample_en),
+	.rst(rst),
 	.sensor(regular_sensor8),
-	.sensor_address(4'd8),
 	.slot(slot[8]));
 
 
-regular_sensor_interface regular_sensor_interface9(
+regular_sensor_interface
+	#(.sensor_address(4'd9)) 
+	regular_sensor_interface9(
 	.clk_division(clk_division),
 	.sample_en(sample_en),
+	.rst(rst),
 	.sensor(regular_sensor9),
-	.sensor_address(4'd9),
 	.slot(slot[9]));
 
 
-regular_sensor_interface regular_sensor_interface10(
+regular_sensor_interface
+	#(.sensor_address(4'd10)) 
+	regular_sensor_interface10(
 	.clk_division(clk_division),
 	.sample_en(sample_en),
+	.rst(rst),
 	.sensor(regular_sensor10),
-	.sensor_address(4'd10),
 	.slot(slot[10]));
 
 
-regular_sensor_interface regular_sensor_interface11(
+regular_sensor_interface
+	#(.sensor_address(4'd11)) 
+	regular_sensor_interface11(
 	.clk_division(clk_division),
 	.sample_en(sample_en),
+	.rst(rst),
 	.sensor(regular_sensor11),
-	.sensor_address(4'd11),
 	.slot(slot[11]));
 
 
-regular_sensor_interface regular_sensor_interface12(
+regular_sensor_interface
+	#(.sensor_address(4'd12)) 
+	regular_sensor_interface12(
 	.clk_division(clk_division),
 	.sample_en(sample_en),
+	.rst(rst),
 	.sensor(regular_sensor12),
-	.sensor_address(4'd12),
 	.slot(slot[12]));
 
 
-regular_sensor_interface regular_sensor_interface13(
+regular_sensor_interface
+	#(.sensor_address(4'd13)) 
+	regular_sensor_interface13(
 	.clk_division(clk_division),
 	.sample_en(sample_en),
+	.rst(rst),
 	.sensor(regular_sensor13),
-	.sensor_address(4'd13),
 	.slot(slot[13]));
 
 
-regular_sensor_interface regular_sensor_interface14(
+regular_sensor_interface
+	#(.sensor_address(4'd14)) 
+	regular_sensor_interface14(
 	.clk_division(clk_division),
 	.sample_en(sample_en),
+	.rst(rst),
 	.sensor(regular_sensor14),
-	.sensor_address(4'd14),
 	.slot(slot[14]));
 
 
-regular_sensor_interface regular_sensor_interface15(
+regular_sensor_interface
+	#(.sensor_address(4'd15)) 
+	regular_sensor_interface15(
 	.clk_division(clk_division),
 	.sample_en(sample_en),
+	.rst(rst),
 	.sensor(regular_sensor15),
-	.sensor_address(4'd15),
 	.slot(slot[15]));
 
 
 	
 regularNI_FIFO_wrctrl regularNI_FIFO_wrctrl(
-	.enable(enable),
+	.rst(rst),
 	.clk_division(clk_division),
 	.core_address(core_address),
 	.regularFIFO_data(regularNI_FIFO_data),
@@ -236,7 +270,7 @@ clock_division clock_division(
 
 FIFO_32depth priorityfifo(
 	.clk(clk),
-	.reset(1'b0),
+	.reset(rst),
 	.data_in(priorityNI_FIFO_data),
 	.read(priorityNI_FIFO_read),
 	.write(priorityNI_FIFO_wr),
@@ -246,7 +280,7 @@ FIFO_32depth priorityfifo(
 
 FIFO_32depth  regularfifo(
 	.clk(clk),
-	.reset(1'b0),
+	.reset(rst),
 	.data_in(regularNI_FIFO_data),
 	.read(regularNI_FIFO_read),
 	.write(regularNI_FIFO_wr),
@@ -263,7 +297,6 @@ two_1_mux outputmux(
 	
 	
 FIFO_readctrl FIFO_readctrl(
-	.clk(clk),
 	.head(regularNI_FIFO_dataout[15:13]),
 	.regularFIFO_empty(regularNI_FIFO_empty),
 	.priorityFIFO_empty(priorityNI_FIFO_empty),

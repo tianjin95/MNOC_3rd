@@ -1,10 +1,10 @@
 module priority_sensor_counter(
 	clk,
-	enable,
+	rst,
 	priority_sensor);
 	
 input clk;
-input enable;
+input rst;
 output [15:0] priority_sensor;
 reg [15:0] priority_sensor;
 reg [16:0] counter;
@@ -25,7 +25,7 @@ end
 
 always@(posedge clk)
 begin
-if(enable) counter<=counter+1'b1;
+if(!rst) counter<=counter+1'b1;
 else counter<=0;
 end
 

@@ -1,6 +1,7 @@
 
 module i3_router(
 	clk,
+	rst,
 	output_req,
 	output_data,
 	output_bussy,
@@ -15,6 +16,7 @@ module i3_router(
 	input_bussy3);
 	
 input clk;	
+input rst;
 //output port
 output wire[15:0] output_data;	
 output wire output_req;
@@ -59,7 +61,7 @@ wire regular_bussy3;
 
 FIFO priorityfifo(
 	.clk(clk),
-	.reset(1'b0),
+	.reset(rst),
 	.data_in(priority_data),
 	.read(priorityFIFO_read),
 	.write(priorityFIFO_wr),
@@ -69,7 +71,7 @@ FIFO priorityfifo(
 
 FIFO regularfifo(
 	.clk(clk),
-	.reset(1'b0),
+	.reset(rst),
 	.data_in(regular_data),
 	.read(regularFIFO_read),
 	.write(regularFIFO_wr),
@@ -98,7 +100,6 @@ three_1_mux regularmux(
 		.outputdata(regular_data));
 		
 FIFO_readctrl i3_router_FIFO_readctrl(
-	.clk(clk),
 	.head(regularFIFO_dataout[15:13]),
 	.regularFIFO_empty(regularFIFO_empty),
 	.priorityFIFO_empty(priorityFIFO_empty),
@@ -112,6 +113,7 @@ i3_router_FIFO_wrctrl
 	#(.head(3'b001))
 	i3_router_priorityFIFO_wrctrl(
 	.clk(clk),
+	.rst(rst),
 	.input_req1(input_req1),
 	.input_req2(input_req2),
 	.input_req3(input_req3),
@@ -129,6 +131,7 @@ i3_router_FIFO_wrctrl
 	#(.head(3'b000))
 	i3_router_regularFIFO_wrctrl(
 	.clk(clk),
+	.rst(rst),
 	.input_req1(input_req1),
 	.input_req2(input_req2),
 	.input_req3(input_req3),

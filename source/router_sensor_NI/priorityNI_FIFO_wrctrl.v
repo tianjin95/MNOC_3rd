@@ -1,6 +1,7 @@
 
 module priorityNI_FIFO_wrctrl(
 	 clk,
+	 rst,
 	 core_address,
 	 interrupt,
 	 feedback_rst,
@@ -9,6 +10,7 @@ module priorityNI_FIFO_wrctrl(
 	 priorityNI_FIFO_wr);
 	 
 input clk;	 
+input rst;
 input [3:0] core_address;
 input priorityNI_FIFO_full;
 input [15:0] interrupt;
@@ -22,7 +24,7 @@ reg [15:0] feedback_rst;
 parameter idle = 2'b00;
 parameter act_address = 2'b01;
 parameter act_data = 2'b10;
-parameter rst = 2'b11;
+parameter frst = 2'b11;
 
 reg [1:0] state_n;
 reg [1:0] state_c;
@@ -34,7 +36,8 @@ end
 
 always@(posedge clk)
 begin
-state_c<=state_n;
+if(rst) state_c<=idle;
+else state_c<=state_n;
 end
 
 always@(*)
@@ -46,14 +49,22 @@ case(state_c)
 		else state_n=state_c;
 		end
 	act_address:begin state_n=act_data;end
-	act_data:begin state_n=rst;end
-	rst:begin state_n=idle;end
+	act_data:begin state_n=frst;end
+	frst:begin state_n=idle;end
 endcase
 end
 
 always@(*)
 begin
-case(state_c)
+if(rst)
+	begin
+	feedback_rst=0;
+	priorityNI_FIFO_wr=0;
+	priorityFIFO_data=0;
+	end
+else
+	begin
+	case(state_c)
 	idle:
 		begin
 		feedback_rst=0;
@@ -88,7 +99,7 @@ case(state_c)
 		priorityNI_FIFO_wr=~priorityNI_FIFO_full;
 		priorityFIFO_data={3'b110,13'd0};
 		end
-	rst:
+	frst:
 		begin
 		priorityFIFO_data=0;
 		priorityNI_FIFO_wr=0;
@@ -110,7 +121,8 @@ case(state_c)
 		else if(interrupt[0]) feedback_rst[0]=1;
 		else feedback_rst=0;
 		end
-endcase
+	endcase
+end
 end
 
 

@@ -2,6 +2,7 @@
 
 module i2_router(
 	clk,
+	rst,
 	output_req,
 	output_data,
 	output_bussy,
@@ -12,6 +13,7 @@ module i2_router(
 	input_req2,
 	input_bussy2);
 input clk;	
+input rst;
 //output port
 output wire[15:0] output_data;	
 output wire output_req;
@@ -49,7 +51,7 @@ wire regular_bussy2;
 
 FIFO priorityfifo(
 	.clk(clk),
-	.reset(1'b0),
+	.reset(rst),
 	.data_in(priority_data),
 	.read(priorityFIFO_read),
 	.write(priorityFIFO_wr),
@@ -59,7 +61,7 @@ FIFO priorityfifo(
 
 FIFO regularfifo(
 	.clk(clk),
-	.reset(1'b0),
+	.reset(rst),
 	.data_in(regular_data),
 	.read(regularFIFO_read),
 	.write(regularFIFO_wr),
@@ -86,7 +88,6 @@ two_1_mux regularmux(
 		.outputdata(regular_data));
 		
 FIFO_readctrl i2_router_FIFO_readctrl(
-	.clk(clk),
 	.head(regularFIFO_dataout[15:13]),
 	.regularFIFO_empty(regularFIFO_empty),
 	.priorityFIFO_empty(priorityFIFO_empty),
@@ -100,6 +101,7 @@ i2_router_FIFO_wrctrl
 	#(.head(3'b001))
 	i2_router_priorityFIFO_wrctrl(
 	.clk(clk),
+	.rst(rst),
 	.input_req1(input_req1),
 	.input_req2(input_req2),
 	.head1(input_data1[15:13]),
@@ -114,6 +116,7 @@ i2_router_FIFO_wrctrl
 	#(.head(3'b000))
 	i2_router_regularFIFO_wrctrl(
 	.clk(clk),
+	.rst(rst),
 	.input_req1(input_req1),
 	.input_req2(input_req2),
 	.head1(input_data1[15:13]),

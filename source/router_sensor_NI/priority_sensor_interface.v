@@ -2,9 +2,11 @@ module priority_sensor_interface(
 	sensor,
 	clk,
 	interrupt,
+	grst,
 	rst);
 	
 input sensor;
+input grst;
 input clk;
 input rst;
 output interrupt;
@@ -23,7 +25,8 @@ end
 
 always@(posedge clk)
 begin
-state_c<=state_n;
+if(grst) state_c<=idle;
+else state_c<=state_n;
 end
 
 always@(*)
@@ -42,12 +45,16 @@ case(state_c)
 endcase
 end
 
-always@(state_c)
+always@(*)
 begin
-case(state_c)
+if(grst) interrupt=0;
+else
+	begin
+	case(state_c)
 	idle:begin interrupt=0;end
 	act:begin interrupt=1;end
-endcase
+	endcase
+end
 end
 
 endmodule	

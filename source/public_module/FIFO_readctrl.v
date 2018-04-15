@@ -1,7 +1,6 @@
 
 
 module FIFO_readctrl(
-	clk,
 	head,
 	regularFIFO_empty,
 	priorityFIFO_empty,
@@ -11,7 +10,6 @@ module FIFO_readctrl(
 	priorityFIFO_read,
 	FIFOsel);
 	
-input clk;
 input regularFIFO_empty;
 input priorityFIFO_empty;
 input bussy;

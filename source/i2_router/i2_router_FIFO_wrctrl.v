@@ -2,6 +2,7 @@
 
 module i2_router_FIFO_wrctrl(
 	clk,
+	rst,
 	input_req1,
 	input_req2,
 	head1,
@@ -13,6 +14,7 @@ module i2_router_FIFO_wrctrl(
 	select);
 	
 input clk;
+input rst;
 input input_req1;
 input input_req2;
 input [2:0] head1;
@@ -38,7 +40,8 @@ end
 
 always@(posedge clk) 
 begin
-state_c<=state_n;
+if(rst) state_c<=idle;
+else state_c<=state_n;
 end
 
 always@(*)
@@ -58,7 +61,16 @@ end
 
 always@(*)
 begin
-case(state_c)
+if(rst)
+	begin
+	select=0;
+	FIFO_wr=0;
+	input_bussy1=1;
+	input_bussy2=1;
+	end
+else
+	begin
+	case(state_c)
 	idle:
 		begin
 		if(input_req1&&(head1==head)&&(~FIFO_full))
@@ -111,7 +123,8 @@ case(state_c)
 		input_bussy2=FIFO_full;
 		input_bussy1=1;
 		end
-endcase
+	endcase
+end
 end
 
 endmodule

@@ -1,0 +1,611 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Study/Graduation_Project/verilog/MNOC_3rd/simulation/modelsim
+vbaseline_c5gx
+Z1 !s110 1523813563
+!i10b 1
+!s100 1L[inFfLE6HZn_cA3jKG<2
+Ihi^Gf`;UfL8GhB@MmjcfM1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1444760366
+8D:/Study/Graduation_Project/verilog/MNOC_3rd/baseline_c5gx.v
+FD:/Study/Graduation_Project/verilog/MNOC_3rd/baseline_c5gx.v
+L0 38
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1523813563.000000
+!s107 D:/Study/Graduation_Project/verilog/MNOC_3rd/baseline_c5gx.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd|D:/Study/Graduation_Project/verilog/MNOC_3rd/baseline_c5gx.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd
+Z7 tCvgOpt 0
+vclock_division
+Z8 !s110 1523813562
+!i10b 1
+!s100 MnE_zW<V^16A?5OF=U1i60
+Im?P;JF:njI`6b@:0IAj;T1
+R2
+R0
+w1522744235
+8D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI/clock_division.v
+FD:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI/clock_division.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z9 !s108 1523813562.000000
+!s107 D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI/clock_division.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI|D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI/clock_division.v|
+!i113 1
+R5
+Z10 !s92 -vlog01compat -work work +incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI
+R7
+vFIFO
+R8
+!i10b 1
+!s100 0G3_KSgBBNJ?gZ?435b_m3
+I5z?Gn=WGF^k6GJ?SKVBK>3
+R2
+R0
+w1523293753
+8D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module/FIFO.v
+FD:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module/FIFO.v
+L0 4
+R3
+r1
+!s85 0
+31
+R9
+!s107 D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module/FIFO.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module|D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module/FIFO.v|
+!i113 1
+R5
+Z11 !s92 -vlog01compat -work work +incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module
+R7
+n@f@i@f@o
+vFIFO_32depth
+R8
+!i10b 1
+!s100 jW?BS]Ucf4cK[PA1O1bAO1
+I_CVN6MmV:kdTli[j3Ro<D2
+R2
+R0
+w1523293786
+8D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module/FIFO _32depth.v
+FD:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module/FIFO _32depth.v
+L0 4
+R3
+r1
+!s85 0
+31
+R9
+!s107 D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module/FIFO _32depth.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module|D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module/FIFO _32depth.v|
+!i113 1
+R5
+R11
+R7
+n@f@i@f@o_32depth
+vFIFO_readctrl
+R8
+!i10b 1
+!s100 Kh_a:P6=^]M?R37EJF0ce0
+I1KU9Fnz`6=9;39[1]caXe3
+R2
+R0
+w1523772073
+8D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module/FIFO_readctrl.v
+FD:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module/FIFO_readctrl.v
+L0 3
+R3
+r1
+!s85 0
+31
+R9
+!s107 D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module/FIFO_readctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module|D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module/FIFO_readctrl.v|
+!i113 1
+R5
+R11
+R7
+n@f@i@f@o_readctrl
+vi1_router
+R1
+!i10b 1
+!s100 7FMdA4]78hzM5BFUK6M5Y1
+IXaMdkCgL]J`kND9lC?XKg0
+R2
+R0
+w1523772312
+8D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i1_router/i1_router.v
+FD:/Study/Graduation_Project/verilog/MNOC_3rd/source/i1_router/i1_router.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i1_router/i1_router.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i1_router|D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i1_router/i1_router.v|
+!i113 1
+R5
+Z12 !s92 -vlog01compat -work work +incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i1_router
+R7
+vi1_router_FIFO_wrctrl
+R1
+!i10b 1
+!s100 _D>GfZLHzHcmlCSQCSPQV3
+Il_RKVbP5TaZ1O3XS1K1oI0
+R2
+R0
+w1523772532
+8D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i1_router/i1_router_FIFO_wrctrl.v
+FD:/Study/Graduation_Project/verilog/MNOC_3rd/source/i1_router/i1_router_FIFO_wrctrl.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i1_router/i1_router_FIFO_wrctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i1_router|D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i1_router/i1_router_FIFO_wrctrl.v|
+!i113 1
+R5
+R12
+R7
+ni1_router_@f@i@f@o_wrctrl
+vi2_router
+R1
+!i10b 1
+!s100 ;G9CPdBC2LM5d?nCljEfb3
+IX;m5gPOWKRD7LI9F9Uc3H0
+R2
+R0
+w1523772368
+8D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i2_router/i2_router.v
+FD:/Study/Graduation_Project/verilog/MNOC_3rd/source/i2_router/i2_router.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i2_router/i2_router.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i2_router|D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i2_router/i2_router.v|
+!i113 1
+R5
+Z13 !s92 -vlog01compat -work work +incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i2_router
+R7
+vi2_router_FIFO_wrctrl
+R1
+!i10b 1
+!s100 eaNm<mz89A9PR_cKDA=b93
+Ihi6f6Un277Nn6m;XS;7c?3
+R2
+R0
+w1523772524
+8D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i2_router/i2_router_FIFO_wrctrl.v
+FD:/Study/Graduation_Project/verilog/MNOC_3rd/source/i2_router/i2_router_FIFO_wrctrl.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i2_router/i2_router_FIFO_wrctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i2_router|D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i2_router/i2_router_FIFO_wrctrl.v|
+!i113 1
+R5
+R13
+R7
+ni2_router_@f@i@f@o_wrctrl
+vi3_router
+R8
+!i10b 1
+!s100 ?_TazhOeb]a[4e@f9ZDO52
+I[WWd`9emCN;manT7o=[K`3
+R2
+R0
+w1523772299
+8D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i3_router/i3_router.v
+FD:/Study/Graduation_Project/verilog/MNOC_3rd/source/i3_router/i3_router.v
+L0 2
+R3
+r1
+!s85 0
+31
+R9
+!s107 D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i3_router/i3_router.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i3_router|D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i3_router/i3_router.v|
+!i113 1
+R5
+Z14 !s92 -vlog01compat -work work +incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i3_router
+R7
+vi3_router_FIFO_wrctrl
+R8
+!i10b 1
+!s100 =Y2[n:HIKTemKXW;;<PO=3
+I4YhFg3<U>LjQDh]Bm7LQM3
+R2
+R0
+w1523772507
+8D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i3_router/i3_router_FIFO_wrctrl.v
+FD:/Study/Graduation_Project/verilog/MNOC_3rd/source/i3_router/i3_router_FIFO_wrctrl.v
+L0 3
+R3
+r1
+!s85 0
+31
+R9
+!s107 D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i3_router/i3_router_FIFO_wrctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i3_router|D:/Study/Graduation_Project/verilog/MNOC_3rd/source/i3_router/i3_router_FIFO_wrctrl.v|
+!i113 1
+R5
+R14
+R7
+ni3_router_@f@i@f@o_wrctrl
+vMNOC_3rd
+R1
+!i10b 1
+!s100 z:9bZ;N]LC^O4=4a8L01a1
+I=`onLPkOF_h_o9L:O:KH@3
+R2
+R0
+w1523813538
+8D:/Study/Graduation_Project/verilog/MNOC_3rd/MNOC_3rd.v
+FD:/Study/Graduation_Project/verilog/MNOC_3rd/MNOC_3rd.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/Study/Graduation_Project/verilog/MNOC_3rd/MNOC_3rd.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd|D:/Study/Graduation_Project/verilog/MNOC_3rd/MNOC_3rd.v|
+!i113 1
+R5
+R6
+R7
+n@m@n@o@c_3rd
+vMNOC_3rd_vlg_tst
+R1
+!i10b 1
+!s100 OhXmHfb0^lYIW_[LFD]Ya3
+I3KGNCYolYh8Y<U>OLQmC@1
+R2
+R0
+w1523813068
+8D:/Study/Graduation_Project/verilog/MNOC_3rd/simulation/modelsim/MNOC_3rd.vt
+FD:/Study/Graduation_Project/verilog/MNOC_3rd/simulation/modelsim/MNOC_3rd.vt
+L0 28
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/Study/Graduation_Project/verilog/MNOC_3rd/simulation/modelsim/MNOC_3rd.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/simulation/modelsim|D:/Study/Graduation_Project/verilog/MNOC_3rd/simulation/modelsim/MNOC_3rd.vt|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/simulation/modelsim
+R7
+n@m@n@o@c_3rd_vlg_tst
+vpriority_sensor_counter
+Z15 !s110 1523813561
+!i10b 1
+!s100 2bzkBzf8lAjT^0TU>gW;J3
+IJPl^NVZzobF7Fl`DjbMH11
+R2
+R0
+w1523774676
+8D:/Study/Graduation_Project/verilog/MNOC_3rd/source/stimulation/priority_sensor_counter.v
+FD:/Study/Graduation_Project/verilog/MNOC_3rd/source/stimulation/priority_sensor_counter.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z16 !s108 1523813561.000000
+!s107 D:/Study/Graduation_Project/verilog/MNOC_3rd/source/stimulation/priority_sensor_counter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/stimulation|D:/Study/Graduation_Project/verilog/MNOC_3rd/source/stimulation/priority_sensor_counter.v|
+!i113 1
+R5
+Z17 !s92 -vlog01compat -work work +incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/stimulation
+R7
+vpriority_sensor_interface
+R8
+!i10b 1
+!s100 ^Tno]S<lk`HX5CR^9zc5c3
+I`?Nhdz8^5nPbP6jL8>T_X1
+R2
+R0
+w1523772659
+8D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI/priority_sensor_interface.v
+FD:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI/priority_sensor_interface.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI/priority_sensor_interface.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI|D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI/priority_sensor_interface.v|
+!i113 1
+R5
+R10
+R7
+vpriorityNI_FIFO_wrctrl
+R8
+!i10b 1
+!s100 9Y_9oUc4^fL0C8WL3mJ?i0
+I4ec7Izd25>GJ_mlR9ni0J0
+R2
+R0
+w1523774602
+8D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI/priorityNI_FIFO_wrctrl.v
+FD:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI/priorityNI_FIFO_wrctrl.v
+L0 2
+R3
+r1
+!s85 0
+31
+R16
+!s107 D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI/priorityNI_FIFO_wrctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI|D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI/priorityNI_FIFO_wrctrl.v|
+!i113 1
+R5
+R10
+R7
+npriority@n@i_@f@i@f@o_wrctrl
+vrandom_16bit
+R15
+!i10b 1
+!s100 J0A:TX9B>AJ^NbKe@YK141
+I3UIm0n[XRIEkYgHK:]Mf82
+R2
+R0
+w1523021172
+8D:/Study/Graduation_Project/verilog/MNOC_3rd/source/stimulation/random_16bit.v
+FD:/Study/Graduation_Project/verilog/MNOC_3rd/source/stimulation/random_16bit.v
+L0 1
+R3
+r1
+!s85 0
+31
+R16
+!s107 D:/Study/Graduation_Project/verilog/MNOC_3rd/source/stimulation/random_16bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/stimulation|D:/Study/Graduation_Project/verilog/MNOC_3rd/source/stimulation/random_16bit.v|
+!i113 1
+R5
+R17
+R7
+vrandom_8bit
+R15
+!i10b 1
+!s100 jfZUhA9AfHZjbn0`ZAZQ03
+IoTk<T=:00ZcLK2mPU6Sl]3
+R2
+R0
+w1523020877
+8D:/Study/Graduation_Project/verilog/MNOC_3rd/source/stimulation/random_8bit.v
+FD:/Study/Graduation_Project/verilog/MNOC_3rd/source/stimulation/random_8bit.v
+L0 1
+R3
+r1
+!s85 0
+31
+R16
+!s107 D:/Study/Graduation_Project/verilog/MNOC_3rd/source/stimulation/random_8bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/stimulation|D:/Study/Graduation_Project/verilog/MNOC_3rd/source/stimulation/random_8bit.v|
+!i113 1
+R5
+R17
+R7
+vregular_sensor_counter
+R15
+!i10b 1
+!s100 aG;;a9W:ZNdDJ47:e6:ei3
+IiQFm4]Tc`Y<7MoG59mcWY3
+R2
+R0
+w1523773886
+8D:/Study/Graduation_Project/verilog/MNOC_3rd/source/stimulation/regular_sensor_counter.v
+FD:/Study/Graduation_Project/verilog/MNOC_3rd/source/stimulation/regular_sensor_counter.v
+L0 1
+R3
+r1
+!s85 0
+31
+R16
+!s107 D:/Study/Graduation_Project/verilog/MNOC_3rd/source/stimulation/regular_sensor_counter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/stimulation|D:/Study/Graduation_Project/verilog/MNOC_3rd/source/stimulation/regular_sensor_counter.v|
+!i113 1
+R5
+R17
+R7
+vregular_sensor_interface
+R15
+!i10b 1
+!s100 D`7HE003=<fabl[JZQKoM3
+I8aW8kU<P<[`ENnLaLQ[en0
+R2
+R0
+w1523774552
+8D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI/regular_sensor_interface.v
+FD:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI/regular_sensor_interface.v
+L0 1
+R3
+r1
+!s85 0
+31
+R16
+!s107 D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI/regular_sensor_interface.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI|D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI/regular_sensor_interface.v|
+!i113 1
+R5
+R10
+R7
+vregularNI_FIFO_wrctrl
+R15
+!i10b 1
+!s100 kE_2ZlDe;nz25G;mBeCJd3
+Id6ZoiNN7HB=VL4G9UV4^o3
+R2
+R0
+w1523774820
+8D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI/regularNI_FIFO_wrctrl.v
+FD:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI/regularNI_FIFO_wrctrl.v
+L0 4
+R3
+r1
+!s85 0
+31
+R16
+!s107 D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI/regularNI_FIFO_wrctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI|D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI/regularNI_FIFO_wrctrl.v|
+!i113 1
+R5
+R10
+R7
+nregular@n@i_@f@i@f@o_wrctrl
+vrouter_sensor_NI
+R15
+!i10b 1
+!s100 GLLT]i5fznL@dV?UFD_ZH0
+I=9K_SlNTJ?GB7nn8zlgb<1
+R2
+R0
+w1523774747
+8D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI/router_sensor_NI.v
+FD:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI/router_sensor_NI.v
+L0 1
+R3
+r1
+!s85 0
+31
+R16
+!s107 D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI/router_sensor_NI.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI|D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_sensor_NI/router_sensor_NI.v|
+!i113 1
+R5
+R10
+R7
+nrouter_sensor_@n@i
+vrouter_UART_NI
+R15
+!i10b 1
+!s100 dGKAT[YLiMLQ7hg4K7`h]0
+Icl8T1Cl5X9OcZYX]CDRA^0
+R2
+R0
+w1523440743
+8D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_UART_NI/router_UART_NI.v
+FD:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_UART_NI/router_UART_NI.v
+L0 3
+R3
+r1
+!s85 0
+31
+R16
+!s107 D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_UART_NI/router_UART_NI.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_UART_NI|D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_UART_NI/router_UART_NI.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/router_UART_NI
+R7
+nrouter_@u@a@r@t_@n@i
+Esuper_pll
+Z18 w1523771491
+Z19 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z20 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z21 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 dfin^_@l97Ngz6cK0kjS62
+R0
+Z22 8D:/Study/Graduation_Project/verilog/MNOC_3rd/source/clock_management/super_pll_sim/super_pll.vho
+Z23 FD:/Study/Graduation_Project/verilog/MNOC_3rd/source/clock_management/super_pll_sim/super_pll.vho
+l0
+L33
+V5_XVo7niXQ:l;GgA_29gj3
+!s100 i:HN70?5Zo9T@BA`bhnGC1
+Z24 OV;C;10.5b;63
+32
+R15
+!i10b 1
+R16
+Z25 !s90 -reportprogress|300|D:/Study/Graduation_Project/verilog/MNOC_3rd/source/clock_management/super_pll_sim/super_pll.vho|
+Z26 !s107 D:/Study/Graduation_Project/verilog/MNOC_3rd/source/clock_management/super_pll_sim/super_pll.vho|
+!i113 1
+Z27 tExplicit 1 CvgOpt 0
+Artl
+R19
+R20
+R21
+DEx4 work 9 super_pll 0 22 5_XVo7niXQ:l;GgA_29gj3
+l51
+L44
+VKGYH42a^Qd@DR5b57zm:N3
+!s100 ]_OIAITDSKQW;d8nL[:OJ3
+R24
+32
+R15
+!i10b 1
+R16
+R25
+R26
+!i113 1
+R27
+vthree_1_mux
+R8
+!i10b 1
+!s100 i6TEMaV3N=3<CRIG[Q_dh1
+IbTfP@J^P4;:eORe<6@kah1
+R2
+R0
+w1523073817
+8D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module/three_1_mux.v
+FD:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module/three_1_mux.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module/three_1_mux.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module|D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module/three_1_mux.v|
+!i113 1
+R5
+R11
+R7
+vtwo_1_mux
+R8
+!i10b 1
+!s100 YKbD;G[4Ed]LonEdc:^DT2
+IR4nGX1YY[M[UDMAbbebZ^0
+R2
+R0
+w1522132091
+8D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module/two_1_mux.v
+FD:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module/two_1_mux.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module/two_1_mux.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module|D:/Study/Graduation_Project/verilog/MNOC_3rd/source/public_module/two_1_mux.v|
+!i113 1
+R5
+R11
+R7

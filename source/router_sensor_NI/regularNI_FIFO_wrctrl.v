@@ -2,7 +2,7 @@
 
 
 module regularNI_FIFO_wrctrl(
-	enable,
+	rst,
 	core_address,
 	clk_division,
 	regularFIFO_data,
@@ -11,7 +11,7 @@ module regularNI_FIFO_wrctrl(
 	regularNI_FIFO_empty,
 	regularNI_FIFO_wr);
 
-input enable;
+input rst;
 input [3:0] core_address;
 input clk_division;
 input [15:0] slot;
@@ -50,7 +50,7 @@ end
 
 always@(posedge clk_division)
 begin
-if(enable) state_c<=state_n;
+if(!rst) state_c<=state_n;
 else state_c=idle;
 end
 
@@ -78,7 +78,17 @@ end
 
 always@(*)
 begin
-case(state_c)
+if(rst)
+	begin
+	regularNI_FIFO_wr=0;
+	sample_counter_en=0;
+	inject_counter_en=0;
+	regularFIFO_data=0;
+	sample_en=0;
+	end
+else
+	begin
+	case(state_c)
 	idle:
 		begin
 		regularNI_FIFO_wr=0;
@@ -112,7 +122,7 @@ case(state_c)
 			begin
 			if(clk_division) regularFIFO_data={3'd0,5'd0,core_address,slot_counter};
 			else regularFIFO_data={3'b110,5'd0,data_counter};
-			regularNI_FIFO_wr=enable;
+			regularNI_FIFO_wr=1;
 			end
 		else
 			begin
@@ -120,18 +130,23 @@ case(state_c)
 			regularNI_FIFO_wr=0;
 			end
 		end
-endcase
+	endcase
+	end
 end
 
 always@(posedge clk_division)
 begin
-if(inject_counter_en) inject_counter<=inject_counter+1'b1;
-else inject_counter<=0;
+if(rst) inject_counter<=0;
+else
+	begin
+	if(inject_counter_en) inject_counter<=inject_counter+1'b1;
+	else inject_counter<=0;
+	end
 end
 
 always@(posedge clk_division)		
 begin
-if(sample_counter_en)
+if(sample_counter_en&&(!rst))
 	begin
 	slot_counter<=slot_counter+1'b1;
 	if(slot_counter==15) data_counter<=data_counter+1'b1;

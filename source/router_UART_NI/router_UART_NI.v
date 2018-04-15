@@ -2,6 +2,7 @@
 
 module router_UART_NI(
 	clk,
+	rst,
 	clk_uart,
 	data,
 	RXD,
@@ -9,6 +10,7 @@ module router_UART_NI(
 	req);
 	
 input clk;
+input rst;
 input clk_uart;
 input [15:0] data;
 input req;
@@ -44,7 +46,8 @@ end
 
 always@(posedge clk)
 begin
-state_c<=state_n;
+if(rst) state_c<=idle;
+else state_c<=state_n;
 end
 
 always@(*)
@@ -70,7 +73,15 @@ end
 
 always@(*)
 begin
-case(state_c)
+if(rst)
+	begin
+	head_sample=0;
+	tail_sample=0;
+	counter_en=0;
+	end
+else
+	begin
+	case(state_c)
 	idle:
 		begin
 		if((counter==0)&&req&&(((data[15:13]==3'b001)&&(data[7:0]==priority_address))||((data[15:13]==3'b000)&&(data[7:0]==regular_address)))) head_sample=1;
@@ -91,24 +102,32 @@ case(state_c)
 		head_sample=0;
 		tail_sample=0;
 		end
-endcase
+	endcase
+end
 end
 
 always@(posedge clk_uart)
 begin
-if(counter_en) counter<=counter+1'b1;
+if(counter_en&&(!rst)) counter<=counter+1'b1;
 else counter<=0;
 end
 
 always@(posedge clk)
 begin
-if(head_sample) intdata[31:16]<=data;
-if(tail_sample) intdata[15:0]<=data;
+if(rst) intdata=0;
+else
+	begin
+	if(head_sample) intdata[31:16]<=data;
+	else if(tail_sample) intdata[15:0]<=data;
+	end
 end
 
 always@(posedge clk_uart)
 begin
-if(counter_en)
+if(rst) RXD<=1;
+else
+	begin
+	if(counter_en)
 	begin
 	case(counter)
 			10'd0:begin RXD<=0;end
@@ -151,16 +170,24 @@ if(counter_en)
 			10'd592:begin RXD<=intdata[6];end
 			10'd608:begin RXD<=intdata[7];end
 			10'd624:begin RXD<=1;end
-
-	endcase
+		endcase
+		end
+	else RXD<=1;
 	end
-else RXD<=1;
 end
 
 always@(posedge clk)
 begin
-if((counter==0)&&head_sample&&(data[15:13]==3'b000)&&(data[7:0]==regular_address)) regular_address<=regular_address+1;
-else if((counter==0)&&head_sample&&(data[15:13]==3'b001)&&(data[7:0]==priority_address)) priority_address<=priority_address+1;
+if(rst) 
+	begin
+	regular_address<=0;
+	priority_address<=0;
+	end
+else
+	begin
+	if((counter==0)&&head_sample&&(data[15:13]==3'b000)&&(data[7:0]==regular_address)) regular_address<=regular_address+1;
+	else if((counter==0)&&head_sample&&(data[15:13]==3'b001)&&(data[7:0]==priority_address)) priority_address<=priority_address+1;
+	end
 end
 		
 endmodule

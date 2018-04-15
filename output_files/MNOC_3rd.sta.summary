@@ -1,0 +1,1029 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'rst'
+Slack : -11.700
+TNS   : -1387.616
+
+Type  : Slow 1100mV 85C Model Setup 'router_sensor_NI:NI7|clock_division:clock_division|clk_division'
+Slack : -10.428
+TNS   : -224.614
+
+Type  : Slow 1100mV 85C Model Setup 'router_sensor_NI:NI4|clock_division:clock_division|clk_division'
+Slack : -10.238
+TNS   : -227.020
+
+Type  : Slow 1100mV 85C Model Setup 'super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : -10.043
+TNS   : -13181.133
+
+Type  : Slow 1100mV 85C Model Setup 'router_sensor_NI:NI13|clock_division:clock_division|clk_division'
+Slack : -9.912
+TNS   : -214.680
+
+Type  : Slow 1100mV 85C Model Setup 'router_sensor_NI:NI6|clock_division:clock_division|clk_division'
+Slack : -9.765
+TNS   : -197.092
+
+Type  : Slow 1100mV 85C Model Setup 'router_sensor_NI:NI3|clock_division:clock_division|clk_division'
+Slack : -9.711
+TNS   : -227.684
+
+Type  : Slow 1100mV 85C Model Setup 'router_sensor_NI:NI11|clock_division:clock_division|clk_division'
+Slack : -9.652
+TNS   : -251.512
+
+Type  : Slow 1100mV 85C Model Setup 'router_sensor_NI:NI9|clock_division:clock_division|clk_division'
+Slack : -9.630
+TNS   : -169.900
+
+Type  : Slow 1100mV 85C Model Setup 'router_sensor_NI:NI8|clock_division:clock_division|clk_division'
+Slack : -9.522
+TNS   : -200.173
+
+Type  : Slow 1100mV 85C Model Setup 'router_sensor_NI:NI14|clock_division:clock_division|clk_division'
+Slack : -9.453
+TNS   : -206.000
+
+Type  : Slow 1100mV 85C Model Setup 'router_sensor_NI:NI12|clock_division:clock_division|clk_division'
+Slack : -9.210
+TNS   : -188.008
+
+Type  : Slow 1100mV 85C Model Setup 'router_sensor_NI:NI15|clock_division:clock_division|clk_division'
+Slack : -9.096
+TNS   : -192.048
+
+Type  : Slow 1100mV 85C Model Setup 'router_sensor_NI:NI10|clock_division:clock_division|clk_division'
+Slack : -9.075
+TNS   : -182.706
+
+Type  : Slow 1100mV 85C Model Setup 'router_sensor_NI:NI5|clock_division:clock_division|clk_division'
+Slack : -9.055
+TNS   : -181.814
+
+Type  : Slow 1100mV 85C Model Setup 'router_sensor_NI:NI0|clock_division:clock_division|clk_division'
+Slack : -9.045
+TNS   : -193.973
+
+Type  : Slow 1100mV 85C Model Setup 'router_sensor_NI:NI2|clock_division:clock_division|clk_division'
+Slack : -8.709
+TNS   : -223.418
+
+Type  : Slow 1100mV 85C Model Setup 'router_sensor_NI:NI1|clock_division:clock_division|clk_division'
+Slack : -8.404
+TNS   : -193.351
+
+Type  : Slow 1100mV 85C Model Setup 'super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : -3.203
+TNS   : -20.530
+
+Type  : Slow 1100mV 85C Model Setup 'clock_division:clock_division1|clk_division'
+Slack : -2.685
+TNS   : -22.811
+
+Type  : Slow 1100mV 85C Model Hold 'rst'
+Slack : -6.638
+TNS   : -857.948
+
+Type  : Slow 1100mV 85C Model Hold 'super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : -4.523
+TNS   : -5046.296
+
+Type  : Slow 1100mV 85C Model Hold 'router_sensor_NI:NI12|clock_division:clock_division|clk_division'
+Slack : -0.768
+TNS   : -1.088
+
+Type  : Slow 1100mV 85C Model Hold 'router_sensor_NI:NI4|clock_division:clock_division|clk_division'
+Slack : -0.756
+TNS   : -2.016
+
+Type  : Slow 1100mV 85C Model Hold 'router_sensor_NI:NI5|clock_division:clock_division|clk_division'
+Slack : -0.424
+TNS   : -1.415
+
+Type  : Slow 1100mV 85C Model Hold 'router_sensor_NI:NI2|clock_division:clock_division|clk_division'
+Slack : -0.189
+TNS   : -1.323
+
+Type  : Slow 1100mV 85C Model Hold 'router_sensor_NI:NI3|clock_division:clock_division|clk_division'
+Slack : -0.131
+TNS   : -0.537
+
+Type  : Slow 1100mV 85C Model Hold 'router_sensor_NI:NI9|clock_division:clock_division|clk_division'
+Slack : -0.057
+TNS   : -0.456
+
+Type  : Slow 1100mV 85C Model Hold 'router_sensor_NI:NI0|clock_division:clock_division|clk_division'
+Slack : -0.054
+TNS   : -0.054
+
+Type  : Slow 1100mV 85C Model Hold 'router_sensor_NI:NI1|clock_division:clock_division|clk_division'
+Slack : 0.107
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'router_sensor_NI:NI10|clock_division:clock_division|clk_division'
+Slack : 0.171
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'router_sensor_NI:NI14|clock_division:clock_division|clk_division'
+Slack : 0.284
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'router_sensor_NI:NI8|clock_division:clock_division|clk_division'
+Slack : 0.285
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'router_sensor_NI:NI13|clock_division:clock_division|clk_division'
+Slack : 0.298
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'router_sensor_NI:NI15|clock_division:clock_division|clk_division'
+Slack : 0.341
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'router_sensor_NI:NI7|clock_division:clock_division|clk_division'
+Slack : 0.349
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'router_sensor_NI:NI11|clock_division:clock_division|clk_division'
+Slack : 0.352
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'router_sensor_NI:NI6|clock_division:clock_division|clk_division'
+Slack : 0.356
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'clock_division:clock_division1|clk_division'
+Slack : 0.580
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.717
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'rst'
+Slack : -9.258
+TNS   : -1734.709
+
+Type  : Slow 1100mV 85C Model Removal 'rst'
+Slack : -5.672
+TNS   : -761.333
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'rst'
+Slack : -6.324
+TNS   : -6949.228
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'router_sensor_NI:NI12|clock_division:clock_division|clk_division'
+Slack : -0.649
+TNS   : -46.675
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'router_sensor_NI:NI4|clock_division:clock_division|clk_division'
+Slack : -0.562
+TNS   : -41.469
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'router_sensor_NI:NI1|clock_division:clock_division|clk_division'
+Slack : -0.538
+TNS   : -45.314
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'router_sensor_NI:NI0|clock_division:clock_division|clk_division'
+Slack : -0.538
+TNS   : -43.938
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'router_sensor_NI:NI5|clock_division:clock_division|clk_division'
+Slack : -0.538
+TNS   : -43.304
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'router_sensor_NI:NI2|clock_division:clock_division|clk_division'
+Slack : -0.538
+TNS   : -43.063
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'router_sensor_NI:NI9|clock_division:clock_division|clk_division'
+Slack : -0.538
+TNS   : -42.251
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'router_sensor_NI:NI6|clock_division:clock_division|clk_division'
+Slack : -0.538
+TNS   : -41.991
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'router_sensor_NI:NI15|clock_division:clock_division|clk_division'
+Slack : -0.538
+TNS   : -41.919
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'router_sensor_NI:NI10|clock_division:clock_division|clk_division'
+Slack : -0.538
+TNS   : -41.915
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'router_sensor_NI:NI3|clock_division:clock_division|clk_division'
+Slack : -0.538
+TNS   : -41.702
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'router_sensor_NI:NI14|clock_division:clock_division|clk_division'
+Slack : -0.538
+TNS   : -41.312
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'router_sensor_NI:NI8|clock_division:clock_division|clk_division'
+Slack : -0.538
+TNS   : -41.289
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'router_sensor_NI:NI7|clock_division:clock_division|clk_division'
+Slack : -0.538
+TNS   : -40.692
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'router_sensor_NI:NI13|clock_division:clock_division|clk_division'
+Slack : -0.538
+TNS   : -40.652
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'router_sensor_NI:NI11|clock_division:clock_division|clk_division'
+Slack : -0.538
+TNS   : -40.311
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clock_division:clock_division1|clk_division'
+Slack : -0.538
+TNS   : -8.856
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'super_pll|super_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 0.666
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 1.899
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk_50MHz'
+Slack : 9.949
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 270.584
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'rst'
+Slack : -11.591
+TNS   : -1403.239
+
+Type  : Slow 1100mV 0C Model Setup 'router_sensor_NI:NI7|clock_division:clock_division|clk_division'
+Slack : -10.405
+TNS   : -221.676
+
+Type  : Slow 1100mV 0C Model Setup 'router_sensor_NI:NI4|clock_division:clock_division|clk_division'
+Slack : -10.241
+TNS   : -219.663
+
+Type  : Slow 1100mV 0C Model Setup 'router_sensor_NI:NI6|clock_division:clock_division|clk_division'
+Slack : -9.778
+TNS   : -193.036
+
+Type  : Slow 1100mV 0C Model Setup 'router_sensor_NI:NI3|clock_division:clock_division|clk_division'
+Slack : -9.772
+TNS   : -222.032
+
+Type  : Slow 1100mV 0C Model Setup 'router_sensor_NI:NI13|clock_division:clock_division|clk_division'
+Slack : -9.764
+TNS   : -210.688
+
+Type  : Slow 1100mV 0C Model Setup 'super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : -9.732
+TNS   : -12252.346
+
+Type  : Slow 1100mV 0C Model Setup 'router_sensor_NI:NI11|clock_division:clock_division|clk_division'
+Slack : -9.664
+TNS   : -245.744
+
+Type  : Slow 1100mV 0C Model Setup 'router_sensor_NI:NI9|clock_division:clock_division|clk_division'
+Slack : -9.615
+TNS   : -166.309
+
+Type  : Slow 1100mV 0C Model Setup 'router_sensor_NI:NI14|clock_division:clock_division|clk_division'
+Slack : -9.612
+TNS   : -202.695
+
+Type  : Slow 1100mV 0C Model Setup 'router_sensor_NI:NI8|clock_division:clock_division|clk_division'
+Slack : -9.515
+TNS   : -195.639
+
+Type  : Slow 1100mV 0C Model Setup 'router_sensor_NI:NI12|clock_division:clock_division|clk_division'
+Slack : -9.257
+TNS   : -182.929
+
+Type  : Slow 1100mV 0C Model Setup 'router_sensor_NI:NI15|clock_division:clock_division|clk_division'
+Slack : -9.224
+TNS   : -189.083
+
+Type  : Slow 1100mV 0C Model Setup 'router_sensor_NI:NI5|clock_division:clock_division|clk_division'
+Slack : -9.184
+TNS   : -176.492
+
+Type  : Slow 1100mV 0C Model Setup 'router_sensor_NI:NI10|clock_division:clock_division|clk_division'
+Slack : -9.093
+TNS   : -177.700
+
+Type  : Slow 1100mV 0C Model Setup 'router_sensor_NI:NI0|clock_division:clock_division|clk_division'
+Slack : -9.052
+TNS   : -189.053
+
+Type  : Slow 1100mV 0C Model Setup 'router_sensor_NI:NI2|clock_division:clock_division|clk_division'
+Slack : -8.768
+TNS   : -219.270
+
+Type  : Slow 1100mV 0C Model Setup 'router_sensor_NI:NI1|clock_division:clock_division|clk_division'
+Slack : -8.512
+TNS   : -189.553
+
+Type  : Slow 1100mV 0C Model Setup 'super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : -3.188
+TNS   : -18.936
+
+Type  : Slow 1100mV 0C Model Setup 'clock_division:clock_division1|clk_division'
+Slack : -2.610
+TNS   : -21.717
+
+Type  : Slow 1100mV 0C Model Hold 'rst'
+Slack : -6.586
+TNS   : -863.303
+
+Type  : Slow 1100mV 0C Model Hold 'super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : -4.574
+TNS   : -5610.165
+
+Type  : Slow 1100mV 0C Model Hold 'router_sensor_NI:NI12|clock_division:clock_division|clk_division'
+Slack : -0.645
+TNS   : -0.671
+
+Type  : Slow 1100mV 0C Model Hold 'router_sensor_NI:NI4|clock_division:clock_division|clk_division'
+Slack : -0.562
+TNS   : -1.247
+
+Type  : Slow 1100mV 0C Model Hold 'router_sensor_NI:NI5|clock_division:clock_division|clk_division'
+Slack : -0.292
+TNS   : -0.536
+
+Type  : Slow 1100mV 0C Model Hold 'router_sensor_NI:NI2|clock_division:clock_division|clk_division'
+Slack : -0.146
+TNS   : -1.022
+
+Type  : Slow 1100mV 0C Model Hold 'router_sensor_NI:NI0|clock_division:clock_division|clk_division'
+Slack : -0.053
+TNS   : -0.053
+
+Type  : Slow 1100mV 0C Model Hold 'router_sensor_NI:NI3|clock_division:clock_division|clk_division'
+Slack : -0.032
+TNS   : -0.032
+
+Type  : Slow 1100mV 0C Model Hold 'router_sensor_NI:NI9|clock_division:clock_division|clk_division'
+Slack : -0.010
+TNS   : -0.044
+
+Type  : Slow 1100mV 0C Model Hold 'router_sensor_NI:NI10|clock_division:clock_division|clk_division'
+Slack : 0.142
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'router_sensor_NI:NI1|clock_division:clock_division|clk_division'
+Slack : 0.182
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'router_sensor_NI:NI14|clock_division:clock_division|clk_division'
+Slack : 0.329
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'router_sensor_NI:NI8|clock_division:clock_division|clk_division'
+Slack : 0.377
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'router_sensor_NI:NI15|clock_division:clock_division|clk_division'
+Slack : 0.379
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'router_sensor_NI:NI13|clock_division:clock_division|clk_division'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'router_sensor_NI:NI11|clock_division:clock_division|clk_division'
+Slack : 0.400
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'router_sensor_NI:NI7|clock_division:clock_division|clk_division'
+Slack : 0.404
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'router_sensor_NI:NI6|clock_division:clock_division|clk_division'
+Slack : 0.411
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'clock_division:clock_division1|clk_division'
+Slack : 0.616
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.650
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'rst'
+Slack : -9.220
+TNS   : -1748.410
+
+Type  : Slow 1100mV 0C Model Removal 'rst'
+Slack : -5.702
+TNS   : -762.025
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'rst'
+Slack : -6.272
+TNS   : -6955.993
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'router_sensor_NI:NI12|clock_division:clock_division|clk_division'
+Slack : -0.646
+TNS   : -46.559
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'router_sensor_NI:NI4|clock_division:clock_division|clk_division'
+Slack : -0.543
+TNS   : -41.155
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'router_sensor_NI:NI1|clock_division:clock_division|clk_division'
+Slack : -0.538
+TNS   : -44.559
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'router_sensor_NI:NI0|clock_division:clock_division|clk_division'
+Slack : -0.538
+TNS   : -43.702
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'router_sensor_NI:NI2|clock_division:clock_division|clk_division'
+Slack : -0.538
+TNS   : -42.934
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'router_sensor_NI:NI5|clock_division:clock_division|clk_division'
+Slack : -0.538
+TNS   : -42.705
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'router_sensor_NI:NI6|clock_division:clock_division|clk_division'
+Slack : -0.538
+TNS   : -41.784
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'router_sensor_NI:NI10|clock_division:clock_division|clk_division'
+Slack : -0.538
+TNS   : -41.775
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'router_sensor_NI:NI3|clock_division:clock_division|clk_division'
+Slack : -0.538
+TNS   : -41.619
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'router_sensor_NI:NI15|clock_division:clock_division|clk_division'
+Slack : -0.538
+TNS   : -41.490
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'router_sensor_NI:NI8|clock_division:clock_division|clk_division'
+Slack : -0.538
+TNS   : -41.274
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'router_sensor_NI:NI14|clock_division:clock_division|clk_division'
+Slack : -0.538
+TNS   : -41.196
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'router_sensor_NI:NI9|clock_division:clock_division|clk_division'
+Slack : -0.538
+TNS   : -41.146
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'router_sensor_NI:NI13|clock_division:clock_division|clk_division'
+Slack : -0.538
+TNS   : -40.567
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'router_sensor_NI:NI11|clock_division:clock_division|clk_division'
+Slack : -0.538
+TNS   : -40.215
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'router_sensor_NI:NI7|clock_division:clock_division|clk_division'
+Slack : -0.538
+TNS   : -40.069
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clock_division:clock_division1|clk_division'
+Slack : -0.538
+TNS   : -8.932
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'super_pll|super_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 0.666
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 1.857
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk_50MHz'
+Slack : 9.980
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 270.502
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'rst'
+Slack : -6.566
+TNS   : -667.789
+
+Type  : Fast 1100mV 85C Model Setup 'super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : -5.906
+TNS   : -8572.326
+
+Type  : Fast 1100mV 85C Model Setup 'router_sensor_NI:NI7|clock_division:clock_division|clk_division'
+Slack : -5.158
+TNS   : -111.110
+
+Type  : Fast 1100mV 85C Model Setup 'router_sensor_NI:NI4|clock_division:clock_division|clk_division'
+Slack : -5.137
+TNS   : -111.828
+
+Type  : Fast 1100mV 85C Model Setup 'router_sensor_NI:NI13|clock_division:clock_division|clk_division'
+Slack : -5.086
+TNS   : -101.533
+
+Type  : Fast 1100mV 85C Model Setup 'router_sensor_NI:NI11|clock_division:clock_division|clk_division'
+Slack : -4.795
+TNS   : -129.431
+
+Type  : Fast 1100mV 85C Model Setup 'router_sensor_NI:NI6|clock_division:clock_division|clk_division'
+Slack : -4.780
+TNS   : -90.732
+
+Type  : Fast 1100mV 85C Model Setup 'router_sensor_NI:NI3|clock_division:clock_division|clk_division'
+Slack : -4.752
+TNS   : -110.433
+
+Type  : Fast 1100mV 85C Model Setup 'router_sensor_NI:NI9|clock_division:clock_division|clk_division'
+Slack : -4.698
+TNS   : -69.270
+
+Type  : Fast 1100mV 85C Model Setup 'router_sensor_NI:NI8|clock_division:clock_division|clk_division'
+Slack : -4.577
+TNS   : -93.101
+
+Type  : Fast 1100mV 85C Model Setup 'router_sensor_NI:NI14|clock_division:clock_division|clk_division'
+Slack : -4.572
+TNS   : -99.368
+
+Type  : Fast 1100mV 85C Model Setup 'router_sensor_NI:NI12|clock_division:clock_division|clk_division'
+Slack : -4.451
+TNS   : -85.817
+
+Type  : Fast 1100mV 85C Model Setup 'router_sensor_NI:NI10|clock_division:clock_division|clk_division'
+Slack : -4.381
+TNS   : -83.330
+
+Type  : Fast 1100mV 85C Model Setup 'router_sensor_NI:NI0|clock_division:clock_division|clk_division'
+Slack : -4.379
+TNS   : -85.680
+
+Type  : Fast 1100mV 85C Model Setup 'router_sensor_NI:NI5|clock_division:clock_division|clk_division'
+Slack : -4.329
+TNS   : -77.032
+
+Type  : Fast 1100mV 85C Model Setup 'router_sensor_NI:NI15|clock_division:clock_division|clk_division'
+Slack : -4.237
+TNS   : -88.225
+
+Type  : Fast 1100mV 85C Model Setup 'router_sensor_NI:NI2|clock_division:clock_division|clk_division'
+Slack : -4.120
+TNS   : -110.863
+
+Type  : Fast 1100mV 85C Model Setup 'router_sensor_NI:NI1|clock_division:clock_division|clk_division'
+Slack : -3.831
+TNS   : -86.961
+
+Type  : Fast 1100mV 85C Model Setup 'clock_division:clock_division1|clk_division'
+Slack : -1.035
+TNS   : -8.564
+
+Type  : Fast 1100mV 85C Model Setup 'super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : -0.914
+TNS   : -2.718
+
+Type  : Fast 1100mV 85C Model Hold 'rst'
+Slack : -3.314
+TNS   : -406.400
+
+Type  : Fast 1100mV 85C Model Hold 'super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : -2.182
+TNS   : -1955.972
+
+Type  : Fast 1100mV 85C Model Hold 'router_sensor_NI:NI4|clock_division:clock_division|clk_division'
+Slack : -0.628
+TNS   : -1.941
+
+Type  : Fast 1100mV 85C Model Hold 'router_sensor_NI:NI5|clock_division:clock_division|clk_division'
+Slack : -0.482
+TNS   : -3.919
+
+Type  : Fast 1100mV 85C Model Hold 'router_sensor_NI:NI12|clock_division:clock_division|clk_division'
+Slack : -0.478
+TNS   : -1.297
+
+Type  : Fast 1100mV 85C Model Hold 'router_sensor_NI:NI0|clock_division:clock_division|clk_division'
+Slack : -0.302
+TNS   : -0.545
+
+Type  : Fast 1100mV 85C Model Hold 'router_sensor_NI:NI3|clock_division:clock_division|clk_division'
+Slack : -0.299
+TNS   : -2.122
+
+Type  : Fast 1100mV 85C Model Hold 'router_sensor_NI:NI2|clock_division:clock_division|clk_division'
+Slack : -0.271
+TNS   : -2.001
+
+Type  : Fast 1100mV 85C Model Hold 'router_sensor_NI:NI10|clock_division:clock_division|clk_division'
+Slack : -0.113
+TNS   : -0.895
+
+Type  : Fast 1100mV 85C Model Hold 'router_sensor_NI:NI9|clock_division:clock_division|clk_division'
+Slack : -0.091
+TNS   : -0.941
+
+Type  : Fast 1100mV 85C Model Hold 'router_sensor_NI:NI1|clock_division:clock_division|clk_division'
+Slack : -0.051
+TNS   : -0.081
+
+Type  : Fast 1100mV 85C Model Hold 'router_sensor_NI:NI6|clock_division:clock_division|clk_division'
+Slack : 0.001
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'router_sensor_NI:NI8|clock_division:clock_division|clk_division'
+Slack : 0.119
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'router_sensor_NI:NI13|clock_division:clock_division|clk_division'
+Slack : 0.121
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'router_sensor_NI:NI14|clock_division:clock_division|clk_division'
+Slack : 0.122
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'router_sensor_NI:NI7|clock_division:clock_division|clk_division'
+Slack : 0.157
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'router_sensor_NI:NI15|clock_division:clock_division|clk_division'
+Slack : 0.165
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.195
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'router_sensor_NI:NI11|clock_division:clock_division|clk_division'
+Slack : 0.221
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'clock_division:clock_division1|clk_division'
+Slack : 0.300
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'rst'
+Slack : -4.935
+TNS   : -824.675
+
+Type  : Fast 1100mV 85C Model Removal 'rst'
+Slack : -2.952
+TNS   : -399.926
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'rst'
+Slack : -3.298
+TNS   : -3082.461
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'router_sensor_NI:NI12|clock_division:clock_division|clk_division'
+Slack : -0.261
+TNS   : -3.119
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'router_sensor_NI:NI4|clock_division:clock_division|clk_division'
+Slack : -0.191
+TNS   : -0.761
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'router_sensor_NI:NI5|clock_division:clock_division|clk_division'
+Slack : -0.189
+TNS   : -2.410
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'router_sensor_NI:NI0|clock_division:clock_division|clk_division'
+Slack : -0.181
+TNS   : -2.281
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'router_sensor_NI:NI3|clock_division:clock_division|clk_division'
+Slack : -0.107
+TNS   : -0.851
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'router_sensor_NI:NI1|clock_division:clock_division|clk_division'
+Slack : -0.099
+TNS   : -1.454
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'router_sensor_NI:NI2|clock_division:clock_division|clk_division'
+Slack : -0.094
+TNS   : -0.983
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'router_sensor_NI:NI9|clock_division:clock_division|clk_division'
+Slack : -0.069
+TNS   : -0.959
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'router_sensor_NI:NI6|clock_division:clock_division|clk_division'
+Slack : -0.066
+TNS   : -0.917
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'router_sensor_NI:NI10|clock_division:clock_division|clk_division'
+Slack : -0.044
+TNS   : -0.343
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'router_sensor_NI:NI15|clock_division:clock_division|clk_division'
+Slack : -0.029
+TNS   : -0.211
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'router_sensor_NI:NI8|clock_division:clock_division|clk_division'
+Slack : -0.005
+TNS   : -0.037
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'router_sensor_NI:NI14|clock_division:clock_division|clk_division'
+Slack : 0.016
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'router_sensor_NI:NI13|clock_division:clock_division|clk_division'
+Slack : 0.018
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'router_sensor_NI:NI7|clock_division:clock_division|clk_division'
+Slack : 0.056
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clock_division:clock_division1|clk_division'
+Slack : 0.062
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'router_sensor_NI:NI11|clock_division:clock_division|clk_division'
+Slack : 0.081
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'super_pll|super_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 0.666
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 2.219
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk_50MHz'
+Slack : 9.643
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 270.887
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'rst'
+Slack : -5.900
+TNS   : -629.441
+
+Type  : Fast 1100mV 0C Model Setup 'super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : -5.240
+TNS   : -7290.968
+
+Type  : Fast 1100mV 0C Model Setup 'router_sensor_NI:NI7|clock_division:clock_division|clk_division'
+Slack : -4.912
+TNS   : -104.449
+
+Type  : Fast 1100mV 0C Model Setup 'router_sensor_NI:NI4|clock_division:clock_division|clk_division'
+Slack : -4.887
+TNS   : -102.518
+
+Type  : Fast 1100mV 0C Model Setup 'router_sensor_NI:NI13|clock_division:clock_division|clk_division'
+Slack : -4.801
+TNS   : -95.513
+
+Type  : Fast 1100mV 0C Model Setup 'router_sensor_NI:NI6|clock_division:clock_division|clk_division'
+Slack : -4.574
+TNS   : -84.320
+
+Type  : Fast 1100mV 0C Model Setup 'router_sensor_NI:NI11|clock_division:clock_division|clk_division'
+Slack : -4.573
+TNS   : -119.574
+
+Type  : Fast 1100mV 0C Model Setup 'router_sensor_NI:NI3|clock_division:clock_division|clk_division'
+Slack : -4.506
+TNS   : -103.449
+
+Type  : Fast 1100mV 0C Model Setup 'router_sensor_NI:NI9|clock_division:clock_division|clk_division'
+Slack : -4.464
+TNS   : -65.224
+
+Type  : Fast 1100mV 0C Model Setup 'router_sensor_NI:NI14|clock_division:clock_division|clk_division'
+Slack : -4.393
+TNS   : -93.273
+
+Type  : Fast 1100mV 0C Model Setup 'router_sensor_NI:NI8|clock_division:clock_division|clk_division'
+Slack : -4.384
+TNS   : -88.088
+
+Type  : Fast 1100mV 0C Model Setup 'router_sensor_NI:NI12|clock_division:clock_division|clk_division'
+Slack : -4.284
+TNS   : -79.989
+
+Type  : Fast 1100mV 0C Model Setup 'router_sensor_NI:NI10|clock_division:clock_division|clk_division'
+Slack : -4.205
+TNS   : -77.372
+
+Type  : Fast 1100mV 0C Model Setup 'router_sensor_NI:NI0|clock_division:clock_division|clk_division'
+Slack : -4.196
+TNS   : -78.548
+
+Type  : Fast 1100mV 0C Model Setup 'router_sensor_NI:NI5|clock_division:clock_division|clk_division'
+Slack : -4.180
+TNS   : -67.965
+
+Type  : Fast 1100mV 0C Model Setup 'router_sensor_NI:NI15|clock_division:clock_division|clk_division'
+Slack : -4.132
+TNS   : -84.113
+
+Type  : Fast 1100mV 0C Model Setup 'router_sensor_NI:NI2|clock_division:clock_division|clk_division'
+Slack : -3.988
+TNS   : -103.701
+
+Type  : Fast 1100mV 0C Model Setup 'router_sensor_NI:NI1|clock_division:clock_division|clk_division'
+Slack : -3.727
+TNS   : -79.604
+
+Type  : Fast 1100mV 0C Model Setup 'clock_division:clock_division1|clk_division'
+Slack : -0.851
+TNS   : -6.784
+
+Type  : Fast 1100mV 0C Model Setup 'super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : -0.710
+TNS   : -0.710
+
+Type  : Fast 1100mV 0C Model Hold 'rst'
+Slack : -2.992
+TNS   : -373.589
+
+Type  : Fast 1100mV 0C Model Hold 'super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : -2.203
+TNS   : -2209.456
+
+Type  : Fast 1100mV 0C Model Hold 'router_sensor_NI:NI4|clock_division:clock_division|clk_division'
+Slack : -0.502
+TNS   : -1.464
+
+Type  : Fast 1100mV 0C Model Hold 'router_sensor_NI:NI5|clock_division:clock_division|clk_division'
+Slack : -0.375
+TNS   : -3.208
+
+Type  : Fast 1100mV 0C Model Hold 'router_sensor_NI:NI12|clock_division:clock_division|clk_division'
+Slack : -0.370
+TNS   : -0.718
+
+Type  : Fast 1100mV 0C Model Hold 'router_sensor_NI:NI3|clock_division:clock_division|clk_division'
+Slack : -0.270
+TNS   : -1.778
+
+Type  : Fast 1100mV 0C Model Hold 'router_sensor_NI:NI0|clock_division:clock_division|clk_division'
+Slack : -0.242
+TNS   : -0.401
+
+Type  : Fast 1100mV 0C Model Hold 'router_sensor_NI:NI2|clock_division:clock_division|clk_division'
+Slack : -0.204
+TNS   : -1.472
+
+Type  : Fast 1100mV 0C Model Hold 'router_sensor_NI:NI10|clock_division:clock_division|clk_division'
+Slack : -0.076
+TNS   : -0.608
+
+Type  : Fast 1100mV 0C Model Hold 'router_sensor_NI:NI1|clock_division:clock_division|clk_division'
+Slack : -0.057
+TNS   : -0.077
+
+Type  : Fast 1100mV 0C Model Hold 'router_sensor_NI:NI9|clock_division:clock_division|clk_division'
+Slack : -0.048
+TNS   : -0.380
+
+Type  : Fast 1100mV 0C Model Hold 'router_sensor_NI:NI6|clock_division:clock_division|clk_division'
+Slack : 0.013
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'router_sensor_NI:NI8|clock_division:clock_division|clk_division'
+Slack : 0.119
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'router_sensor_NI:NI13|clock_division:clock_division|clk_division'
+Slack : 0.124
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'router_sensor_NI:NI14|clock_division:clock_division|clk_division'
+Slack : 0.125
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.136
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'router_sensor_NI:NI15|clock_division:clock_division|clk_division'
+Slack : 0.155
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'router_sensor_NI:NI7|clock_division:clock_division|clk_division'
+Slack : 0.155
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'router_sensor_NI:NI11|clock_division:clock_division|clk_division'
+Slack : 0.207
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'clock_division:clock_division1|clk_division'
+Slack : 0.275
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'rst'
+Slack : -4.560
+TNS   : -772.956
+
+Type  : Fast 1100mV 0C Model Removal 'rst'
+Slack : -2.676
+TNS   : -361.281
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'rst'
+Slack : -2.964
+TNS   : -2687.735
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'router_sensor_NI:NI12|clock_division:clock_division|clk_division'
+Slack : -0.183
+TNS   : -2.183
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'router_sensor_NI:NI4|clock_division:clock_division|clk_division'
+Slack : -0.127
+TNS   : -0.505
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'router_sensor_NI:NI0|clock_division:clock_division|clk_division'
+Slack : -0.126
+TNS   : -1.292
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'router_sensor_NI:NI5|clock_division:clock_division|clk_division'
+Slack : -0.124
+TNS   : -1.308
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'router_sensor_NI:NI3|clock_division:clock_division|clk_division'
+Slack : -0.094
+TNS   : -0.752
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'router_sensor_NI:NI2|clock_division:clock_division|clk_division'
+Slack : -0.061
+TNS   : -0.583
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'router_sensor_NI:NI1|clock_division:clock_division|clk_division'
+Slack : -0.047
+TNS   : -0.568
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'router_sensor_NI:NI6|clock_division:clock_division|clk_division'
+Slack : -0.042
+TNS   : -0.567
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'router_sensor_NI:NI9|clock_division:clock_division|clk_division'
+Slack : -0.028
+TNS   : -0.371
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'router_sensor_NI:NI10|clock_division:clock_division|clk_division'
+Slack : -0.019
+TNS   : -0.140
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'router_sensor_NI:NI15|clock_division:clock_division|clk_division'
+Slack : -0.007
+TNS   : -0.037
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'router_sensor_NI:NI8|clock_division:clock_division|clk_division'
+Slack : 0.016
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'router_sensor_NI:NI14|clock_division:clock_division|clk_division'
+Slack : 0.027
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'router_sensor_NI:NI13|clock_division:clock_division|clk_division'
+Slack : 0.033
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clock_division:clock_division1|clk_division'
+Slack : 0.057
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'router_sensor_NI:NI7|clock_division:clock_division|clk_division'
+Slack : 0.076
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'router_sensor_NI:NI11|clock_division:clock_division|clk_division'
+Slack : 0.084
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'super_pll|super_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 0.666
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'super_pll|super_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 2.221
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk_50MHz'
+Slack : 9.632
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'super_pll|super_pll_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 270.880
+TNS   : 0.000
+
+------------------------------------------------------------
